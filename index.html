@@ -6,88 +6,79 @@
     <title>12th Planet Fight Wear | Official Manufacturer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* GLOBAL RESET */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        
+        body { background-color: #fff; color: #111; overflow-x: hidden; }
+
+        /* HEADER */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
             padding: 15px 5%; background: #fff; border-bottom: 1px solid #eee;
-            position: sticky; top: 0; z-index: 5000; 
+            position: sticky; top: 0; z-index: 9999; 
         }
-        .logo img { height: 65px; }
-        nav { display: flex; gap: 18px; align-items: center; }
+        .logo img { height: 60px; display: block; }
+        nav { display: flex; gap: 20px; align-items: center; }
         .nav-item { position: relative; padding: 10px 0; cursor: pointer; }
-        .nav-item > a { text-decoration: none; color: #333; font-weight: 700; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .nav-item > a { text-decoration: none; color: #111; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; }
 
+        /* MEGA MENU */
         .mega-menu { 
             position: absolute; top: 100%; left: 50%; transform: translateX(-50%); 
-            width: 95vw; max-width: 1200px; background: #fff; border-top: 3px solid #cc0000; 
+            width: 90vw; max-width: 1150px; background: #fff; border-top: 3px solid #cc0000; 
             display: none; grid-template-columns: repeat(4, 1fr); padding: 40px; 
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15); z-index: 6000; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1); z-index: 10000; 
         }
         .nav-item:hover .mega-menu { display: grid; }
-        .menu-col h4 { font-size: 13px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; color: #000; font-weight: 800; }
+        .menu-col h4 { font-size: 12px; text-transform: uppercase; margin-bottom: 15px; border-bottom: 2px solid #f5f5f5; padding-bottom: 8px; font-weight: 800; }
         .menu-col ul { list-style: none; }
-        .menu-col li { font-size: 12px; color: #555; margin-bottom: 10px; cursor: pointer; transition: 0.2s; }
+        .menu-col li { font-size: 11.5px; color: #666; margin-bottom: 10px; cursor: pointer; transition: 0.2s; }
         .menu-col li:hover { color: #cc0000; padding-left: 5px; }
 
-        .custom-order-btn { background: #000; color: #fff; padding: 10px 18px; text-decoration: none; font-weight: bold; font-size: 11px; border-radius: 4px; text-transform: uppercase; }
+        .custom-order-btn { background: #000; color: #fff; padding: 11px 20px; text-decoration: none; font-weight: bold; font-size: 10.5px; border-radius: 4px; text-transform: uppercase; transition: 0.3s; }
+        .custom-order-btn:hover { background: #cc0000; }
 
-        .hero-grid { display: flex; height: 75vh; width: 100%; flex-wrap: wrap; overflow: hidden; }
+        /* HERO GRID FIX (Zero Overlapping) */
+        .hero-grid { display: flex; width: 100%; flex-wrap: wrap; background: #fff; }
         .grid-box { 
-            flex: 1; min-width: 250px; display: flex; flex-direction: column; 
-            align-items: center; justify-content: space-between; 
-            text-align: center; padding: 40px 20px; 
+            flex: 1; min-width: 250px; height: 550px; position: relative; 
+            overflow: hidden; display: flex; flex-direction: column; 
+            align-items: center; justify-content: flex-start; padding-top: 50px;
         }
-        .grid-box h2 { font-size: 22px; font-weight: 800; text-transform: uppercase; color: #111; margin-bottom: 20px; }
-        .grid-box img { max-width: 90%; max-height: 70%; object-fit: contain; transition: 0.4s ease; }
-        .grid-box:hover img { transform: scale(1.05); }
-
-        .sports-uniform { background-color: #f2ede4; }
-        .active-wear { background-color: #d6e9f9; }
-        .street-wear { background-color: #3e4b55; }
+        .grid-box h2 { 
+            position: relative; z-index: 10; font-size: 26px; font-weight: 900; 
+            text-transform: uppercase; color: #111; letter-spacing: 1px; 
+        }
+        .grid-box img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; z-index: 1; transition: 0.5s ease;
+        }
+        .grid-box:hover img { transform: scale(1.08); }
         .street-wear h2 { color: #fff; }
-        .tactical-work { background-color: #eceae0; }
 
-        .service-bar { display: grid; grid-template-columns: repeat(4, 1fr); background: #eee7e2; padding: 30px 5%; }
-        .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; border-right: 1px solid rgba(0,0,0,0.05); }
-        .service-item:last-child { border-right: none; }
-        .service-item i { font-size: 22px; margin-bottom: 10px; color: #333; }
-
-        footer { display: grid; grid-template-columns: 1.2fr 1fr 1.5fr; padding: 70px 8%; background: #fff; gap: 60px; border-top: 1px solid #eee; }
-        .footer-col h3 { font-size: 18px; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; }
-        .footer-col p { font-size: 14px; color: #444; margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
-        .footer-col i { color: #cc0000; width: 20px; text-align: center; }
-
-        .social-icons { display: flex; gap: 15px; margin-top: 25px; }
-        .social-icons a { width: 42px; height: 42px; background: #f5f5f5; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #333; text-decoration: none; font-size: 18px; transition: 0.3s; }
-        .social-icons a:hover { background: #000; color: #fff; }
-
-        .bottom-bar { padding: 25px 8%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
-        .bottom-bar img { height: 16px; margin-right: 20px; filter: grayscale(1); opacity: 0.6; }
-
-        @media (max-width: 992px) { 
-            footer { grid-template-columns: 1fr; } 
-            .service-bar { grid-template-columns: 1fr 1fr; } 
-            .hero-grid { height: auto; }
-            .grid-box { height: 400px; }
-            .bottom-bar { flex-direction: column; gap: 20px; }
+        /* SERVICE BAR */
+        .service-bar { 
+            display: grid; grid-template-columns: repeat(4, 1fr); 
+            background: #f7f3f0; padding: 45px 5%; border-top: 1px solid #eee;
         }
-    </style>
-</head>
-<body>
+        .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; border-right: 1px solid #ddd; }
+        .service-item:last-child { border-right: none; }
+        .service-item i { font-size: 22px; color: #222; margin-bottom: 15px; }
+        .service-item h4 { font-size: 13px; text-transform: uppercase; font-weight: 800; }
+        .service-item p { font-size: 12px; color: #777; margin-top: 5px; }
 
-<header>
-    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet"></div>
-    <nav>
-        <div class="nav-item">
-            <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
-            <div class="mega-menu">
-                <div class="menu-col">
-                    <h4>Sports Uniform</h4>
-                    <ul><li>American Football Uniform</li><li>Soccer Uniform</li><li>Paintball Jersey</li><li>Basketball Uniform</li><li>Baseball Uniform</li><li>Rugby Uniform</li><li>Cricket Uniform</li><li>Boxing Uniform</li><li>Ice Hockey Uniform</li><li>Softball Uniform</li><li>Volleyball Uniform</li></ul>
-                </div>
-                <div class="menu-col">
-                    <h4>Active Wear</h4>
-                    <ul><li>Compression Shorts</li><li>Fitness Bra</li><li>Legging</li><li>Gym T-shirts</li><li>Swimsuit</li><li>Tank Top</li><li>Tracksuit</li><li>Workout Hoodies</li><li>Rash Guards</li><li>Meggings</li><li>T-Shirts (Women)</li></ul>
-                </div>
-                <div class="menu
+        /* FOOTER - ALIGNED AS PER SCREENSHOT */
+        footer { 
+            display: grid; grid-template-columns: 1.2fr 1fr 1.3fr; 
+            padding: 80px 8%; background: #fff; gap: 60px; 
+            border-top: 1px solid #eee; 
+        }
+        .footer-col h3 { font-size: 17px; font-weight: 800; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-col p { font-size: 14px; color: #444; margin-bottom: 18px; display: flex; align-items: center; gap: 15px; line-height: 1.5; }
+        .footer-col i { color: #cc0000; font-size: 15px; width: 20px; text-align: center; }
+
+        /* Contact Form inside Footer */
+        .footer-col input, .footer-col textarea { 
+            width: 100%; padding: 12px; margin-bottom: 12px; 
+            border: 1px solid #e5e5e5; background: #fafafa; font-size: 13px; outline: none;
+        }
+        .footer-col button {
