@@ -10,7 +10,8 @@
         
         /* Top Info Bar */
         .top-info-bar { background: #1a1a1a; color: #fff; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 13px; align-items: center; }
-        .top-info-bar a { color: #fff; text-decoration: none; margin-left: 15px; font-size: 17px; }
+        .top-info-bar a { color: #fff; text-decoration: none; margin-left: 15px; font-size: 17px; transition: 0.3s; }
+        .top-info-bar a:hover { color: #cc0000; }
 
         /* Main Header */
         header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
@@ -30,7 +31,7 @@
         .nav-item:hover .mega-menu { display: grid; }
         .menu-col h4 { font-size: 13px; color: #000; text-transform: uppercase; margin-bottom: 15px; font-weight: 800; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
         .menu-col ul { list-style: none; }
-        .menu-col li { font-size: 12px; color: #555; margin-bottom: 10px; cursor: pointer; }
+        .menu-col li { font-size: 12px; color: #555; margin-bottom: 10px; cursor: pointer; transition: 0.2s; }
         .menu-col li:hover { color: #cc0000; padding-left: 5px; }
 
         .custom-btn { background: #000; color: #fff; padding: 12px 22px; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; border-radius: 4px; }
@@ -38,7 +39,7 @@
         /* Hero Banner */
         .main-banner { height: 80vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; }
         .main-banner h1 { font-size: clamp(35px, 8vw, 75px); font-weight: 900; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 4px; }
-        .explore-btn { background: #cc0000; color: #fff; padding: 15px 40px; text-decoration: none; font-weight: 800; text-transform: uppercase; }
+        .explore-btn { background: #cc0000; color: #fff; padding: 15px 40px; text-decoration: none; font-weight: 800; text-transform: uppercase; transition: 0.3s; }
 
         /* Products Display */
         .section-title { text-align: center; padding: 70px 0 40px; font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; position: relative; }
@@ -55,7 +56,8 @@
         footer { padding: 80px 5%; background: #111; color: #fff; display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
         .footer-col h3 { font-size: 18px; margin-bottom: 20px; text-transform: uppercase; color: #cc0000; }
         .footer-col p { color: #bbb; font-size: 14px; margin-bottom: 10px; }
-        .footer-social a { color: #fff; font-size: 24px; margin-right: 20px; }
+        .footer-social a { color: #fff; font-size: 24px; margin-right: 20px; transition: 0.3s; }
+        .footer-social a:hover { color: #cc0000; }
 
         .bottom-bar { padding: 30px 5%; background: #000; text-align: center; color: #666; font-size: 12px; border-top: 1px solid #222; }
 
@@ -90,6 +92,7 @@
                         <li>American Football Uniform</li><li>Soccer Uniform</li><li>Paintball Jersey</li>
                         <li>Basketball Uniform</li><li>Baseball Uniform</li><li>Rugby Uniform</li>
                         <li>Cricket Uniform</li><li>Boxing Uniform</li><li>Ice Hockey Uniform</li>
+                        <li>Softball Uniform</li><li>Volleyball Uniform</li>
                     </ul>
                 </div>
                 <div class="menu-col">
@@ -97,7 +100,8 @@
                     <ul>
                         <li>Compression Shorts</li><li>Fitness Bra</li><li>Legging</li>
                         <li>Gym T-shirts</li><li>Swimsuit</li><li>Tank Top</li>
-                        <li>Tracksuit</li><li>Workout Hoodies</li>
+                        <li>Tracksuit</li><li>Workout Hoodies</li><li>Rash Guards</li>
+                        <li>Meggings</li><li>T-Shirts (Women)</li>
                     </ul>
                 </div>
                 <div class="menu-col">
@@ -118,19 +122,20 @@
                     <h4>Casual Wear</h4>
                     <ul>
                         <li>Sweat Shirts</li><li>Hoodie</li><li>Shorts</li><li>Polo Shirts</li>
-                        <li>T-Shirts</li><li>Trousers</li>
+                        <li>Long Sleeve T Shirt</li><li>T-Shirts</li><li>T-Shirt (Women)</li>
+                        <li>Hoodies (Women)</li><li>Long Coat</li><li>Track Suit</li><li>Trousers</li>
                     </ul>
                 </div>
                 <div class="menu-col">
                     <h4>Jackets</h4>
                     <ul>
                         <li>Rain Jackets</li><li>Puffer Jackets</li><li>Varsity Jackets</li>
-                        <li>Windbreaker Jackets</li>
+                        <li>Windbreaker Jackets</li><li>Fleece Jackets</li><li>Softshell Jackets</li>
                     </ul>
                 </div>
                 <div class="menu-col">
                     <h4>Knitwear</h4>
-                    <ul><li>Beanies</li><li>Sweaters</li><li>Ski Mask</li></ul>
+                    <ul><li>Beanies</li><li>Sweaters</li><li>Ski Mask</li><li>Wool Socks</li></ul>
                 </div>
             </div>
         </div>
