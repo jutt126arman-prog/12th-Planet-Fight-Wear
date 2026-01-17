@@ -3,85 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet Fight Wear | Elite Performance</title>
+    <title>12th Planet Fight Wear | Official</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background: #fff; color: #000; }
-        
-        /* Premium Header */
-        header { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; sticky; top: 0; background: #fff; z-index: 1000; }
-        .logo { font-size: 24px; font-weight: 900; letter-spacing: -1px; text-transform: uppercase; }
-        nav a { margin-left: 25px; text-decoration: none; color: #000; font-size: 14px; font-weight: 600; text-transform: uppercase; }
-
-        /* Hero Section (Like Shils Wear) */
-        .hero { height: 80vh; background: #f4f4f4; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
-        .hero-content { text-align: center; z-index: 1; }
-        .hero-content h2 { font-size: 60px; text-transform: uppercase; margin-bottom: 20px; font-weight: 900; }
-        .shop-now { padding: 15px 40px; background: #000; color: #fff; text-decoration: none; font-weight: bold; border-radius: 0; transition: 0.3s; }
-        .shop-now:hover { background: #333; }
-
-        /* Product Grid */
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #000; scroll-behavior: smooth; }
+        header { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
+        .logo { font-size: 22px; font-weight: 900; text-transform: uppercase; }
+        nav a { margin-left: 20px; text-decoration: none; color: #000; font-size: 11px; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
+        .hero { height: 70vh; background: #f4f4f4; display: flex; align-items: center; justify-content: center; text-align: center; background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80'); background-size: cover; background-position: center; }
+        .hero h2 { font-size: 50px; font-weight: 900; text-transform: uppercase; }
         .container { padding: 60px 5%; }
-        .section-title { font-size: 30px; margin-bottom: 40px; text-align: center; text-transform: uppercase; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
-        
-        /* Product Card */
-        .card { text-decoration: none; color: #000; transition: 0.3s; }
-        .img-container { background: #f9f9f9; overflow: hidden; position: relative; height: 400px; }
-        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .section-title { font-size: 28px; text-transform: uppercase; font-weight: 900; margin-bottom: 40px; text-align: center; border-bottom: 2px solid #000; display: table; margin-left: auto; margin-right: auto; padding-bottom: 5px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        .card { text-decoration: none; color: #000; }
+        .img-box { background: #f9f9f9; height: 400px; overflow: hidden; margin-bottom: 15px; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
         .card:hover img { transform: scale(1.05); }
-        .card-info { padding: 20px 0; text-align: left; }
-        .card-info h3 { font-size: 16px; margin-bottom: 5px; font-weight: bold; text-transform: uppercase; }
-        .price { color: #666; font-size: 16px; }
-
-        /* WhatsApp Button (Modern Style) */
-        .wa-btn { display: inline-block; margin-top: 10px; padding: 10px 20px; border: 1px solid #000; color: #000; text-decoration: none; font-size: 12px; font-weight: bold; transition: 0.3s; }
+        .wa-btn { display: block; width: 100%; padding: 12px; border: 1px solid #000; text-align: center; text-decoration: none; color: #000; font-size: 11px; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
         .wa-btn:hover { background: #000; color: #fff; }
-
-        @media (max-width: 768px) { .hero-content h2 { font-size: 35px; } }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo">12th Planet</div>
+    <div class="logo">12TH PLANET</div>
     <nav>
-        <a href="#">Wrestling</a>
-        <a href="#">MMA</a>
-        <a href="#">Gym</a>
+        <a href="#activewear">Activewear</a>
+        <a href="#combat">Combat Gear</a>
+        <a href="#wrestling">Wrestling</a>
     </nav>
 </header>
 
 <div class="hero">
     <div class="hero-content">
-        <h2>Unleash The Beast</h2>
-        <a href="#products" class="shop-now">EXPLORE COLLECTION</a>
+        <h2>PREMIUM PERFORMANCE</h2>
+        <p>Sialkot's Finest Fight Gear</p>
     </div>
 </div>
 
-<div class="container" id="products">
-    <h2 class="section-title">Latest Arrivals</h2>
+<div class="container" id="activewear">
+    <h2 class="section-title">Activewear</h2>
     <div class="grid">
         <div class="card">
-            <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1599058917232-d750084c6ecd?q=80&w=2070" alt="Product">
-            </div>
-            <div class="card-info">
-                <h3>Performance Fight Shorts</h3>
-                <span class="price">Rs. 3,500</span><br>
-                <a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a>
-            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80" alt=""></div>
+            <h3>Gym Stringer V1</h3>
+            <p>Rs. 2,200</p>
+            <a href="https://wa.me/92313411317?text=Order-Stringer" class="wa-btn">Order on WhatsApp</a>
         </div>
-
         <div class="card">
-            <div class="img-container">
-                <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070" alt="Product">
-            </div>
-            <div class="card-info">
-                <h3>Elite Wrestling Singlet</h3>
-                <span class="price">Rs. 5,200</span><br>
-                <a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a>
-            </div>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa20e79c?q=80" alt=""></div>
+            <h3>Training Joggers</h3>
+            <p>Rs. 3,500</p>
+            <a href="https://wa.me/92313411317?text=Order-Joggers" class="wa-btn">Order on WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="combat" style="background:#fafafa;">
+    <h2 class="section-title">Combat Gear</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80" alt=""></div>
+            <h3>MMA Shorts</h3>
+            <p>Rs. 3,200</p>
+            <a href="https://wa.me/92313411317?text=Order-MMA-Shorts" class="wa-btn">Order on WhatsApp</a>
+        </div>
+        <div class="card">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80" alt=""></div>
+            <h3>Boxing Gloves</h3>
+            <p>Rs. 5,500</p>
+            <a href="https://wa.me/92313411317?text=Order-Gloves" class="wa-btn">Order on WhatsApp</a>
+        </div>
+    </div>
+</div>
+
+<div class="container" id="wrestling">
+    <h2 class="section-title">Wrestling</h2>
+    <div class="grid">
+        <div class="card">
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1599058917232-d750084c6ecd?q=80" alt=""></div>
+            <h3>Elite Singlet</h3>
+            <p>Rs. 4,800</p>
+            <a href="https://wa.me/92313411317?text=Order-Singlet" class="wa-btn">Order on WhatsApp</a>
         </div>
     </div>
 </div>
