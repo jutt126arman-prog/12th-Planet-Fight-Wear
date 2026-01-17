@@ -3,64 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet Fight Wear | Official Store</title>
+    <title>12th Planet Fight Wear | Official Manufacturer</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #000; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #000; overflow-x: hidden; }
         
-        /* Shils Style Top Bar */
-        .top-bar { background: #1a1a1a; color: #fff; padding: 10px 5%; font-size: 11px; display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: 1px; }
-        
-        /* Header & Logo */
-        header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
-        .logo img { height: 70px; width: auto; } 
-        nav a { margin-left: 20px; text-decoration: none; color: #000; font-size: 11px; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
-        nav a:hover { color: #666; }
+        /* Shils Top Bar */
+        .top-bar { background: #2c313a; color: #fff; padding: 10px 5%; font-size: 11px; display: flex; justify-content: space-between; text-transform: uppercase; letter-spacing: 1px; }
+        .top-bar .social-links a { color: #fff; text-decoration: none; margin-left: 15px; transition: 0.3s; }
+        .top-bar a:hover { color: #d9ebf9; }
 
-        /* Shils Wear Exact Category Banner */
-        .shils-banner { display: flex; flex-wrap: wrap; }
-        .banner-col { flex: 1; min-width: 33.33%; height: 70vh; position: relative; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 50px; text-decoration: none; color: #000; border-right: 1px solid #fff; }
-        .banner-col img { position: absolute; top: 10%; width: 90%; height: 75%; object-fit: contain; transition: 0.6s ease; }
-        .banner-col:hover img { transform: scale(1.08); }
-        .banner-col h2 { font-size: 22px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; z-index: 1; }
+        /* Premium Header */
+        header { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; background: #fff; position: sticky; top: 0; z-index: 2000; }
+        .logo img { height: 80px; width: auto; }
+
+        /* Mega Menu Navigation */
+        nav { display: flex; gap: 25px; }
+        .nav-item { position: relative; padding: 10px 0; cursor: pointer; }
+        .nav-item > a { text-decoration: none; color: #000; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
         
-        /* Exact Background Colors */
+        /* Dropdown/Mega Menu */
+        .mega-menu {
+            position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+            width: 90vw; max-width: 1000px; background: #fff; border: 1px solid #eee;
+            display: none; grid-template-columns: repeat(4, 1fr); padding: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); z-index: 3000;
+        }
+        .nav-item:hover .mega-menu { display: grid; }
+        .menu-col h4 { font-size: 12px; color: #cc0000; text-transform: uppercase; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+        .menu-col ul { list-style: none; }
+        .menu-col li { font-size: 11px; color: #555; margin-bottom: 8px; transition: 0.3s; cursor: pointer; }
+        .menu-col li:hover { color: #000; padding-left: 5px; }
+
+        /* Category Banners (Exactly like Shils) */
+        .shils-banner { display: flex; flex-wrap: wrap; }
+        .banner-col { flex: 1; min-width: 33.33%; height: 75vh; position: relative; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 60px; text-decoration: none; color: #000; }
+        .banner-col img { position: absolute; top: 5%; width: 95%; height: 85%; object-fit: contain; transition: 0.7s ease; }
+        .banner-col:hover img { transform: translateY(-20px); }
+        .banner-col h2 { font-size: 24px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; z-index: 1; }
+        
         .bg-sports { background: #f3f3f1; }
         .bg-active { background: #d9ebf9; }
         .bg-street { background: #e2e4e5; }
 
-        /* Feature Bar (Clean white like Shils) */
-        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); background: #fcfcfc; padding: 50px 5%; gap: 20px; border-bottom: 1px solid #eee; }
-        .f-box { text-align: center; border-right: 1px solid #eee; padding: 10px; }
+        /* Feature Bar Icons */
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); background: #f9f9f9; padding: 40px 5%; border-bottom: 1px solid #eee; }
+        .f-box { text-align: center; border-right: 1px solid #ddd; padding: 15px; }
         .f-box:last-child { border-right: none; }
-        .f-box h4 { font-size: 15px; text-transform: uppercase; margin-bottom: 8px; font-weight: 900; }
-        .f-box p { font-size: 12px; color: #888; text-transform: capitalize; }
+        .f-box h4 { font-size: 14px; text-transform: uppercase; font-weight: 900; margin-bottom: 5px; }
+        .f-box p { font-size: 11px; color: #777; }
 
-        /* Footer (Shils Style) */
-        footer { padding: 80px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 60px; background: #fff; border-top: 1px solid #eee; }
-        .footer-col h4 { text-transform: uppercase; font-size: 15px; margin-bottom: 30px; font-weight: 900; border-bottom: 3px solid #000; display: inline-block; padding-bottom: 5px; }
-        .footer-col p, .footer-col li { font-size: 14px; color: #555; list-style: none; margin-bottom: 15px; line-height: 1.8; }
-        
-        @media (max-width: 900px) { .banner-col { min-width: 100%; height: 50vh; } .f-box { border-right: none; border-bottom: 1px solid #eee; padding-bottom: 20px; } }
+        /* Custom Button */
+        .custom-btn { background: #d9ebf9; padding: 12px 25px; text-decoration: none; color: #000; font-weight: 900; font-size: 11px; text-transform: uppercase; transition: 0.3s; }
+        .custom-btn:hover { background: #000; color: #fff; }
+
+        /* Footer */
+        footer { padding: 80px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 50px; background: #fff; border-top: 1px solid #eee; }
+        .footer-col h4 { text-transform: uppercase; font-size: 14px; margin-bottom: 25px; font-weight: 900; border-bottom: 2px solid #000; display: inline-block; padding-bottom: 5px; }
+        .footer-col p, .footer-col li { font-size: 13px; color: #666; list-style: none; margin-bottom: 12px; }
+        .footer-social a { text-decoration: none; font-weight: bold; color: #000; margin-right: 15px; font-size: 12px; }
+
+        @media (max-width: 900px) { .banner-col { min-width: 100%; height: 60vh; } .mega-menu { grid-template-columns: 1fr 1fr; width: 95vw; } }
     </style>
 </head>
 <body>
 
 <div class="top-bar">
-    <span>info@12thplanet.com</span>
-    <span>WhatsApp: +92 313 411317</span>
+    <span>✉ 12thplanetfightwear@gmail.com</span>
+    <div class="social-links">
+        <a href="https://www.facebook.com/arman.elahi.753250/" target="_blank">FB</a>
+        <a href="https://www.instagram.com/12thplanetfightwear/" target="_blank">IG</a>
+        <a href="https://wa.me/92313411317" target="_blank">WA</a>
+    </div>
 </div>
 
 <header>
     <div class="logo">
-        <img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet Fight Wear">
+        <img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet">
     </div>
     <nav>
-        <a href="#">Sports Apparel</a>
-        <a href="#">Activewear</a>
-        <a href="#">Combat Gear</a>
-        <a href="#">Contact</a>
+        <div class="nav-item">
+            <a href="#">Sports Apparel ▾</a>
+            <div class="mega-menu">
+                <div class="menu-col">
+                    <h4>Sports Uniform</h4>
+                    <ul>
+                        <li>American Football Uniform</li>
+                        <li>Soccer Uniform</li>
+                        <li>Paintball Jersey</li>
+                        <li>Basketball Uniform</li>
+                        <li>Baseball Uniform</li>
+                        <li>Rugby Uniform</li>
+                        <li>Cricket Uniform</li>
+                        <li>Boxing Uniform</li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Active Wear</h4>
+                    <ul>
+                        <li>Compression Shorts</li>
+                        <li>Fitness Bra</li>
+                        <li>Legging</li>
+                        <li>Gym T-shirts</li>
+                        <li>Swimsuit</li>
+                        <li>Tank Top</li>
+                        <li>Tracksuit</li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Martial Arts</h4>
+                    <ul>
+                        <li>Karate Uniform</li>
+                        <li>Brazilian Jiu Jitsu</li>
+                        <li>MMA Short</li>
+                        <li>Muay Thai Short</li>
+                        <li>Judo Uniform</li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Accessories</h4>
+                    <ul>
+                        <li>Sports Bag</li>
+                        <li>Caps</li>
+                        <li>Face Mask</li>
+                        <li>Socks</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nav-item"><a href="#">Casual Apparel</a></div>
+        <div class="nav-item"><a href="#">Tactical Wear</a></div>
+        <div class="nav-item"><a href="#" style="color: #cc0000;">Contact</a></div>
     </nav>
+    <a href="https://wa.me/92313411317" class="custom-btn">Custom Made Wear</a>
 </header>
 
 <div class="shils-banner">
@@ -79,34 +154,38 @@
 </div>
 
 <div class="features">
-    <div class="f-box"><h4>Fast Shipping</h4><p>Fast & Safe Delivery</p></div>
-    <div class="f-box"><h4>Quality Products</h4><p>100% Satisfaction Guarantee</p></div>
-    <div class="f-box"><h4>Huge Savings</h4><p>At Lowest Manufacturer Price</p></div>
-    <div class="f-box"><h4>Sublimation</h4><p>Custom Cut & Sew</p></div>
+    <div class="f-box"><h4>Fast Shipping</h4><p>Worldwide Fast Delivery</p></div>
+    <div class="f-box"><h4>Quality Gear</h4><p>100% Satisfaction Guarantee</p></div>
+    <div class="f-box"><h4>Best Prices</h4><p>Direct Factory Rates</p></div>
+    <div class="f-box"><h4>Sublimation</h4><p>Professional Cut & Sew</p></div>
 </div>
 
 <footer>
     <div class="footer-col">
-        <h4>Contact Info</h4>
-        <p>Email: info@12thplanet.com</p>
-        <p>WhatsApp: +92 313 411317</p>
-        <p>Location: Sialkot, Pakistan</p>
+        <h4>Contact Us</h4>
+        <p>✉ 12thplanetfightwear@gmail.com</p>
+        <p>📱 +92 313 411317</p>
+        <p>📍 Sialkot, Pakistan</p>
     </div>
     <div class="footer-col">
-        <h4>Let's Talk</h4>
-        <p>We are ready for your custom bulk orders. Quality is our first priority.</p>
-        <a href="https://wa.me/92313411317" style="display: inline-block; padding: 10px 20px; border: 1px solid #000; color: #000; text-decoration: none; font-weight: bold; font-size: 12px;">WHATSAPP US</a>
+        <h4>Follow Us</h4>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/arman.elahi.753250/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/12thplanetfightwear/" target="_blank">Instagram</a>
+        </div>
+        <p style="margin-top:15px;">Official Manufacturer of High Performance Fight Gear.</p>
     </div>
     <div class="footer-col">
-        <h4>What We Do</h4>
-        <li>Customized Design</li>
-        <li>Kids-Men-Women (All Sizes)</li>
-        <li>Sublimation and Cut & Sew</li>
+        <h4>Expertise</h4>
+        <li>Custom Uniforms</li>
+        <li>Fitness Apparel</li>
+        <li>MMA & Combat Gear</li>
+        <li>Worldwide Shipping</li>
     </div>
 </footer>
 
-<div style="text-align: center; padding: 30px; font-size: 11px; color: #999; border-top: 1px solid #eee;">
-    Copyright © 2026 12th Planet Fight Wear | Official Manufacturer
+<div style="text-align: center; padding: 20px; font-size: 11px; background: #f9f9f9; color: #999; border-top: 1px solid #eee; text-transform: uppercase; letter-spacing: 1px;">
+    Copyright © 2026 12th Planet Fight Wear | Official Website
 </div>
 
 </body>
