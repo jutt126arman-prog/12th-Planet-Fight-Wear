@@ -1,58 +1,201 @@
-<h2 class="section-title">Our Specialized Categories</h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12th Planet Fight Wear | Official Manufacturer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Roboto, sans-serif; }
+        
+        /* Top Info Bar */
+        .top-info-bar { background: #1a1a1a; color: #fff; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 13px; align-items: center; }
+        .top-info-bar a { color: #fff; text-decoration: none; margin-left: 15px; font-size: 17px; }
+
+        /* Main Header */
+        header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+        .logo img { height: 75px; }
+
+        nav { display: flex; gap: 20px; align-items: center; }
+        .nav-item { position: relative; padding: 10px 0; }
+        .nav-item > a { text-decoration: none; color: #111; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        
+        /* Mega Menu */
+        .mega-menu {
+            position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
+            width: 95vw; max-width: 1200px; background: #fff; border-top: 4px solid #cc0000;
+            display: none; grid-template-columns: repeat(4, 1fr); padding: 40px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.2); z-index: 5000;
+        }
+        .nav-item:hover .mega-menu { display: grid; }
+        .menu-col h4 { font-size: 13px; color: #000; text-transform: uppercase; margin-bottom: 15px; font-weight: 800; border-bottom: 2px solid #f0f0f0; padding-bottom: 8px; }
+        .menu-col ul { list-style: none; }
+        .menu-col li { font-size: 12px; color: #555; margin-bottom: 10px; cursor: pointer; }
+        .menu-col li:hover { color: #cc0000; padding-left: 5px; }
+
+        .custom-btn { background: #000; color: #fff; padding: 12px 22px; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; border-radius: 4px; }
+
+        /* Hero Banner */
+        .main-banner { height: 80vh; background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; }
+        .main-banner h1 { font-size: clamp(35px, 8vw, 75px); font-weight: 900; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 4px; }
+        .explore-btn { background: #cc0000; color: #fff; padding: 15px 40px; text-decoration: none; font-weight: 800; text-transform: uppercase; }
+
+        /* Products Display */
+        .section-title { text-align: center; padding: 70px 0 40px; font-size: 28px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px; position: relative; }
+        .section-title::after { content: ''; width: 60px; height: 4px; background: #cc0000; position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); }
+        
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 0 5% 80px; }
+        .product-card { background: #fff; border: 1px solid #eee; transition: 0.4s; overflow: hidden; text-align: center; }
+        .product-card img { width: 100%; height: 400px; object-fit: cover; }
+        .product-info { padding: 25px; }
+        .whatsapp-order { background: #25d366; color: #fff; padding: 10px 20px; text-decoration: none; font-size: 12px; font-weight: 800; border-radius: 4px; display: inline-block; transition: 0.3s; }
+        .whatsapp-order:hover { background: #128c7e; }
+
+        /* Footer */
+        footer { padding: 80px 5%; background: #111; color: #fff; display: grid; grid-template-columns: repeat(3, 1fr); gap: 50px; }
+        .footer-col h3 { font-size: 18px; margin-bottom: 20px; text-transform: uppercase; color: #cc0000; }
+        .footer-col p { color: #bbb; font-size: 14px; margin-bottom: 10px; }
+        .footer-social a { color: #fff; font-size: 24px; margin-right: 20px; }
+
+        .bottom-bar { padding: 30px 5%; background: #000; text-align: center; color: #666; font-size: 12px; border-top: 1px solid #222; }
+
+        @media (max-width: 992px) { footer { grid-template-columns: 1fr; } .mega-menu { grid-template-columns: 1fr 1fr; } }
+    </style>
+</head>
+<body>
+
+<div class="top-info-bar">
+    <div>
+        <i class="fas fa-envelope"></i> 12thplanetfightwear@gmail.com | 
+        <i class="fas fa-phone"></i> +92 313 4111317
+    </div>
+    <div>
+        <a href="https://www.facebook.com/12thplanetfightwear" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/12thplanetfightwear" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/923134111317" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</div>
+
+<header>
+    <div class="logo">
+        <img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet">
+    </div>
+    <nav>
+        <div class="nav-item">
+            <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
+            <div class="mega-menu">
+                <div class="menu-col">
+                    <h4>Sports Uniform</h4>
+                    <ul>
+                        <li>American Football Uniform</li><li>Soccer Uniform</li><li>Paintball Jersey</li>
+                        <li>Basketball Uniform</li><li>Baseball Uniform</li><li>Rugby Uniform</li>
+                        <li>Cricket Uniform</li><li>Boxing Uniform</li><li>Ice Hockey Uniform</li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Active Wear</h4>
+                    <ul>
+                        <li>Compression Shorts</li><li>Fitness Bra</li><li>Legging</li>
+                        <li>Gym T-shirts</li><li>Swimsuit</li><li>Tank Top</li>
+                        <li>Tracksuit</li><li>Workout Hoodies</li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Martial Arts</h4>
+                    <ul><li>Karate Uniform</li><li>BJJ Gi</li><li>MMA Shorts</li><li>Muay Thai</li><li>Judo Uniform</li></ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Accessories</h4>
+                    <ul><li>Sports Bag</li><li>Gym Belts</li><li>Caps</li><li>Face Mask</li><li>Socks</li></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="#">Casual Apparel <i class="fas fa-caret-down"></i></a>
+            <div class="mega-menu" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="menu-col">
+                    <h4>Casual Wear</h4>
+                    <ul>
+                        <li>Sweat Shirts</li><li>Hoodie</li><li>Shorts</li><li>Polo Shirts</li>
+                        <li>T-Shirts</li><li>Trousers</li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Jackets</h4>
+                    <ul>
+                        <li>Rain Jackets</li><li>Puffer Jackets</li><li>Varsity Jackets</li>
+                        <li>Windbreaker Jackets</li>
+                    </ul>
+                </div>
+                <div class="menu-col">
+                    <h4>Knitwear</h4>
+                    <ul><li>Beanies</li><li>Sweaters</li><li>Ski Mask</li></ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-item"><a href="#">Gym Accessories</a></div>
+        <div class="nav-item"><a href="#">Work Wear</a></div>
+        <div class="nav-item"><a href="#" style="color: #cc0000;">Contact</a></div>
+    </nav>
+    <a href="https://wa.me/923134111317" class="custom-btn">Custom Order</a>
+</header>
+
+<section class="main-banner">
+    <h1>UNLEASH THE BEAST</h1>
+    <a href="https://wa.me/923134111317" class="explore-btn">Get A Quote</a>
+</section>
+
+<h2 class="section-title">Specialized Categories</h2>
 <div class="product-grid">
-    
     <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=2000&auto=format&fit=crop" alt="Soccer Uniform">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?q=80&w=1000&auto=format&fit=crop" alt="Sports Uniform">
         <div class="product-info">
             <h3>Sports Uniforms</h3>
-            <p style="font-size: 12px; color: #777; margin-bottom: 15px;">Soccer, Basketball, American Football & more</p>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">VIEW ALL UNIFORMS</a>
+            <a href="https://wa.me/923134111317" class="whatsapp-order">INQUIRE VIA WHATSAPP</a>
         </div>
     </div>
-
     <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?q=80&w=2070&auto=format&fit=crop" alt="Gym Wear">
-        <div class="product-info">
-            <h3>Active & Fitness Wear</h3>
-            <p style="font-size: 12px; color: #777; margin-bottom: 15px;">Leggings, Gym Tees, Tank Tops & Hoodies</p>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">VIEW FITNESS WEAR</a>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1552072092-2f9b791a993b?q=80&w=2070&auto=format&fit=crop" alt="MMA Gear">
+        <img src="https://images.unsplash.com/photo-1552072092-2f9b791a993b?q=80&w=1000&auto=format&fit=crop" alt="Martial Arts">
         <div class="product-info">
             <h3>Martial Arts Gear</h3>
-            <p style="font-size: 12px; color: #777; margin-bottom: 15px;">BJJ Gi, MMA Shorts, Muay Thai & Karate</p>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">VIEW FIGHT GEAR</a>
+            <a href="https://wa.me/923134111317" class="whatsapp-order">INQUIRE VIA WHATSAPP</a>
         </div>
     </div>
-
     <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1887&auto=format&fit=crop" alt="Casual Wear">
+        <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?q=80&w=1000&auto=format&fit=crop" alt="Active Wear">
         <div class="product-info">
-            <h3>Casual Apparel</h3>
-            <p style="font-size: 12px; color: #777; margin-bottom: 15px;">Premium Hoodies, Sweatshirts & Polo T-shirts</p>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">VIEW CASUAL WEAR</a>
+            <h3>Active Wear</h3>
+            <a href="https://wa.me/923134111317" class="whatsapp-order">INQUIRE VIA WHATSAPP</a>
         </div>
     </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1551028719-00167b16eac5?q=80&w=1935&auto=format&fit=crop" alt="Jackets">
-        <div class="product-info">
-            <h3>Custom Jackets</h3>
-            <p style="font-size: 12px; color: #777; margin-bottom: 15px;">Varsity, Puffer, Softshell & Windbreakers</p>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">VIEW JACKETS</a>
-        </div>
-    </div>
-
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1551841449-74127526767f?q=80&w=1935&auto=format&fit=crop" alt="Gym Bag">
-        <div class="product-info">
-            <h3>Gym Accessories</h3>
-            <p style="font-size: 12px; color: #777; margin-bottom: 15px;">Sports Bags, Belts, Caps & Face Masks</p>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">VIEW ACCESSORIES</a>
-        </div>
-    </div>
-
 </div>
+
+<footer>
+    <div class="footer-col">
+        <h3>Official Contact</h3>
+        <p><i class="fas fa-envelope"></i> 12thplanetfightwear@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +92 313 4111317</p>
+        <p><i class="fas fa-map-marker-alt"></i> Sialkot, Pakistan</p>
+    </div>
+    <div class="footer-col">
+        <h3>Social Media</h3>
+        <div class="footer-social">
+            <a href="https://www.facebook.com/12thplanetfightwear" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/12thplanetfightwear" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </div>
+    <div class="footer-col">
+        <h3>Manufacturing</h3>
+        <p>Expert manufacturers of custom fight wear and sports apparel.</p>
+        <a href="https://wa.me/923134111317" class="whatsapp-order" style="width: 100%; text-align: center;">SEND MESSAGE</a>
+    </div>
+</footer>
+
+<div class="bottom-bar">
+    <p>Copyright © 2026 12th Planet Fight Wear | Official Manufacturer</p>
+</div>
+
+</body>
+</html>
