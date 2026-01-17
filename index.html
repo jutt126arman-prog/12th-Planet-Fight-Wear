@@ -3,24 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet Fight Wear | Official</title>
+    <title>12th Planet Fight Wear | Official Store</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #000; scroll-behavior: smooth; }
-        header { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
-        .logo { font-size: 22px; font-weight: 900; text-transform: uppercase; }
-        nav a { margin-left: 20px; text-decoration: none; color: #000; font-size: 11px; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
-        .hero { height: 70vh; background: #f4f4f4; display: flex; align-items: center; justify-content: center; text-align: center; background-image: linear-gradient(rgba(255,255,255,0.5),rgba(255,255,255,0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80'); background-size: cover; background-position: center; }
-        .hero h2 { font-size: 50px; font-weight: 900; text-transform: uppercase; }
-        .container { padding: 60px 5%; }
-        .section-title { font-size: 28px; text-transform: uppercase; font-weight: 900; margin-bottom: 40px; text-align: center; border-bottom: 2px solid #000; display: table; margin-left: auto; margin-right: auto; padding-bottom: 5px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-bottom: 60px; }
+        body { font-family: 'Helvetica Neue', Arial, sans-serif; background: #fff; color: #000; line-height: 1.6; }
+        
+        /* Top Navigation */
+        header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
+        .logo { font-size: 24px; font-weight: 900; letter-spacing: -1px; }
+        nav a { margin-left: 20px; text-decoration: none; color: #000; font-size: 11px; font-weight: 700; text-transform: uppercase; }
+
+        /* Banner Style (Shils) */
+        .categories-banner { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); height: 60vh; border-bottom: 1px solid #eee; }
+        .cat-box { position: relative; overflow: hidden; display: flex; align-items: flex-end; justify-content: center; padding-bottom: 40px; text-decoration: none; color: #000; }
+        .cat-box:nth-child(1) { background: #f4f1ea; }
+        .cat-box:nth-child(2) { background: #d9ebf9; }
+        .cat-box:nth-child(3) { background: #e2e4e5; }
+        .cat-box h2 { font-size: 20px; text-transform: uppercase; font-weight: 900; z-index: 1; letter-spacing: 2px; }
+        .cat-box img { position: absolute; top: 20%; height: 60%; object-fit: contain; transition: 0.5s; }
+        .cat-box:hover img { transform: scale(1.1); }
+
+        /* Features Bar */
+        .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); background: #f9f9f9; padding: 40px 5%; text-align: center; gap: 20px; border-bottom: 1px solid #eee; }
+        .f-item h4 { font-size: 14px; text-transform: uppercase; margin-bottom: 5px; }
+        .f-item p { font-size: 12px; color: #666; }
+
+        /* Product Sections */
+        .container { padding: 80px 5%; }
+        .section-title { text-align: center; margin-bottom: 50px; text-transform: uppercase; letter-spacing: 4px; font-size: 24px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
         .card { text-decoration: none; color: #000; }
         .img-box { background: #f9f9f9; height: 400px; overflow: hidden; margin-bottom: 15px; }
-        .img-box img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
-        .card:hover img { transform: scale(1.05); }
-        .wa-btn { display: block; width: 100%; padding: 12px; border: 1px solid #000; text-align: center; text-decoration: none; color: #000; font-size: 11px; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
+        .img-box img { width: 100%; height: 100%; object-fit: cover; }
+        .wa-btn { display: block; width: 100%; padding: 12px; border: 1px solid #000; text-align: center; text-decoration: none; color: #000; font-size: 11px; font-weight: bold; margin-top: 10px; }
         .wa-btn:hover { background: #000; color: #fff; }
+
+        /* Footer Style (Shils) */
+        footer { background: #fff; padding: 80px 5% 40px; border-top: 1px solid #eee; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; }
+        footer h4 { margin-bottom: 20px; text-transform: uppercase; font-size: 14px; }
+        footer p, footer li { font-size: 13px; color: #555; list-style: none; margin-bottom: 10px; }
+        .copyright { grid-column: 1 / -1; text-align: center; padding-top: 40px; font-size: 11px; color: #999; border-top: 1px solid #eee; margin-top: 40px; }
     </style>
 </head>
 <body>
@@ -28,66 +50,69 @@
 <header>
     <div class="logo">12TH PLANET</div>
     <nav>
-        <a href="#activewear">Activewear</a>
+        <a href="#sports">Sports Apparel</a>
+        <a href="#active">Activewear</a>
         <a href="#combat">Combat Gear</a>
-        <a href="#wrestling">Wrestling</a>
     </nav>
 </header>
 
-<div class="hero">
-    <div class="hero-content">
-        <h2>PREMIUM PERFORMANCE</h2>
-        <p>Sialkot's Finest Fight Gear</p>
-    </div>
+<div class="categories-banner">
+    <a href="#sports" class="cat-box">
+        <img src="https://shilswear.com/wp-content/uploads/2021/11/sports-uniform.png" alt="">
+        <h2>Sports Uniform</h2>
+    </a>
+    <a href="#active" class="cat-box">
+        <img src="https://shilswear.com/wp-content/uploads/2021/11/active-wear.png" alt="">
+        <h2>Active Wear</h2>
+    </a>
+    <a href="#combat" class="cat-box">
+        <img src="https://shilswear.com/wp-content/uploads/2021/11/street-wear.png" alt="">
+        <h2>Combat Wear</h2>
+    </a>
 </div>
 
-<div class="container" id="activewear">
-    <h2 class="section-title">Activewear</h2>
+<div class="features">
+    <div class="f-item"><h4>Fast Shipping</h4><p>Fast & Save</p></div>
+    <div class="f-item"><h4>Quality Products</h4><p>100% Guarantee</p></div>
+    <div class="f-item"><h4>Huge Savings</h4><p>At Lowest Price</p></div>
+    <div class="f-item"><h4>Custom Made</h4><p>Cut & Sew</p></div>
+</div>
+
+<div class="container" id="active">
+    <h2 class="section-title">Latest Activewear</h2>
     <div class="grid">
         <div class="card">
             <div class="img-box"><img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80" alt=""></div>
-            <h3>Gym Stringer V1</h3>
-            <p>Rs. 2,200</p>
+            <h3>Elite Gym Stringer</h3><p>Rs. 2,200</p>
             <a href="https://wa.me/92313411317?text=Order-Stringer" class="wa-btn">Order on WhatsApp</a>
         </div>
         <div class="card">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1583454110551-21f2fa20e79c?q=80" alt=""></div>
-            <h3>Training Joggers</h3>
-            <p>Rs. 3,500</p>
+            <div class="img-box"><img src="https://images.unsplash.com/photo-1599058918267-9a4f715474f4?q=80" alt=""></div>
+            <h3>Performance Joggers</h3><p>Rs. 3,500</p>
             <a href="https://wa.me/92313411317?text=Order-Joggers" class="wa-btn">Order on WhatsApp</a>
         </div>
     </div>
 </div>
 
-<div class="container" id="combat" style="background:#fafafa;">
-    <h2 class="section-title">Combat Gear</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?q=80" alt=""></div>
-            <h3>MMA Shorts</h3>
-            <p>Rs. 3,200</p>
-            <a href="https://wa.me/92313411317?text=Order-MMA-Shorts" class="wa-btn">Order on WhatsApp</a>
-        </div>
-        <div class="card">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80" alt=""></div>
-            <h3>Boxing Gloves</h3>
-            <p>Rs. 5,500</p>
-            <a href="https://wa.me/92313411317?text=Order-Gloves" class="wa-btn">Order on WhatsApp</a>
-        </div>
+<footer>
+    <div>
+        <h4>Contact Info</h4>
+        <p>Email: info@12thplanet.com</p>
+        <p>WhatsApp: +92 313 411317</p>
+        <p>Location: Sialkot, Pakistan</p>
     </div>
-</div>
-
-<div class="container" id="wrestling">
-    <h2 class="section-title">Wrestling</h2>
-    <div class="grid">
-        <div class="card">
-            <div class="img-box"><img src="https://images.unsplash.com/photo-1599058917232-d750084c6ecd?q=80" alt=""></div>
-            <h3>Elite Singlet</h3>
-            <p>Rs. 4,800</p>
-            <a href="https://wa.me/92313411317?text=Order-Singlet" class="wa-btn">Order on WhatsApp</a>
-        </div>
+    <div>
+        <h4>What We Do</h4>
+        <p>Manufacture and export high quality sports wear especially Team wear, Gym wear and Combat wear at competitive prices.</p>
     </div>
-</div>
+    <div>
+        <h4>Quick Links</h4>
+        <li>Customized Design</li>
+        <li>Kids-Men-Women (All Sizes)</li>
+        <li>Sublimation & Embroidery</li>
+    </div>
+    <div class="copyright">Copyright © 2026 12th Planet Fight Wear</div>
+</footer>
 
 </body>
 </html>
