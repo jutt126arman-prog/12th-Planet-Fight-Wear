@@ -10,6 +10,7 @@
         
         /* Top Info Bar */
         .top-info-bar { background: #222d32; color: #fff; padding: 10px 5%; display: flex; justify-content: space-between; font-size: 13px; align-items: center; }
+        .top-info-bar .contact-info span { margin-right: 15px; }
         .top-info-bar a { color: #fff; text-decoration: none; margin-left: 15px; font-size: 18px; transition: 0.3s; }
         .top-info-bar a:hover { color: #cc0000; }
 
@@ -36,7 +37,7 @@
 
         .custom-btn { background: #bce1ff; color: #333; padding: 12px 20px; text-decoration: none; font-size: 11px; font-weight: 700; text-transform: uppercase; border-radius: 2px; }
 
-        /* Hero Banner Section */
+        /* Hero Banner */
         .main-banner { height: 75vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=2070&auto=format&fit=crop'); background-size: cover; background-position: center; display: flex; flex-direction: column; align-items: center; justify-content: center; color: #fff; text-align: center; }
         .main-banner h1 { font-size: clamp(35px, 8vw, 70px); font-weight: 900; text-transform: uppercase; margin-bottom: 20px; letter-spacing: 3px; }
         .explore-btn { background: #000; color: #fff; padding: 15px 45px; text-decoration: none; font-weight: bold; text-transform: uppercase; border: 2px solid #000; transition: 0.3s; }
@@ -51,14 +52,11 @@
         .product-info { padding: 25px; text-align: center; }
         .product-info h3 { font-size: 15px; text-transform: uppercase; margin-bottom: 8px; font-weight: 800; }
         .whatsapp-order { background: #000; color: #fff; padding: 12px 25px; text-decoration: none; font-size: 12px; font-weight: bold; display: inline-block; transition: 0.3s; }
-        .whatsapp-order:hover { background: #25d366; }
 
         /* Footer */
         footer { padding: 80px 5% 40px; background: #fcfcfc; display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; border-top: 1px solid #eee; }
         .footer-col h3 { font-size: 18px; font-weight: 900; text-transform: uppercase; margin-bottom: 25px; }
         .footer-col p { font-size: 14px; color: #666; margin-bottom: 10px; }
-        .check-list li { position: relative; padding-left: 30px; margin-bottom: 12px; list-style: none; font-weight: 600; font-size: 14px; }
-        .check-list li::before { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; left: 0; color: #000; }
 
         .bottom-bar { padding: 40px 5%; border-top: 1px solid #eee; text-align: center; }
         .partners img { height: 35px; margin: 0 20px; opacity: 0.6; filter: grayscale(100%); }
@@ -69,8 +67,11 @@
 <body>
 
 <div class="top-info-bar">
-    <span>info@12thplanetfightwear.com</span>
-    <div>
+    <div class="contact-info">
+        <span><i class="fas fa-envelope"></i> 12thplanetfightwear@gmail.com</span>
+        <span><i class="fas fa-phone"></i> +92 313 4111317</span>
+    </div>
+    <div class="social-links">
         <a href="https://www.facebook.com/12thplanetfightwear" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a href="https://www.instagram.com/12thplanetfightwear" target="_blank"><i class="fab fa-instagram"></i></a>
         <a href="https://wa.me/923134111317" target="_blank"><i class="fab fa-whatsapp"></i></a>
@@ -132,79 +133,3 @@
                         <li>Windbreaker Jackets</li><li>Fleece Jackets</li><li>Softshell Jackets</li>
                     </ul>
                 </div>
-                <div class="menu-col">
-                    <h4>Knitwear</h4>
-                    <ul>
-                        <li>Beanies</li><li>Sweaters</li><li>Ski Mask</li><li>Wool Socks</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="nav-item"><a href="#">Gym Accessories</a></div>
-        <div class="nav-item"><a href="#">Work Wear</a></div>
-        <div class="nav-item"><a href="#" style="color: #4CAF50;">Contact</a></div>
-    </nav>
-    <a href="https://wa.me/923134111317" class="custom-btn">Custom Made Wear</a>
-</header>
-
-<section class="main-banner">
-    <h1>UNLEASH THE BEAST</h1>
-    <a href="https://wa.me/923134111317" class="explore-btn">Contact Us</a>
-</section>
-
-<h2 class="section-title">Latest Arrivals</h2>
-<div class="product-grid">
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1594381898411-846e7d193883?q=80&w=1887&auto=format&fit=crop" alt="Fight Shorts">
-        <div class="product-info">
-            <h3>Performance Fight Shorts</h3>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">ORDER VIA WHATSAPP</a>
-        </div>
-    </div>
-    <div class="product-card">
-        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=2070&auto=format&fit=crop" alt="Singlet">
-        <div class="product-info">
-            <h3>Elite Wrestling Singlet</h3>
-            <a href="https://wa.me/923134111317" class="whatsapp-order">ORDER VIA WHATSAPP</a>
-        </div>
-    </div>
-</div>
-
-<footer>
-    <div class="footer-col">
-        <h3>Contact Info</h3>
-        <p><i class="fas fa-envelope"></i> info@12thplanetfightwear.com</p>
-        <p><i class="fas fa-phone"></i> +92 313 4111317</p>
-        <p><i class="fas fa-location-dot"></i> Sialkot, Punjab, Pakistan</p>
-    </div>
-    <div class="footer-col">
-        <h3>Social Connect</h3>
-        <div style="font-size: 28px; margin-bottom: 15px;">
-            <a href="https://www.facebook.com/12thplanetfightwear" target="_blank" style="color:#3b5998; margin-right:20px;"><i class="fab fa-facebook-square"></i></a>
-            <a href="https://www.instagram.com/12thplanetfightwear" target="_blank" style="color:#e4405f;"><i class="fab fa-instagram"></i></a>
-        </div>
-        <p>Follow us for latest updates.</p>
-    </div>
-    <div class="footer-col">
-        <h3>Manufacturing</h3>
-        <ul class="check-list">
-            <li>Customized Design</li>
-            <li>All Sizes Available</li>
-            <li>High Quality Fabric</li>
-        </ul>
-        <a href="https://wa.me/923134111317" class="whatsapp-order" style="background:#25d366; border:none; margin-top:10px;">WHATSAPP US</a>
-    </div>
-</footer>
-
-<div class="bottom-bar">
-    <div class="partners">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/DHL_Logo.svg/1200px-DHL_Logo.svg.png" alt="DHL">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/FedEx_Express_logo.svg/1200px-FedEx_Express_logo.svg.png" alt="FedEx">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/PayPal.svg/1200px-PayPal.svg.png" alt="PayPal">
-    </div>
-    <p style="font-size: 11px; color: #999; margin-top: 20px;">Copyright © 2026 12th Planet Fight Wear</p>
-</div>
-
-</body>
-</html>
