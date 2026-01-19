@@ -7,103 +7,106 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background: #f4f4f4; color: #111; }
-        header { background: #fff; padding: 15px; text-align: center; border-bottom: 3px solid #cc0000; }
-        .logo-text { font-size: 24px; font-weight: 900; color: #cc0000; text-transform: uppercase; }
-        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: #fff; border: 1px solid #ddd; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; transition: 0.3s; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+        body { background: #f0f0f0; color: #111; }
+        header { background: #fff; padding: 15px; text-align: center; border-bottom: 3px solid #cc0000; position: sticky; top: 0; z-index: 1000; }
+        .logo-text { font-size: 22px; font-weight: 900; color: #cc0000; text-transform: uppercase; }
         
-        /* Image Area */
-        .img-box { width: 100%; height: 380px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 15px; }
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 15px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        
+        .card { background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #ddd; display: flex; flex-direction: column; transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+        
+        /* Image Section */
+        .img-box { width: 100%; height: 350px; background: #fff; display: flex; align-items: center; justify-content: center; padding: 10px; }
         .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        .info { padding: 20px; text-align: center; flex-grow: 1; }
+        .info { padding: 15px; text-align: center; flex-grow: 1; border-top: 1px solid #eee; }
         .title { font-size: 16px; font-weight: 800; color: #cc0000; margin-bottom: 10px; text-transform: uppercase; }
-        .bio { font-size: 13px; color: #555; margin-bottom: 20px; line-height: 1.5; height: 40px; }
+        .bio { font-size: 13px; color: #555; margin-bottom: 15px; line-height: 1.4; height: 40px; }
 
-        .wa-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: #25D366; color: #fff; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 13px; }
+        .wa-btn { display: flex; align-items: center; justify-content: center; gap: 8px; background: #25D366; color: #fff; padding: 12px; text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 14px; }
+        .wa-btn:hover { background: #128C7E; }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo-text">12th Planet Fight Wear</div>
+    <div class="logo-text">12TH PLANET FIGHT WEAR</div>
 </header>
 
 <div class="container">
     <div class="grid">
         
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/American_football_jersey_red.svg/500px-American_football_jersey_red.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-red.png" onerror="this.src='https://dummyimage.com/400x500/cc0000/ffffff&text=Red+Elite+Uniform'"></div>
             <div class="info">
-                <div class="title">Crimson Red Pro Set</div>
-                <p class="bio">High-quality mesh jersey with reinforced shoulders and side-panels.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Red Pro Set" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <div class="title">Crimson Red Pro</div>
+                <p class="bio">Heavy-duty mesh jersey with reinforced shoulders and side-panels.</p>
+                <a href="https://wa.me/923134111317?text=I want to order Red Pro Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/American_football_jersey_blue.svg/500px-American_football_jersey_blue.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-blue.png" onerror="this.src='https://dummyimage.com/400x500/003366/ffffff&text=Navy+Blue+Elite'"></div>
             <div class="info">
-                <div class="title">Royal Blue Elite</div>
+                <div class="title">Navy Blue Series</div>
                 <p class="bio">4-way stretch fabric for mobility and breathable mesh for comfort.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Blue Elite" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <a href="https://wa.me/923134111317?text=I want to order Navy Blue Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/American_football_jersey_black.svg/500px-American_football_jersey_black.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-black.png" onerror="this.src='https://dummyimage.com/400x500/000000/ffffff&text=Stealth+Black+Set'"></div>
             <div class="info">
-                <div class="title">Stealth Black Edition</div>
+                <div class="title">Stealth Black Kit</div>
                 <p class="bio">Professional grade durable polyester with moisture-wicking technology.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Black Edition" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <a href="https://wa.me/923134111317?text=I want to order Black Kit Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/American_football_jersey_white.svg/500px-American_football_jersey_white.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-white.png" onerror="this.src='https://dummyimage.com/400x500/eeeeee/333333&text=White+Away+Kit'"></div>
             <div class="info">
                 <div class="title">Arctic White Away</div>
                 <p class="bio">Clean away kit with double-stitched seams and athletic fit.</p>
-                <a href="https://wa.me/923134111317?text=Interested in White Away" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <a href="https://wa.me/923134111317?text=I want to order White Away Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/American_football_jersey_green.svg/500px-American_football_jersey_green.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-green.png" onerror="this.src='https://dummyimage.com/400x500/006600/ffffff&text=Forest+Green+Set'"></div>
             <div class="info">
-                <div class="title">Forest Green Warrior</div>
+                <div class="title">Forest Warrior</div>
                 <p class="bio">Impact-resistant uniform designed for intense professional leagues.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Green Warrior" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <a href="https://wa.me/923134111317?text=I want to order Forest Green Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/American_football_jersey_yellow.svg/500px-American_football_jersey_yellow.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-yellow.png" onerror="this.src='https://dummyimage.com/400x500/ffcc00/000000&text=Gold+Championship'"></div>
             <div class="info">
-                <div class="title">Vibrant Gold Series</div>
+                <div class="title">Gold Championship</div>
                 <p class="bio">Fully sublimated non-fade vibrant colors with custom team logos.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Gold Series" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <a href="https://wa.me/923134111317?text=I want to order Gold Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c5/American_football_jersey_orange.svg/500px-American_football_jersey_orange.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-orange.png" onerror="this.src='https://dummyimage.com/400x500/ff6600/ffffff&text=Orange+Impact+Set'"></div>
             <div class="info">
-                <div class="title">Solar Orange Impact</div>
+                <div class="title">Solar Orange</div>
                 <p class="bio">Heavy-duty gridiron jersey with reinforced tackle-twill numbering.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Orange Impact" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <a href="https://wa.me/923134111317?text=I want to order Orange Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
         <div class="card">
-            <div class="img-box"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/American_football_jersey_purple.svg/500px-American_football_jersey_purple.svg.png"></div>
+            <div class="img-box"><img src="https://images.clothes.com/b0/12345/jersey-purple.png" onerror="this.src='https://dummyimage.com/400x500/660099/ffffff&text=Imperial+Purple+Set'"></div>
             <div class="info">
-                <div class="title">Imperial Purple Elite</div>
+                <div class="title">Imperial Purple</div>
                 <p class="bio">Premium championship set including pro-style lace-up game pants.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Purple Elite" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+                <a href="https://wa.me/923134111317?text=I want to order Purple Uniform" class="wa-btn"><i class="fab fa-whatsapp"></i> ORDER NOW</a>
             </div>
         </div>
 
