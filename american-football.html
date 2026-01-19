@@ -6,132 +6,121 @@
     <title>American Football Collection | 12th Planet Fight Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', Gadget, sans-serif; }
-        body { background: #ffffff; color: #333; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica', Arial, sans-serif; }
+        body { background: #fdfdfd; color: #111; }
 
-        /* Path Navigation */
-        .breadcrumb { padding: 20px 5%; font-size: 12px; color: #888; text-transform: uppercase; border-bottom: 1px solid #eee; }
-        .breadcrumb a { text-decoration: none; color: #cc0000; }
+        /* Navigation Header */
+        header { background: #fff; padding: 20px 5%; border-bottom: 1px solid #eee; text-align: center; }
+        .logo img { height: 55px; }
+        .breadcrumb { font-size: 11px; color: #999; text-transform: uppercase; margin-top: 10px; letter-spacing: 1px; }
 
-        /* MAIN GRID SHOWCASE */
-        .gallery-wrapper { max-width: 1400px; margin: 30px auto; padding: 0 20px; }
-        
-        .product-grid { 
+        .container { max-width: 1400px; margin: 40px auto; padding: 0 20px; }
+        .page-title { text-align: center; font-size: 28px; font-weight: 900; text-transform: uppercase; margin-bottom: 50px; color: #000; }
+
+        /* GRID SYSTEM (12 Designs) */
+        .design-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 15px; 
+            gap: 30px; 
         }
 
-        .product-item { 
-            position: relative; 
+        .design-card { 
             background: #fff; 
-            overflow: hidden; 
-            border: 1px solid #f0f0f0;
-            height: 450px;
-        }
-
-        /* Image Area */
-        .product-img { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; padding: 20px; }
-        .product-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
-
-        /* Overlay Text Style (Dark shade on hover) */
-        .product-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(0, 0, 0, 0.6); 
-            display: flex;
+            border: 1px solid #f0f0f0; 
+            transition: 0.3s; 
+            display: flex; 
             flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            opacity: 0; 
-            transition: 0.4s;
-            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
         }
+        .design-card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.08); border-color: #cc0000; }
 
-        .product-item:hover .product-overlay { opacity: 1; }
-
-        .design-title { 
-            color: #fff; font-size: 16px; font-weight: bold; 
-            text-transform: uppercase; margin-bottom: 10px;
-            letter-spacing: 1px;
+        /* Full View Image Box */
+        .image-box { 
+            width: 100%; 
+            height: 420px; 
+            background: #fff; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            padding: 15px;
+            overflow: hidden;
         }
+        .image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        .design-bio { color: #ccc; font-size: 13px; font-family: Arial, sans-serif; margin-bottom: 20px; line-height: 1.4; }
+        /* Detail Area Below Each Pic */
+        .detail-area { padding: 20px; text-align: center; background: #fff; border-top: 1px solid #f9f9f9; }
+        .design-name { font-size: 15px; font-weight: 800; text-transform: uppercase; color: #000; margin-bottom: 10px; min-height: 40px; }
+        .short-bio { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 20px; min-height: 60px; font-style: italic; }
 
-        /* Button to go to Detail Page */
-        .view-btn { 
-            background: #cc0000; color: #fff; padding: 12px 25px; 
-            text-decoration: none; border-radius: 3px; font-size: 12px; font-weight: bold;
+        /* Direct WhatsApp Button */
+        .wa-btn { 
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: #25D366; color: #fff; padding: 12px; 
+            text-decoration: none; font-weight: bold; font-size: 12px; 
+            text-transform: uppercase; border-radius: 2px; transition: 0.3s;
         }
+        .wa-btn:hover { background: #1eb954; }
 
-        @media (max-width: 768px) { .product-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .design-grid { grid-template-columns: 1fr; } .image-box { height: 350px; } }
     </style>
 </head>
 <body>
 
-<div class="breadcrumb">
-    <a href="index.html">Home</a> / <a href="sports-uniform-category.html">Sports Uniform</a> / American Football
-</div>
+<header>
+    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet"></div>
+    <div class="breadcrumb">Home / Sports Uniform / American Football</div>
+</header>
 
-<div class="gallery-wrapper">
-    <div class="product-grid">
+<div class="container">
+    <h1 class="page-title">American Football Designs</h1>
+    
+    <div class="design-grid">
 
-        <div class="product-item">
-            <div class="product-img"><img src="https://i.ibb.co/9H0pL7R/football-1.png"></div>
-            <div class="product-overlay">
-                <div class="design-title">Custom Orange Mesh Jersey</div>
-                <p class="design-bio">Professional heavy-duty mesh with reinforced stitching for high performance.</p>
-                <a href="product-detail.html?img=https://i.ibb.co/9H0pL7R/football-1.png&title=Custom Orange Mesh Jersey" class="view-btn">VIEW FULL DESIGN</a>
+        <div class="design-card">
+            <div class="image-box"><img src="https://i.ibb.co/9H0pL7R/football-1.png"></div>
+            <div class="detail-area">
+                <div class="design-name">V-Neck Performance Mesh Jersey</div>
+                <p class="short-bio">Engineered with breathable moisture-wicking fabric and double-stitched seams for maximum durability on the field.</p>
+                <a href="https://wa.me/923134111317?text=Hi, I want to order V-Neck Performance Mesh Jersey (AF-01)" class="wa-btn">
+                    <i class="fab fa-whatsapp"></i> Order This Design
+                </a>
             </div>
         </div>
 
-        <div class="product-item">
-            <div class="product-img"><img src="https://i.ibb.co/6vGZ7D5/football-2.png"></div>
-            <div class="product-overlay">
-                <div class="design-title">Elite Red-Black Edition</div>
-                <p class="design-bio">4-way stretch side panels designed for maximum agility and comfort.</p>
-                <a href="product-detail.html?img=https://i.ibb.co/6vGZ7D5/football-2.png&title=Elite Red-Black Edition" class="view-btn">VIEW FULL DESIGN</a>
+        <div class="design-card">
+            <div class="image-box"><img src="https://i.ibb.co/6vGZ7D5/football-2.png"></div>
+            <div class="detail-area">
+                <div class="design-name">Elite Series Spandex Uniform</div>
+                <p class="short-bio">Features 4-way stretch side panels for superior mobility and a tight athletic fit that prevents jersey pulling.</p>
+                <a href="https://wa.me/923134111317?text=Hi, I want to order Elite Series Spandex Uniform (AF-02)" class="wa-btn">
+                    <i class="fab fa-whatsapp"></i> Order This Design
+                </a>
             </div>
         </div>
 
-        <div class="product-item">
-            <div class="product-img"><img src="https://i.ibb.co/YyYxS5P/football-3.png"></div>
-            <div class="product-overlay">
-                <div class="design-title">Sublimated White-Blue Series</div>
-                <p class="design-bio">Breathable airflow fabric with non-fade digital sublimation printing.</p>
-                <a href="product-detail.html?img=https://i.ibb.co/YyYxS5P/football-3.png&title=Sublimated White-Blue Series" class="view-btn">VIEW FULL DESIGN</a>
+        <div class="design-card">
+            <div class="image-box"><img src="https://i.ibb.co/YyYxS5P/football-3.png"></div>
+            <div class="detail-area">
+                <div class="design-name">Full Sublimation Club Jersey</div>
+                <p class="short-bio">High-definition digital printing that never fades. Perfect for custom team logos, names, and vibrant numbers.</p>
+                <a href="https://wa.me/923134111317?text=Hi, I want to order Full Sublimation Club Jersey (AF-03)" class="wa-btn">
+                    <i class="fab fa-whatsapp"></i> Order This Design
+                </a>
             </div>
         </div>
 
-        <div class="product-item">
-            <div class="product-img"><img src="https://i.ibb.co/L5hY6N8/football-4.png"></div>
-            <div class="product-overlay">
-                <div class="design-title">Titanium Gold-White Mesh</div>
-                <p class="design-bio">Durable double-layered shoulders for extra impact protection.</p>
-                <a href="product-detail.html?img=https://i.ibb.co/L5hY6N8/football-4.png&title=Titanium Gold-White Mesh" class="view-btn">VIEW FULL DESIGN</a>
+        <div class="design-card">
+            <div class="image-box"><img src="https://i.ibb.co/L5hY6N8/football-4.png"></div>
+            <div class="detail-area">
+                <div class="design-name">Titanium Impact Pro Edition</div>
+                <p class="short-bio">Heavyweight mesh shoulders and reinforced yoke for extra protection during high-impact gameplay.</p>
+                <a href="https://wa.me/923134111317?text=Hi, I want to order Titanium Impact Pro Edition (AF-04)" class="wa-btn">
+                    <i class="fab fa-whatsapp"></i> Order This Design
+                </a>
             </div>
         </div>
 
-        <div class="product-item">
-            <div class="product-img"><img src="https://i.ibb.co/9H0pL7R/football-1.png"></div>
-            <div class="product-overlay">
-                <div class="design-title">Pro Game Day Uniform</div>
-                <p class="design-bio">High-end moisture-wicking technology for elite athletes.</p>
-                <a href="product-detail.html?img=https://i.ibb.co/9H0pL7R/football-1.png&title=Pro Game Day Uniform" class="view-btn">VIEW FULL DESIGN</a>
-            </div>
         </div>
-
-        <div class="product-item">
-            <div class="product-img"><img src="https://i.ibb.co/6vGZ7D5/football-2.png"></div>
-            <div class="product-overlay">
-                <div class="design-title">Shadow Stealth Edition</div>
-                <p class="design-bio">Lightweight performance fabric with a sleek professional fit.</p>
-                <a href="product-detail.html?img=https://i.ibb.co/6vGZ7D5/football-2.png&title=Shadow Stealth Edition" class="view-btn">VIEW FULL DESIGN</a>
-            </div>
-        </div>
-
-    </div>
 </div>
 
 </body>
