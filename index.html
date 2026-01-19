@@ -5,86 +5,218 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>12th Planet Fight Wear | Official Manufacturer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background: #fff; overflow-x: hidden; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background: #fff; overflow-x: hidden; color: #333; }
+
+        /* TOP BAR */
+        .top-bar {
+            background: #2c3136;
+            color: #fff;
+            padding: 8px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 11px;
+        }
+        .top-bar .social-links a {
+            color: #fff;
+            margin-left: 15px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+        .top-bar .social-links a:hover {
+            color: #cc0000;
+        }
 
         /* HEADER */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
             padding: 12px 5%; background: #fff; border-bottom: 1px solid #eee;
             position: sticky; top: 0; z-index: 9999; 
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
         .logo img { height: 60px; display: block; }
-        nav { display: flex; gap: 15px; align-items: center; }
+        nav { display: flex; gap: 20px; align-items: center; }
         .nav-item { position: relative; padding: 10px 0; cursor: pointer; }
-        .nav-item > a { text-decoration: none; color: #111; font-weight: 700; font-size: 11px; text-transform: uppercase; }
+        .nav-item > a { 
+            text-decoration: none; color: #111; font-weight: 700; 
+            font-size: 11px; text-transform: uppercase;
+            transition: color 0.3s;
+        }
+        .nav-item > a:hover {
+            color: #cc0000;
+        }
 
         /* MEGA MENU */
         .mega-menu { 
             position: absolute; top: 100%; left: 50%; transform: translateX(-50%); 
             width: 90vw; max-width: 1100px; background: #fff; border-top: 3px solid #cc0000; 
             display: none; grid-template-columns: repeat(4, 1fr); padding: 30px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 10000; 
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); z-index: 10000; 
+            border-bottom-left-radius: 8px; border-bottom-right-radius: 8px;
+            animation: fadeIn 0.3s ease-out;
         }
         .nav-item:hover .mega-menu { display: grid; }
-        .menu-col h4 { font-size: 12px; text-transform: uppercase; margin-bottom: 12px; border-bottom: 2px solid #f5f5f5; padding-bottom: 5px; font-weight: 800; color: #000; }
-        .menu-col ul { list-style: none; }
-        .menu-col li { font-size: 11px; color: #555; margin-bottom: 7px; cursor: pointer; }
-        /* Anchor tag styling inside list to maintain your original look */
-        .menu-col li a { text-decoration: none; color: inherit; display: block; }
-        .menu-col li:hover { color: #cc0000; }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px) translateX(-50%); }
+            to { opacity: 1; transform: translateY(0) translateX(-50%); }
+        }
 
-        .custom-order-btn { background: #000; color: #fff; padding: 10px 15px; text-decoration: none; font-weight: bold; font-size: 10px; border-radius: 4px; text-transform: uppercase; }
+        .menu-col h4 { 
+            font-size: 12px; text-transform: uppercase; margin-bottom: 12px; 
+            border-bottom: 2px solid #f5f5f5; padding-bottom: 5px; 
+            font-weight: 800; color: #cc0000;
+        }
+        .menu-col ul { list-style: none; }
+        .menu-col li { font-size: 11px; color: #555; margin-bottom: 7px; transition: color 0.3s; }
+        .menu-col li a { text-decoration: none; color: inherit; display: block; }
+        .menu-col li:hover { color: #cc0000; padding-left: 5px; } /* Slight hover effect */
+
+        .custom-order-btn { 
+            background: #cc0000; color: #fff; padding: 10px 18px; text-decoration: none; 
+            font-weight: bold; font-size: 10px; border-radius: 4px; text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .custom-order-btn:hover {
+            background: #a30000;
+            transform: translateY(-2px);
+        }
 
         /* HERO GRID */
-        .hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; height: 500px; background: #fff; }
-        .grid-box { position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 30px; border-right: 1px solid #fff; }
-        .grid-box h2 { position: relative; z-index: 10; font-size: 22px; font-weight: 900; text-transform: uppercase; color: #111; text-align: center; }
-        .grid-box img { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
-        .street-wear h2 { color: #fff; }
+        .hero-grid { 
+            display: grid; grid-template-columns: repeat(4, 1fr); width: 100%; 
+            min-height: 500px; background: #fff; 
+        }
+        .grid-box { 
+            position: relative; overflow: hidden; display: flex; flex-direction: column; 
+            align-items: center; justify-content: flex-end; padding-bottom: 40px; 
+            border-right: 1px solid #fff; min-height: 500px;
+            cursor: pointer;
+        }
+        .grid-box:last-child { border-right: none; }
+        .grid-box h2 { 
+            position: relative; z-index: 10; font-size: 24px; font-weight: 900; 
+            text-transform: uppercase; color: #fff; text-align: center; 
+            background: rgba(0,0,0,0.6); padding: 10px 20px; border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .grid-box:hover h2 {
+            background: rgba(0,0,0,0.8);
+        }
+        .grid-box img { 
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%; 
+            object-fit: cover; z-index: 1; display: block;
+            transition: transform 0.6s ease-out;
+        }
+        .grid-box:hover img {
+            transform: scale(1.05);
+        }
+        /* Specific text color for street wear if image is light */
+        .street-wear h2 { color: #fff; } 
+        .tactical-wear h2 { color: #fff; }
+
 
         /* SERVICE BAR */
-        .service-bar { display: grid; grid-template-columns: repeat(4, 1fr); background: #f8f6f4; padding: 35px 5%; border-top: 1px solid #eee; }
-        .service-item { display: flex; flex-direction: column; align-items: center; text-align: center; border-right: 1px solid #ddd; }
-        .service-item:last-child { border-right: none; }
-        .service-item i { font-size: 22px; color: #333; margin-bottom: 10px; }
-        .service-item h4 { font-size: 12px; text-transform: uppercase; font-weight: 800; }
+        .service-bar { 
+            display: grid; grid-template-columns: repeat(4, 1fr); background: #fdfcfb; 
+            padding: 40px 5%; border-top: 1px solid #eee; border-bottom: 1px solid #eee;
+            gap: 20px;
+        }
+        .service-item { 
+            display: flex; flex-direction: column; align-items: center; text-align: center; 
+            padding: 15px; 
+        }
+        .service-item i { font-size: 28px; color: #cc0000; margin-bottom: 15px; }
+        .service-item h4 { font-size: 13px; text-transform: uppercase; font-weight: 800; color: #111; margin-bottom: 5px; }
+        .service-item p { font-size: 11px; color: #666; }
 
         /* FOOTER */
         footer { 
-            display: grid; grid-template-columns: 1fr 1fr 1fr; 
-            padding: 60px 8%; background: #fff; gap: 50px; 
-            border-top: 1px solid #eee; align-items: start;
+            display: grid; grid-template-columns: 1.2fr 1fr 1fr; 
+            padding: 60px 8%; background: #2c3136; gap: 50px; 
+            color: #f0f0f0; 
         }
-        .footer-col h3 { font-size: 16px; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; }
-        .footer-col p { font-size: 13px; color: #444; margin-bottom: 15px; display: flex; align-items: center; gap: 12px; }
-        .footer-col i { color: #cc0000; width: 15px; text-align: center; }
+        .footer-col h3 { font-size: 16px; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; color: #cc0000; }
+        .footer-col p { font-size: 13px; color: #ccc; margin-bottom: 12px; display: flex; align-items: center; gap: 12px; }
+        .footer-col i { color: #f0f0f0; width: 15px; text-align: center; }
 
-        .footer-col input, .footer-col textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; font-size: 12px; outline: none; background: #fafafa; }
-        .footer-col button { width: 100%; padding: 12px; background: #000; color: #fff; border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+        .footer-col input, .footer-col textarea { 
+            width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #555; 
+            font-size: 12px; outline: none; background: #3a4046; color: #eee;
+            border-radius: 4px;
+        }
+        .footer-col input::placeholder, .footer-col textarea::placeholder {
+            color: #bbb;
+        }
+        .footer-col button { 
+            width: 100%; padding: 12px; background: #cc0000; color: #fff; border: none; 
+            font-weight: bold; cursor: pointer; text-transform: uppercase; border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+        .footer-col button:hover {
+            background: #a30000;
+        }
 
         .social-icons { display: flex; gap: 12px; margin-top: 20px; }
-        .social-icons a { width: 38px; height: 38px; background: #f4f4f4; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #333; text-decoration: none; font-size: 18px; transition: 0.3s; }
-        .social-icons a:hover { background: #cc0000; color: #fff; }
+        .social-icons a { 
+            width: 38px; height: 38px; background: #4a5158; border-radius: 50%; 
+            display: flex; align-items: center; justify-content: center; 
+            color: #fff; text-decoration: none; font-size: 18px; 
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .social-icons a:hover { background: #cc0000; transform: translateY(-3px); }
 
         /* BOTTOM BAR */
-        .bottom-bar { padding: 25px 8%; background: #fff; border-top: 1px solid #eee; display: flex; justify-content: space-between; align-items: center; }
-        .bottom-bar .copy { font-size: 11px; color: #888; }
-        .bottom-bar img { height: 14px; margin-right: 15px; opacity: 0.6; }
+        .bottom-bar { 
+            padding: 20px 8%; background: #1a1d20; border-top: 1px solid #4a5158; 
+            display: flex; justify-content: space-between; align-items: center; 
+            color: #aaa; font-size: 11px;
+        }
+        .bottom-bar .copy { color: #888; }
+        .bottom-bar img { height: 18px; margin-right: 15px; opacity: 0.7; filter: grayscale(100%) brightness(1.8); }
+        .payment-icons i { font-size: 20px; color: #666; margin-left: 10px; opacity: 0.8; }
+
 
         @media (max-width: 992px) { 
             .hero-grid { grid-template-columns: 1fr 1fr; height: auto; }
-            .grid-box { height: 350px; }
-            footer { grid-template-columns: 1fr; }
-            .service-bar { grid-template-columns: 1fr 1fr; gap: 20px; }
+            .grid-box { min-height: 350px; }
+            footer { grid-template-columns: 1fr; padding: 40px 5%; }
+            .service-bar { grid-template-columns: 1fr 1fr; gap: 20px; padding: 30px 5%; }
+            .bottom-bar { flex-direction: column; text-align: center; gap: 15px; padding: 20px 5%; }
+            .bottom-bar .shipping-logos { order: 2; }
+            .bottom-bar .copy { order: 1; }
+            .bottom-bar .payment-icons { order: 3; }
+        }
+        @media (max-width: 576px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .grid-box { min-height: 300px; border-right: none; border-bottom: 1px solid #fff; }
+            .service-bar { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 15px; padding: 15px 5%; }
+            nav { width: 100%; justify-content: center; flex-wrap: wrap; gap: 10px; }
+            .nav-item > a { font-size: 10px; }
+            .custom-order-btn { margin-top: 10px; }
+            .mega-menu { width: 100%; left: 0; transform: translateX(0); grid-template-columns: 1fr; }
+            .menu-col { text-align: center; }
+            .menu-col h4 { border-bottom: none; }
         }
     </style>
 </head>
 <body>
 
+<div class="top-bar">
+    <div><i class="fas fa-envelope"></i> info@12thplanetfightwear.com</div>
+    <div class="social-links">
+        <a href="https://facebook.com/12thplanetfightwear" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://instagram.com/12thplanetfightwear" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://wa.me/923134111317" target="_blank"><i class="fab fa-whatsapp"></i></a>
+    </div>
+</div>
+
 <header>
-    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet"></div>
+    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet Fight Wear Logo"></div>
     <nav>
         <div class="nav-item">
             <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
@@ -193,4 +325,88 @@
 </header>
 
 <section class="hero-grid">
-    <div class="grid-box"><img src="
+    <div class="grid-box">
+        <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=800&q=80" alt="Sports Uniforms">
+        <h2>Sports Uniform</h2>
+    </div>
+    <div class="grid-box">
+        <img src="https://images.unsplash.com/photo-1550995646-324e030a08e1?auto=format&fit=crop&w=800&q=80" alt="Active Wear">
+        <h2>Active Wear</h2>
+    </div>
+    <div class="grid-box">
+        <img src="https://images.unsplash.com/photo-1620603770335-b286121430f8?auto=format&fit=crop&w=800&q=80" alt="Street Wear">
+        <h2>Street Wear</h2>
+    </div>
+    <div class="grid-box">
+        <img src="https://images.unsplash.com/photo-1621905252507-b35392cc77b4?auto=format&fit=crop&w=800&q=80" alt="Tactical & Work Wear">
+        <h2>Tactical & Work Wear</h2>
+    </div>
+</section>
+
+<section class="service-bar">
+    <div class="service-item">
+        <i class="fas fa-shipping-fast"></i>
+        <h4>Fast Shipping</h4>
+        <p>Reliable and quick global delivery.</p>
+    </div>
+    <div class="service-item">
+        <i class="fas fa-award"></i>
+        <h4>Top Quality</h4>
+        <p>Premium materials and craftsmanship.</p>
+    </div>
+    <div class="service-item">
+        <i class="fas fa-hand-holding-usd"></i>
+        <h4>Factory Prices</h4>
+        <p>Direct from manufacturer savings.</p>
+    </div>
+    <div class="service-item" style="border:none;">
+        <i class="fas fa-sync-alt"></i>
+        <h4>Customization</h4>
+        <p>Your design, our expertise.</p>
+    </div>
+</section>
+
+<footer>
+    <div class="footer-col">
+        <h3>CONTACT INFO</h3>
+        <p><i class="fas fa-envelope"></i> 12thplanetfightwear@gmail.com</p>
+        <p><i class="fas fa-phone-alt"></i> +92 313 4111317</p>
+        <p><i class="fab fa-whatsapp"></i> +92 313 4111317</p>
+        <p><i class="fas fa-map-marker-alt"></i> Jodhay Wali Kalan, Sialkot 51310, Punjab, Pakistan</p>
+        <div class="social-icons">
+            <a href="https://facebook.com/12thplanetfightwear" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://instagram.com/12thplanetfightwear" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://wa.me/923134111317" target="_blank"><i class="fab fa-whatsapp"></i></a>
+        </div>
+    </div>
+    <div class="footer-col">
+        <h3>LET'S TALK</h3>
+        <input type="email" placeholder="Email Address">
+        <textarea placeholder="Your Message" rows="4"></textarea>
+        <button type="submit">SUBMIT</button>
+    </div>
+    <div class="footer-col">
+        <h3>WHAT WE DO</h3>
+        <p style="color: #ccc; margin-bottom: 15px;">Expert manufacturing and export of customized sports apparel with global shipping. We ensure high-quality products tailored to your needs.</p>
+        <p><strong style="color: #fff;">• Customized Design</strong></p>
+        <p><strong style="color: #fff;">• Kids-Men-Women (All Sizes)</strong></p>
+        <p><strong style="color: #fff;">• Sublimation, Cut & Sew</strong></p>
+    </div>
+</footer>
+
+<div class="bottom-bar">
+    <div class="shipping-logos">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Logo.svg" alt="DHL Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/FedEx_Express_logo.svg" alt="FedEx Logo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/UPS_logo.svg" alt="UPS Logo">
+    </div>
+    <div class="copy">Copyright © 2026 12th Planet Fight Wear. All Rights Reserved.</div>
+    <div class="payment-icons">
+        <i class="fab fa-cc-visa"></i> 
+        <i class="fab fa-cc-mastercard"></i>
+        <i class="fab fa-cc-paypal"></i>
+    </div>
+</div>
+
+</body>
+</html>
