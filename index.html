@@ -8,92 +8,242 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-        body { background-color: #ffffff; color: #333; overflow-x: hidden; }
+        body { background-color: #ffffff; color: #333; overflow-x: hidden; width: 100%; }
 
         /* Top Bar */
-        .top-bar { background: #2c3136; color: #fff; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 600; }
-        .top-bar .social-top a { color: #fff; margin-left: 15px; text-decoration: none; font-size: 14px; transition: 0.3s; }
-        .top-bar .social-top a:hover { color: #cc0000; }
+        .top-bar { background: #2c3136; color: #fff; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
+        .top-bar .social-links a { color: #fff; margin-left: 15px; text-decoration: none; font-size: 14px; }
 
         /* Header */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
-            padding: 15px 5%; background: #fff; border-bottom: 1px solid #f1f1f1;
+            padding: 15px 5%; background: #fff; border-bottom: 1px solid #eee;
             position: sticky; top: 0; z-index: 1000;
         }
-        .logo img { height: 60px; }
+        .logo img { height: 50px; }
 
-        /* Navigation & Mega Menu (Clean Text, No Icons) */
-        nav ul { display: flex; list-style: none; gap: 20px; }
+        /* Nav & Mega Menu */
+        nav ul { display: flex; list-style: none; gap: 25px; }
         nav ul li { position: relative; padding: 10px 0; }
-        nav ul li a { text-decoration: none; color: #111; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; }
+        nav ul li a { text-decoration: none; color: #111; font-weight: 700; font-size: 12px; text-transform: uppercase; }
         
         .mega-menu {
             position: absolute; top: 45px; left: -400px; 
             background: #fff; width: 1100px; display: none; 
             grid-template-columns: 280px repeat(4, 1fr); padding: 40px; 
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 3px solid #cc0000;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-top: 3px solid #cc0000;
         }
         nav ul li:hover .mega-menu { display: grid; }
-        .menu-img-box img { width: 100%; border-radius: 4px; object-fit: cover; height: 380px; }
-        
+        .menu-img-box img { width: 100%; height: 380px; object-fit: cover; border-radius: 4px; }
         .menu-col h4 { font-size: 13px; color: #cc0000; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; border-bottom: 1px solid #eee; padding-bottom: 8px; }
         .menu-col ul { list-style: none; }
         .menu-col li { padding: 5px 0; }
-        .menu-col li a { font-weight: 500; color: #555; font-size: 12px; text-transform: capitalize; text-decoration: none; transition: 0.3s; }
+        .menu-col li a { color: #555; font-size: 12px; text-decoration: none; font-weight: 500; transition: 0.3s; }
         .menu-col li a:hover { color: #cc0000; padding-left: 5px; }
 
-        .custom-btn { background: #000; color: #fff; border: none; padding: 10px 22px; font-weight: 800; font-size: 11px; cursor: pointer; text-transform: uppercase; border-radius: 2px; }
+        .custom-btn { background: #bde1f9; color: #333; border: none; padding: 10px 20px; font-weight: 700; font-size: 11px; cursor: pointer; text-transform: uppercase; }
 
-        /* Hero Banner Grid */
-        .hero-section { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
-        .hero-box { position: relative; height: 580px; overflow: hidden; cursor: pointer; }
-        .hero-box img { width: 100%; height: 100%; object-fit: cover; transition: 1.2s; }
+        /* Hero Section (Image Match) */
+        .hero-section { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; width: 100%; }
+        .hero-box { position: relative; height: 550px; overflow: hidden; }
+        .hero-box img { width: 100%; height: 100%; object-fit: cover; transition: 1s; }
         .hero-box:hover img { transform: scale(1.1); }
-        .hero-box .overlay { position: absolute; bottom: 80px; left: 0; width: 100%; text-align: center; }
-        .hero-box .overlay span { background: #fff; padding: 14px 35px; font-weight: 800; font-size: 13px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(0,0,0,0.1); letter-spacing: 1px; }
+        .hero-box .overlay { position: absolute; bottom: 60px; width: 100%; text-align: center; }
+        .hero-box .overlay span { background: #fff; padding: 12px 30px; font-weight: 800; text-transform: uppercase; font-size: 14px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
 
-        /* Footer (Exact Layout from Image) */
-        footer { background: #fdfcfb; padding: 75px 5% 30px; border-top: 1px solid #eee; margin-top: 50px; }
-        .footer-grid { display: grid; grid-template-columns: 1.3fr 0.8fr 1.3fr; gap: 50px; }
-        .footer-col h4 { font-size: 16px; margin-bottom: 25px; text-transform: uppercase; font-weight: 800; color: #222; }
-        
+        /* Footer (Image 24d978 Exact Match) */
+        footer { background: #fdfcfb; padding: 70px 5% 30px; border-top: 1px solid #eee; margin-top: 50px; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1.2fr; gap: 50px; }
+        .footer-col h4 { font-size: 18px; font-weight: 800; margin-bottom: 25px; }
         .contact-list { list-style: none; }
-        .contact-list li { font-size: 13px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; color: #444; }
-        .contact-list i { color: #111; font-size: 14px; width: 20px; text-align: center; margin-top: 3px; }
-
+        .contact-list li { font-size: 13px; margin-bottom: 12px; display: flex; gap: 10px; color: #444; }
+        
         /* Shadow Social Icons */
         .social-container { display: flex; gap: 15px; margin-top: 30px; }
-        .social-box { width: 45px; height: 45px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 18px rgba(0,0,0,0.1); color: #333; text-decoration: none; font-size: 18px; transition: 0.3s; }
-        .social-box:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); color: #cc0000; }
+        .social-box { width: 45px; height: 45px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1); color: #333; text-decoration: none; transition: 0.3s; }
+        .social-box:hover { transform: translateY(-5px); color: #cc0000; }
 
-        /* Form Styling */
-        .talk-form input, .talk-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; background: #fff; font-size: 13px; outline: none; }
-        .submit-btn { background: #eeeeee; border: none; padding: 10px 30px; cursor: pointer; font-weight: 700; font-size: 12px; text-transform: uppercase; transition: 0.3s; }
-        .submit-btn:hover { background: #ddd; }
+        .talk-form input, .talk-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; outline: none; }
+        .submit-btn { background: #eeeeee; border: none; padding: 10px 25px; font-weight: 700; cursor: pointer; }
 
-        /* What We Do */
-        .what-we-do p { font-size: 13px; line-height: 1.6; margin-bottom: 20px; color: #666; }
-        .bullet-list { list-style: none; }
-        .bullet-list li { font-size: 13px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; font-weight: 600; color: #333; }
-        .bullet-list i { font-size: 8px; color: #000; }
-
+        .what-we-do p { font-size: 13px; line-height: 1.6; color: #666; margin-bottom: 20px; }
+        .bullets { list-style: none; font-size: 13px; font-weight: 700; }
+        .bullets li { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
+        
         .quick-links { list-style: none; margin-top: 25px; }
-        .quick-links li { padding: 10px 0; border-bottom: 1px solid #f2f2f2; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
-        .quick-links a { text-decoration: none; color: #333; transition: 0.3s; }
-        .quick-links a:hover { color: #cc0000; padding-left: 5px; }
+        .quick-links li { padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-size: 13px; }
+        .quick-links a { text-decoration: none; color: #333; }
 
-        /* Bottom Verified Bar */
-        .bottom-footer { border-top: 1px solid #eee; margin-top: 50px; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; }
-        .pay-icons img { height: 22px; margin: 0 10px; opacity: 0.8; }
-        .copyright { font-size: 12px; color: #999; font-weight: 600; }
+        .bottom-bar { border-top: 1px solid #eee; margin-top: 50px; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .pay-icons img { height: 25px; margin: 0 8px; }
     </style>
 </head>
 <body>
 
     <div class="top-bar">
         <div><i class="fas fa-envelope"></i> info@12thplanetfightwear.com</div>
-        <div class="social-top">
+        <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="https
+            <a href="#"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <header>
+        <div class="logo"><img src="logo.png" alt="12th Planet"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li>
+                    <a href="#">Sports Apparel</a>
+                    <div class="mega-menu">
+                        <div class="menu-img-box"><img src="sports-nav.jpg"></div>
+                        <div class="menu-col">
+                            <h4>Sports Uniform</h4>
+                            <ul>
+                                <li><a href="american-football.html">American Football</a></li>
+                                <li><a href="soccer-uniform.html">Soccer Uniform</a></li>
+                                <li><a href="paintball.html">Paintball Jersey</a></li>
+                                <li><a href="basketball.html">Basketball Uniform</a></li>
+                                <li><a href="baseball.html">Baseball Uniform</a></li>
+                                <li><a href="rugby.html">Rugby Uniform</a></li>
+                                <li><a href="cricket.html">Cricket Uniform</a></li>
+                                <li><a href="boxing.html">Boxing Uniform</a></li>
+                                <li><a href="ice-hockey.html">Ice Hockey</a></li>
+                                <li><a href="softball.html">Softball Uniform</a></li>
+                                <li><a href="volleyball.html">Volleyball Uniform</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Active Wear</h4>
+                            <ul>
+                                <li><a href="compression.html">Compression Shorts</a></li>
+                                <li><a href="fitness-bra.html">Fitness Bra</a></li>
+                                <li><a href="legging.html">Legging</a></li>
+                                <li><a href="gym-tshirts.html">Gym T-shirts</a></li>
+                                <li><a href="swimsuit.html">Swimsuit</a></li>
+                                <li><a href="tracksuit.html">Tracksuit</a></li>
+                                <li><a href="hoodies.html">Workout Hoodies</a></li>
+                                <li><a href="rash-guards.html">Rash Guards</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Martial Arts</h4>
+                            <ul>
+                                <li><a href="karate.html">Karate Uniform</a></li>
+                                <li><a href="bjj.html">Brazilian Jiu Jitsu</a></li>
+                                <li><a href="mma.html">MMA Short</a></li>
+                                <li><a href="muay-thai.html">Muay Thai Short</a></li>
+                                <li><a href="judo.html">Judo Uniform</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Accessories</h4>
+                            <ul>
+                                <li><a href="bags.html">Sports Bag</a></li>
+                                <li><a href="caps.html">Caps</a></li>
+                                <li><a href="mask.html">Face Mask</a></li>
+                                <li><a href="socks.html">Socks</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Casual Apparel</a>
+                    <div class="mega-menu" style="width: 900px; left: -200px; grid-template-columns: 280px repeat(3, 1fr);">
+                        <div class="menu-img-box"><img src="casual-nav.jpg"></div>
+                        <div class="menu-col">
+                            <h4>Casual Wear</h4>
+                            <ul>
+                                <li><a href="sweatshirts.html">Sweat Shirts</a></li>
+                                <li><a href="hoodie.html">Hoodie</a></li>
+                                <li><a href="shorts.html">Shorts</a></li>
+                                <li><a href="polo.html">Polo Shirts</a></li>
+                                <li><a href="long-sleeve.html">Long Sleeve T Shirt</a></li>
+                                <li><a href="trousers.html">Trousers</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Jackets</h4>
+                            <ul>
+                                <li><a href="rain-jacket.html">Rain Jackets</a></li>
+                                <li><a href="puffer.html">Puffer Jackets</a></li>
+                                <li><a href="varsity.html">Varsity Jackets</a></li>
+                                <li><a href="windbreaker.html">Windbreaker</a></li>
+                                <li><a href="fleece.html">Fleece Jackets</a></li>
+                                <li><a href="softshell.html">Softshell Jackets</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Knitwear</h4>
+                            <ul>
+                                <li><a href="beanies.html">Beanies</a></li>
+                                <li><a href="sweaters.html">Sweaters</a></li>
+                                <li><a href="ski-mask.html">Ski Mask</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <button class="custom-btn">Custom Made Wear</button>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-box"><img src="b1.jpg"><div class="overlay"><span>Sports Uniform</span></div></div>
+        <div class="hero-box"><img src="b2.jpg"><div class="overlay"><span>Active Wear</span></div></div>
+        <div class="hero-box"><img src="b3.jpg"><div class="overlay"><span>Street Wear</span></div></div>
+        <div class="hero-box"><img src="b4.jpg"><div class="overlay"><span>Tactical & Work</span></div></div>
+    </section>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>CONTACT INFO</h4>
+                <ul class="contact-list">
+                    <li><i class="fas fa-envelope"></i> info@12thplanetfightwear.com</li>
+                    <li><i class="fas fa-phone"></i> +92 313 4111317</li>
+                    <li><i class="fab fa-whatsapp"></i> +92 313 4111317</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jodhay Wali Kalan, Sialkot 51310, Punjab, Pakistan</li>
+                </ul>
+                <div class="social-container">
+                    <a href="#" class="social-box"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-box"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-box"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>LET'S TALK</h4>
+                <form class="talk-form">
+                    <input type="email" placeholder="Email" required>
+                    <textarea placeholder="Message" rows="4"></textarea>
+                    <button type="submit" class="submit-btn">SUBMIT</button>
+                </form>
+            </div>
+            <div class="footer-col">
+                <h4>WHAT WE DO</h4>
+                <div class="what-we-do">
+                    <p>Manufacture and export high quality sports wear especially Team wear, Gym wear and Street wear at competitive prices.</p>
+                    <ul class="bullets">
+                        <li><i class="fas fa-dot-circle"></i> Customized Design</li>
+                        <li><i class="fas fa-dot-circle"></i> Kids-Men-Women (All Sizes)</li>
+                        <li><i class="fas fa-dot-circle"></i> Sublimation and Cut & Sew</li>
+                    </ul>
+                    <h4 style="margin-top:30px; font-size:15px;">QUICK LINKS</h4>
+                    <ul class="quick-links">
+                        <li><a href="soccer-uniform.html">Soccer Uniform</a> <i class="fas fa-tshirt"></i></li>
+                        <li><a href="tracksuits.html">Tracksuits</a> <i class="fas fa-chevron-right"></i></li>
+                        <li><a href="american-football.html">American Football</a> <i class="fas fa-map-marker-alt"></i></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <div class="pay-icons"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/FedEx_Express.svg"></div>
+            <div style="font-size:12px; color:#999;">Copyright © 2026 12th Planet Fight Wear</div>
+            <div class="pay-icons"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"></div>
+        </div>
+    </footer>
+</body>
+</html>
