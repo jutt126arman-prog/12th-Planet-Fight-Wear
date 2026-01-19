@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American Football Collection | 12th Planet Fight Wear</title>
+    <title>American Football 20 Designs | 12th Planet</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background: #f9f9f9; color: #111; }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica', Arial, sans-serif; }
+        body { background: #f7f7f7; color: #111; }
+        
         header { background: #fff; padding: 15px; text-align: center; border-bottom: 3px solid #cc0000; position: sticky; top: 0; z-index: 1000; }
         .logo img { height: 50px; }
-
+        
         .container { max-width: 1400px; margin: 30px auto; padding: 0 20px; }
         .page-header { text-align: center; margin-bottom: 40px; }
-        .page-header h1 { font-size: 32px; font-weight: 900; text-transform: uppercase; color: #000; border-bottom: 4px solid #cc0000; display: inline-block; padding-bottom: 5px; }
+        .page-header h1 { font-size: 28px; font-weight: 900; text-transform: uppercase; color: #cc0000; }
 
-        /* GRID FOR 20 DESIGNS */
+        /* 20 Items Grid */
         .uniform-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 25px; 
         }
 
         .card { 
             background: #fff; 
-            border: 1px solid #eee; 
-            transition: 0.3s ease; 
+            border: 1px solid #ddd; 
+            overflow: hidden; 
+            transition: 0.3s; 
             display: flex; 
             flex-direction: column;
-            border-radius: 8px;
-            overflow: hidden;
+            border-radius: 5px;
         }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: #cc0000; }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 20px rgba(0,0,0,0.1); border-color: #cc0000; }
 
-        /* Fixed Image Container */
+        /* Full Uniform Image Box */
         .img-box { 
             width: 100%; 
-            height: 420px; 
+            height: 450px; 
             background: #fff; 
             display: flex; 
             align-items: center; 
@@ -46,66 +46,66 @@
         }
         .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        /* Details Section */
-        .info { padding: 20px; text-align: center; flex-grow: 1; background: #fff; border-top: 1px solid #f5f5f5; }
-        .design-name { font-size: 16px; font-weight: 800; text-transform: uppercase; color: #cc0000; margin-bottom: 10px; }
-        .design-bio { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 20px; min-height: 60px; }
+        .info { padding: 20px; text-align: center; border-top: 1px solid #f0f0f0; }
+        .design-name { font-size: 16px; font-weight: bold; color: #000; margin-bottom: 10px; text-transform: uppercase; }
+        .design-bio { font-size: 13px; color: #666; margin-bottom: 20px; line-height: 1.5; height: 60px; overflow: hidden; }
 
-        /* Order Button */
         .wa-btn { 
-            display: flex; align-items: center; justify-content: center; gap: 10px;
-            background: #25D366; color: #fff; padding: 14px; 
-            text-decoration: none; font-weight: 700; border-radius: 5px; font-size: 14px;
-            text-transform: uppercase;
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            background: #25D366; color: #fff; padding: 12px; 
+            text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 14px;
         }
         .wa-btn:hover { background: #128C7E; }
-
-        @media (max-width: 768px) { .img-box { height: 350px; } }
     </style>
 </head>
 <body>
 
 <header>
-    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet Logo"></div>
+    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet"></div>
 </header>
 
 <div class="container">
-    <div class="page-header">
-        <h1>20 Premium Football Uniform Designs</h1>
-    </div>
-
-    <div class="uniform-grid" id="product-gallery">
+    <div class="page-header"><h1>Full Football Uniform Collection</h1></div>
+    <div class="uniform-grid" id="main-grid">
         </div>
 </div>
 
 <script>
-    // 20 High-Quality Real Uniform Images
-    const designs = [
-        { name: "Stealth Alpha Black", img: "https://images.unsplash.com/photo-1566577739112-5180d4bf9390?w=500", bio: "Full uniform with breathable micro-mesh jersey and reinforced spandex pants." },
-        { name: "Red Warrior Pro", img: "https://images.pexels.com/photos/163452/basketball-player-team-ball-163452.jpeg?auto=compress&cs=tinysrgb&w=500", bio: "Sublimated elite kit with double-layered shoulders and pad-ready game pants." },
-        { name: "Royal Championship", img: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?w=500", bio: "Traditional gridiron design featuring moisture-wicking fabric and elasticized cuffs." },
-        { name: "Titanium White Away", img: "https://images.unsplash.com/photo-1628155259653-39be0d1e3894?w=500", bio: "Clean professional away set with 4-way stretch panels for maximum speed." },
-        { name: "Neon Surge Edition", img: "https://images.unsplash.com/photo-1551952237-954a0e68786c?w=500", bio: "Modern high-visibility design with anti-bacterial fabric and custom tackle twill numbers." },
-        { name: "Ironclad Navy", img: "https://images.unsplash.com/photo-1504450758481-7338eba7524a?w=500", bio: "Heavyweight impact-resistant uniform with reinforced stitching for pro-leagues." },
-        { name: "Gold Viper Series", img: "https://images.unsplash.com/photo-1529900204558-45a820067675?w=500", bio: "Premium gold sublimation with lace-up pants and breathable side ventilation." },
-        { name: "Shadow Elite", img: "https://images.unsplash.com/photo-1509924372550-593b86064f7b?w=500", bio: "Matte finish stealth uniform designed for elite agility and streamlined fit." },
-        // ... Adding more to reach 20
+    const images = [
+        "https://sc04.alicdn.com/kf/H7c784714e84d4a8997a3f458e0a399f1O.jpg",
+        "https://sc04.alicdn.com/kf/H98725841457849669677840898586f1e80931131.jpg",
+        "https://sc04.alicdn.com/kf/H570779836334585868840b375b5b943.jpg",
+        "https://sc04.alicdn.com/kf/H062007831334585868840b375b5b945.jpg",
+        "https://sc04.alicdn.com/kf/U6be7e81794714197824f1e809311319B.jpg"
     ];
 
-    const gallery = document.getElementById('product-gallery');
+    const names = [
+        "Stealth Green Warrior", "Crimson Impact Kit", "Pro White-Gold Elite", 
+        "Royal Championship Set", "Dark Shadow Edition"
+    ];
 
-    // Generating 20 Cards
-    for (let i = 0; i < 20; i++) {
-        const d = designs[i % designs.length]; // Repeating designs for demo, replace with 20 unique links
-        gallery.innerHTML += `
+    const bios = [
+        "Full set: Micro-mesh jersey & pad-pocket spandex pants.",
+        "Durable sublimated kit with reinforced stitching for pro leagues.",
+        "Clean away series with 4-way stretch panels for speed.",
+        "Heavy-duty traditional uniform with classic lace-up pants.",
+        "Sleek aerodynamic design for maximum athlete performance."
+    ];
+
+    const grid = document.getElementById('main-grid');
+
+    // Create 20 Cards
+    for(let i=0; i<20; i++) {
+        let index = i % images.length;
+        grid.innerHTML += `
             <div class="card">
                 <div class="img-box">
-                    <img src="${d.img}" alt="${d.name}" onerror="this.src='https://placehold.co/400x500?text=Uniform+Design+${i+1}'">
+                    <img src="${images[index]}" alt="Design ${i+1}" onerror="this.src='https://placehold.co/400x600?text=AF-Uniform-Set-${i+1}'">
                 </div>
                 <div class="info">
-                    <div class="design-name">${d.name} AF-0${i+1}</div>
-                    <p class="design-bio">${d.bio}</p>
-                    <a href="https://wa.me/923134111317?text=Hi, I want to order the ${d.name} (AF-0${i+1}) full uniform set." class="wa-btn">
+                    <div class="design-name">${names[index]} AF-${i+1}</div>
+                    <p class="design-bio">${bios[index]}</p>
+                    <a href="https://wa.me/923134111317?text=Interested in ${names[index]} set" class="wa-btn">
                         <i class="fab fa-whatsapp"></i> Order This Set
                     </a>
                 </div>
