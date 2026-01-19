@@ -6,138 +6,114 @@
     <title>American Football Collection | 12th Planet Fight Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background: #f4f4f4; color: #333; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica', Arial, sans-serif; }
+        body { background: #f4f4f4; color: #222; }
 
-        /* Header & Breadcrumb */
-        header { background: #fff; padding: 15px 5%; border-bottom: 1px solid #ddd; text-align: center; }
-        .logo img { height: 50px; }
-        .breadcrumb { font-size: 12px; color: #777; margin-top: 8px; text-transform: uppercase; }
+        .container { max-width: 1300px; margin: 50px auto; padding: 0 20px; }
+        .page-title { text-align: center; font-size: 30px; font-weight: 900; text-transform: uppercase; margin-bottom: 40px; color: #111; border-bottom: 4px solid #cc0000; display: inline-block; padding-bottom: 10px; width: 100%; }
 
-        .container { max-width: 1200px; margin: 30px auto; padding: 0 15px; }
-        .page-heading { text-align: center; margin-bottom: 40px; font-size: 32px; font-weight: 800; text-transform: uppercase; color: #1a1a1a; }
-
-        /* Modern Grid Layout */
-        .grid { 
+        /* Grid Setup */
+        .uniform-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
             gap: 25px; 
         }
 
-        .card { 
+        .uniform-card { 
             background: #fff; 
-            border-radius: 8px; 
+            border-radius: 5px; 
             overflow: hidden; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
-            transition: 0.3s ease;
+            transition: 0.3s ease; 
+            border: 1px solid #ddd;
             display: flex;
             flex-direction: column;
         }
-        .card:hover { transform: translateY(-8px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); }
+        .uniform-card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: #cc0000; }
 
-        /* Image Styling */
-        .img-area { 
+        /* Image Box */
+        .image-box { 
             width: 100%; 
-            height: 320px; 
+            height: 400px; 
             background: #fff; 
             display: flex; 
             align-items: center; 
-            justify-content: center;
-            padding: 10px;
+            justify-content: center; 
+            padding: 20px;
         }
-        .img-area img { 
-            max-width: 100%; 
-            max-height: 100%; 
-            object-fit: contain; 
-        }
+        .image-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        /* Detail Area */
-        .info { padding: 20px; text-align: center; flex-grow: 1; border-top: 1px solid #eee; }
-        .info h3 { font-size: 16px; font-weight: 700; margin-bottom: 10px; color: #cc0000; text-transform: uppercase; }
-        .info p { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 20px; height: 60px; overflow: hidden; }
+        /* Detail/Bio Area */
+        .info-box { padding: 20px; text-align: center; flex-grow: 1; border-top: 1px solid #f5f5f5; }
+        .design-name { font-size: 17px; font-weight: bold; color: #000; margin-bottom: 10px; text-transform: uppercase; }
+        .design-bio { font-size: 13px; color: #666; line-height: 1.5; margin-bottom: 20px; height: 60px; overflow: hidden; }
 
         /* WhatsApp Button */
-        .btn-wa { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 10px;
-            background: #25D366; 
-            color: #fff; 
-            padding: 12px; 
-            text-decoration: none; 
-            font-weight: 600; 
-            border-radius: 5px;
-            transition: 0.3s;
-            font-size: 14px;
+        .wa-button { 
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: #25D366; color: #fff; padding: 12px; 
+            text-decoration: none; font-weight: bold; border-radius: 4px; font-size: 14px;
         }
-        .btn-wa:hover { background: #128C7E; }
+        .wa-button:hover { background: #1eb954; }
 
-        @media (max-width: 600px) { .grid { grid-template-columns: 1fr; } }
+        @media (max-width: 768px) { .image-box { height: 320px; } }
     </style>
 </head>
 <body>
 
-<header>
-    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="Logo"></div>
-    <p class="breadcrumb">Home > Sports Apparel > American Football</p>
-</header>
-
 <div class="container">
-    <h1 class="page-heading">Premium Football Uniforms</h1>
+    <h1 class="page-title">Full Football Uniform Sets</h1>
     
-    <div class="grid">
-        <div class="card">
-            <div class="img-area"><img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=500&auto=format&fit=crop" alt="Jersey 1"></div>
-            <div class="info">
-                <h3>V-Neck Elite Mesh</h3>
-                <p>Engineered for maximum breathability with reinforced stitching for high-impact games.</p>
-                <a href="https://wa.me/923134111317?text=Interested in V-Neck Elite Mesh" class="btn-wa"><i class="fab fa-whatsapp"></i> Order This Design</a>
+    <div class="uniform-grid">
+
+        <div class="uniform-card">
+            <div class="image-box">
+                <img src="https://sc04.alicdn.com/kf/H75677b1e4f4d4a8997a3f458e0a399f1O.jpg" alt="Dark Elite Uniform">
+            </div>
+            <div class="info-box">
+                <div class="design-name">Stealth Black & Neon Elite</div>
+                <p class="design-bio">High-impact polyester mesh jersey with spandex side panels. Matching integrated pad-ready pants for maximum protection and agility.</p>
+                <a href="https://wa.me/923134111317?text=Interested in Stealth Black Full Uniform" class="wa-button">
+                    <i class="fab fa-whatsapp"></i> Order This Set
+                </a>
             </div>
         </div>
 
-        <div class="card">
-            <div class="img-area"><img src="https://images.unsplash.com/photo-1628155259653-39be0d1e3894?q=80&w=500&auto=format&fit=crop" alt="Jersey 2"></div>
-            <div class="info">
-                <h3>Pro-Series Spandex Kit</h3>
-                <p>4-way stretch side panels for superior flexibility and a streamlined professional fit.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Pro-Series Spandex Kit" class="btn-wa"><i class="fab fa-whatsapp"></i> Order This Design</a>
+        <div class="uniform-card">
+            <div class="image-box">
+                <img src="https://sc04.alicdn.com/kf/H98725841457849669677840898586f1e80931131.jpg" alt="Red Warrior Uniform">
+            </div>
+            <div class="info-box">
+                <div class="design-name">Red Warrior Sublimated Kit</div>
+                <p class="design-bio">Fully sublimated vibrant red jersey with double-layered shoulders. Matching stretch-fit pants with reinforced knee pockets.</p>
+                <a href="https://wa.me/923134111317?text=Interested in Red Warrior Full Uniform" class="wa-button">
+                    <i class="fab fa-whatsapp"></i> Order This Set
+                </a>
             </div>
         </div>
 
-        <div class="card">
-            <div class="img-area"><img src="https://images.pexels.com/photos/163452/basketball-player-team-ball-163452.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Jersey 3"></div>
-            <div class="info">
-                <h3>Classic Gridiron Jersey</h3>
-                <p>Traditional heavyweight fabric with modern moisture-wicking technology.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Classic Gridiron" class="btn-wa"><i class="fab fa-whatsapp"></i> Order This Design</a>
+        <div class="uniform-card">
+            <div class="image-box">
+                <img src="https://sc04.alicdn.com/kf/H632007831334585868840b375b5b945.jpg" alt="Gold Jersey">
+            </div>
+            <div class="info-box">
+                <div class="design-name">Gold Championship Edition</div>
+                <p class="design-bio">Elite v-neck design with moisture-wicking technology. Includes professional lace-up pants for a secure and classic fit.</p>
+                <a href="https://wa.me/923134111317?text=Interested in Gold Championship Full Uniform" class="wa-button">
+                    <i class="fab fa-whatsapp"></i> Order This Set
+                </a>
             </div>
         </div>
 
-        <div class="card">
-            <div class="img-area"><img src="https://images.pexels.com/photos/159611/football-american-football-runner-running-back-159611.jpeg?auto=compress&cs=tinysrgb&w=500" alt="Jersey 4"></div>
-            <div class="info">
-                <h3>Sublimated Club Edition</h3>
-                <p>Fully customizable vibrant colors with non-fade digital printing technology.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Sublimated Club" class="btn-wa"><i class="fab fa-whatsapp"></i> Order This Design</a>
+        <div class="uniform-card">
+            <div class="image-box">
+                <img src="https://sc04.alicdn.com/kf/H570779836334585868840b375b5b943.jpg" alt="White Uniform">
             </div>
-        </div>
-
-        <div class="card">
-            <div class="img-area"><img src="https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=500&auto=format&fit=crop" alt="Jersey 5"></div>
-            <div class="info">
-                <h3>Titanium Impact Jersey</h3>
-                <p>Double-layered shoulders for extra protection during intense tackle plays.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Titanium Impact" class="btn-wa"><i class="fab fa-whatsapp"></i> Order This Design</a>
-            </div>
-        </div>
-
-        <div class="card">
-            <div class="img-area"><img src="https://images.unsplash.com/photo-1551952237-954a0e68786c?q=80&w=500&auto=format&fit=crop" alt="Jersey 6"></div>
-            <div class="info">
-                <h3>Stealth Pro Uniform</h3>
-                <p>Sleek design with anti-bacterial fabric and eco-friendly dyes.</p>
-                <a href="https://wa.me/923134111317?text=Interested in Stealth Pro" class="btn-wa"><i class="fab fa-whatsapp"></i> Order This Design</a>
+            <div class="info-box">
+                <div class="design-name">Pro White Away Series</div>
+                <p class="design-bio">Clean white breathable mesh jersey paired with striking red game pants. Built for durability and speed on the field.</p>
+                <a href="https://wa.me/923134111317?text=Interested in Pro White Away Full Uniform" class="wa-button">
+                    <i class="fab fa-whatsapp"></i> Order This Set
+                </a>
             </div>
         </div>
 
