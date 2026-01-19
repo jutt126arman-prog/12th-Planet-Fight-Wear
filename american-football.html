@@ -7,124 +7,147 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #f9f9f9; color: #333; }
+        body { background-color: #f9f9f9; padding: 20px 5%; }
 
-        /* Header Area */
-        .page-title { background: #fff; padding: 30px 5%; text-align: center; border-bottom: 1px solid #ddd; }
-        .page-title h1 { font-size: 24px; text-transform: uppercase; font-weight: 800; letter-spacing: 1px; color: #111; }
-        .back-home { display: inline-block; margin-top: 10px; color: #cc0000; text-decoration: none; font-weight: bold; font-size: 13px; }
+        /* Title Area */
+        .header-section { margin-bottom: 30px; }
+        .header-section h1 { font-size: 28px; font-weight: 800; color: #000; margin-bottom: 10px; }
+        .results-bar { display: flex; justify-content: space-between; align-items: center; color: #666; font-size: 14px; margin-bottom: 20px; }
 
-        /* Product Grid */
+        /* Grid Layout (4 Columns) */
         .product-grid { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
-            gap: 20px; 
-            padding: 40px 5%; 
+            gap: 25px; 
         }
 
         .product-card { 
             background: #fff; 
-            border: 1px solid #e0e0e0; 
-            padding: 15px; 
-            text-align: center;
+            border: 1px solid #f0f0f0; 
+            padding: 0; 
+            text-align: left;
             transition: 0.3s;
         }
-        .product-card:hover { box-shadow: 0 8px 20px rgba(0,0,0,0.1); transform: translateY(-5px); }
+
+        .img-container {
+            background: #fdfdfd;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
         .product-card img { 
             width: 100%; 
-            height: 320px; 
+            height: auto; 
+            max-height: 220px;
             object-fit: contain;
-            margin-bottom: 15px; 
-            display: block;
-            background: #fdfdfd;
         }
 
-        .product-name { font-size: 13px; color: #777; margin-bottom: 5px; text-transform: uppercase; }
-        .product-code { font-size: 14px; font-weight: 700; color: #111; margin-bottom: 15px; }
+        .product-info { padding: 15px; }
+        .product-name { font-size: 14px; color: #555; margin-bottom: 5px; }
+        .product-code { font-size: 14px; font-weight: 700; color: #333; margin-bottom: 15px; }
 
-        /* WhatsApp Button (Matching your screenshot style) */
-        .whatsapp-btn { 
-            display: block; 
-            background: #b3d9ff; 
+        /* Blue Button matching your screenshot */
+        .read-more-btn { 
+            display: inline-block; 
+            background: #bde0fe; 
             color: #000; 
             text-decoration: none; 
-            padding: 12px; 
-            font-size: 12px; 
-            font-weight: 800; 
-            border-radius: 4px;
+            padding: 10px 25px; 
+            font-size: 14px; 
+            font-weight: 600; 
+            border-radius: 2px;
             transition: 0.3s;
-            text-transform: uppercase;
         }
-        .whatsapp-btn:hover { background: #25D366; color: #fff; }
+        .read-more-btn:hover { background: #25D366; color: #fff; }
 
         /* Responsive */
         @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 650px) { .product-grid { grid-template-columns: 1fr; } }
+        @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <div class="page-title">
+    <div class="header-section">
         <h1>American Football Uniform</h1>
-        <a href="index.html" class="back-home"><i class="fas fa-arrow-left"></i> BACK TO HOME</a>
+        <div class="results-bar">
+            <span>Showing all 8 results</span>
+            <span>Default sorting <i class="fas fa-chevron-down" style="font-size: 10px;"></i></span>
+        </div>
     </div>
 
     <section class="product-grid">
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1566577739112-5180d4bf9390?q=80&w=600" alt="SW-AFU-17">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-17</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-17" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/v4pB0G7G/afu1.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-17</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/163452/basketball-player-athlete-sport-163452.jpeg?auto=compress&cs=tinysrgb&w=600" alt="SW-AFU-18">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-18</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-18" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/v6mX89m6/afu2.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-18</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1508962914676-134849a727f0?q=80&w=600" alt="SW-AFU-19">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-19</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-19" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/6R8mD9Gj/afu3.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-19</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=600" alt="SW-AFU-20">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-20</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-20" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/5X7m89m6/afu4.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-20</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1612866442385-f4104052044f?q=80&w=600" alt="SW-AFU-21">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-21</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-21" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/v4pB0G7G/afu1.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-21</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/159515/football-american-football-runner-player-159515.jpeg?auto=compress&cs=tinysrgb&w=600" alt="SW-AFU-22">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-22</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-22" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/v6mX89m6/afu2.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-22</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.unsplash.com/photo-1529633038475-13c3aa694833?q=80&w=600" alt="SW-AFU-23">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-23</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-23" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/RT9mD9Gj/afu7.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-23</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=600" alt="SW-AFU-24">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-24</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order American Football Uniform SW-AFU-24" class="whatsapp-btn">Order on WhatsApp</a>
+            <div class="img-container"><img src="https://i.ibb.co/pX7m89m6/afu8.jpg"></div>
+            <div class="product-info">
+                <p class="product-name">American Football Uniform</p>
+                <p class="product-code">SW-AFU-24</p>
+                <a href="https://wa.me/923134111317" class="read-more-btn">Read more</a>
+            </div>
         </div>
     </section>
 
