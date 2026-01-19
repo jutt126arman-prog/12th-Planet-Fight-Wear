@@ -3,67 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet Fight Wear | Official Store</title>
+    <title>12th Planet Fight Wear | Home</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* AAPKA SAVED ORIGINAL DESIGN */
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        
+        /* SHILS STYLE CORE CSS */
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
+        body { background-color: #ffffff; }
+
+        /* Top Header */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
-            padding: 15px 5%; background: #fff; border-bottom: 1px solid #eee;
+            padding: 10px 5%; background: #fff; border-bottom: 1px solid #eee;
             position: sticky; top: 0; z-index: 1000;
         }
-        .logo img { height: 50px; }
+        .logo img { height: 65px; }
 
+        /* Navigation */
         nav ul { display: flex; list-style: none; gap: 25px; }
-        nav ul li { position: relative; padding: 10px 0; }
+        nav ul li { position: relative; padding: 15px 0; }
         nav ul li a { 
-            text-decoration: none; color: #333; font-weight: bold; 
-            font-size: 13px; text-transform: uppercase; 
+            text-decoration: none; color: #111; font-weight: 700; 
+            font-size: 13px; text-transform: uppercase; letter-spacing: 0.5px;
         }
 
-        /* MEGA MENU STYLE (Jo aapne pehle save kiya tha) */
+        /* Shils Mega Menu Design */
         .mega-menu {
-            position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-            background: #fff; width: 800px; display: none; 
-            grid-template-columns: repeat(4, 1fr); padding: 25px; 
-            box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-top: 3px solid #cc0000;
+            position: absolute; top: 100%; left: -250px; 
+            background: #f9f8f6; width: 1050px; display: none; 
+            grid-template-columns: 250px repeat(3, 1fr); padding: 35px; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.08); border-top: 2px solid #cc0000;
         }
         nav ul li:hover .mega-menu { display: grid; }
         
+        .menu-banner { padding-right: 25px; border-right: 1px solid #e0e0e0; }
+        .menu-banner img { width: 100%; height: auto; border-radius: 2px; }
+
+        .menu-col { padding: 0 20px; }
         .menu-col h4 { 
-            font-size: 14px; color: #cc0000; margin-bottom: 12px; 
-            border-bottom: 1px solid #eee; padding-bottom: 5px; text-transform: uppercase; 
+            font-size: 14px; color: #cc0000; margin-bottom: 18px; 
+            text-transform: uppercase; font-weight: 800; border-bottom: 1px solid #ddd;
+            padding-bottom: 8px;
         }
         .menu-col ul { display: block; list-style: none; }
-        .menu-col ul li { padding: 3px 0; }
+        .menu-col ul li { padding: 5px 0; }
         .menu-col ul li a { 
-            font-weight: 400; color: #666; font-size: 12px; text-transform: capitalize; 
+            font-weight: 500; color: #444; font-size: 13px; text-transform: capitalize; 
         }
-        .menu-col ul li a:hover { color: #000; }
+        .menu-col ul li a:hover { color: #cc0000; padding-left: 5px; transition: 0.3s; }
 
-        /* HERO BANNERS (Matlooba Look) */
-        .hero-banners { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; padding: 5px; }
-        .banner { position: relative; overflow: hidden; height: 450px; cursor: pointer; }
-        .banner img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-        .banner:hover img { transform: scale(1.05); }
-        .banner-text { 
-            position: absolute; top: 10%; left: 50%; transform: translateX(-50%); 
-            background: rgba(255,255,255,0.9); padding: 8px 20px; 
-            font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 14px;
+        /* Custom Order Button */
+        .custom-btn { 
+            background: #000; color: #fff; border: none; padding: 12px 25px; 
+            font-weight: 700; cursor: pointer; text-transform: uppercase; font-size: 12px;
         }
 
-        /* CONTACT/FOOTER SECTION */
-        .footer-info { display: flex; justify-content: space-around; padding: 40px 5%; background: #fff; border-top: 1px solid #eee; }
-        .info-box i { font-size: 24px; margin-bottom: 10px; color: #333; }
-        .info-box p { font-size: 12px; font-weight: bold; text-transform: uppercase; }
+        /* Shils Hero Section (4 Banners) */
+        .hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 4px; }
+        .hero-item { position: relative; height: 480px; overflow: hidden; }
+        .hero-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s ease; }
+        .hero-item:hover img { transform: scale(1.08); }
+        .hero-label { 
+            position: absolute; top: 12%; left: 50%; transform: translateX(-50%);
+            background: #fff; padding: 8px 25px; font-weight: 800; font-size: 14px;
+            color: #000; box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;
+        }
+
+        /* Footer Features (Grey Section) */
+        .features-bar { 
+            display: flex; justify-content: center; gap: 15px; 
+            padding: 50px 5%; background: #f9f8f6; margin-top: 20px;
+        }
+        .feat-item { 
+            background: #f1ede8; padding: 30px; text-align: center; 
+            width: 260px; border-radius: 4px; 
+        }
+        .feat-item i { font-size: 26px; color: #111; margin-bottom: 15px; }
+        .feat-item h5 { font-size: 14px; margin-bottom: 8px; text-transform: uppercase; font-weight: 800; }
+        .feat-item p { font-size: 12px; color: #666; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo"><img src="logo.png" alt="12th Planet"></div>
+        <div class="logo"><img src="logo.png" alt="12th Planet Fight Wear"></div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -71,22 +93,25 @@
                 <li>
                     <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
                     <div class="mega-menu">
+                        <div class="menu-banner"><img src="sports-nav.jpg" alt="Sports Uniforms"></div>
                         <div class="menu-col">
                             <h4>Sports Uniform</h4>
                             <ul>
                                 <li><a href="american-football.html">American Football Uniform</a></li>
-                                <li><a href="soccer-ball.html">Soccer Ball</a></li>
+                                <li><a href="soccer-ball.html">Soccer Uniform</a></li>
                                 <li><a href="paintball-jersey.html">Paintball Jersey</a></li>
                                 <li><a href="basketball-uniform.html">Basketball Uniform</a></li>
                                 <li><a href="baseball-uniform.html">Baseball Uniform</a></li>
+                                <li><a href="rugby-uniform.html">Rugby Uniform</a></li>
                             </ul>
                         </div>
                         <div class="menu-col">
                             <h4>Active Wear</h4>
                             <ul>
                                 <li><a href="tracksuit.html">Tracksuit</a></li>
-                                <li><a href="workout-hoodies.html">Workout Hoodies</a></li>
+                                <li><a href="fitness-bra.html">Fitness Bra</a></li>
                                 <li><a href="rash-guards.html">Rash Guards</a></li>
+                                <li><a href="workout-hoodies.html">Workout Hoodies</a></li>
                             </ul>
                         </div>
                         <div class="menu-col">
@@ -95,6 +120,7 @@
                                 <li><a href="karate-uniform.html">Karate Uniform</a></li>
                                 <li><a href="bjj-gi.html">BJJ Gi</a></li>
                                 <li><a href="mma-shorts.html">MMA Shorts</a></li>
+                                <li><a href="muay-thai.html">Muay Thai</a></li>
                             </ul>
                         </div>
                     </div>
@@ -102,12 +128,15 @@
 
                 <li>
                     <a href="#">Casual Wear <i class="fas fa-caret-down"></i></a>
-                    <div class="mega-menu" style="width: 400px;">
+                    <div class="mega-menu" style="width: 850px; left: -150px;">
+                        <div class="menu-banner"><img src="casual-nav.jpg" alt="Casual Wear"></div>
                         <div class="menu-col">
-                            <h4>Casual</h4>
+                            <h4>Casual Clothing</h4>
                             <ul>
                                 <li><a href="hoodie.html">Hoodie</a></li>
                                 <li><a href="t-shirts.html">T-Shirts</a></li>
+                                <li><a href="sweat-shirts.html">Sweat Shirts</a></li>
+                                <li><a href="polo-shirts.html">Polo Shirts</a></li>
                                 <li><a href="trousers.html">Trousers</a></li>
                             </ul>
                         </div>
@@ -116,41 +145,65 @@
                             <ul>
                                 <li><a href="varsity-jackets.html">Varsity Jackets</a></li>
                                 <li><a href="puffer-jackets.html">Puffer Jackets</a></li>
+                                <li><a href="fleece-jackets.html">Fleece Jackets</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Knitwear</h4>
+                            <ul>
+                                <li><a href="beanies.html">Beanies</a></li>
+                                <li><a href="sweaters.html">Sweaters</a></li>
                             </ul>
                         </div>
                     </div>
                 </li>
-                
+
                 <li><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-        <div class="custom-btn"><button style="background:#000; color:#fff; padding:10px 15px; border:none; font-weight:bold; cursor:pointer;">CUSTOM ORDER</button></div>
+        <button class="custom-btn">CUSTOM ORDER</button>
     </header>
 
-    <div class="hero-banners">
-        <div class="banner">
-            <img src="banner1.jpg" alt="Sports Uniform">
-            <div class="banner-text">SPORTS UNIFORM</div>
+    <div class="hero-grid">
+        <div class="hero-item">
+            <img src="b1.jpg" alt="">
+            <div class="hero-label">SPORTS UNIFORM</div>
         </div>
-        <div class="banner">
-            <img src="banner2.jpg" alt="Active Wear">
-            <div class="banner-text">ACTIVE WEAR</div>
+        <div class="hero-item">
+            <img src="b2.jpg" alt="">
+            <div class="hero-label">ACTIVE WEAR</div>
         </div>
-        <div class="banner">
-            <img src="banner3.jpg" alt="Street Wear">
-            <div class="banner-text">STREET WEAR</div>
+        <div class="hero-item">
+            <img src="b3.jpg" alt="">
+            <div class="hero-label">STREET WEAR</div>
         </div>
-        <div class="banner">
-            <img src="banner4.jpg" alt="Tactical & Work">
-            <div class="banner-text">TACTICAL & WORK</div>
+        <div class="hero-item">
+            <img src="b4.jpg" alt="">
+            <div class="hero-label">TACTICAL & WORK</div>
         </div>
     </div>
 
-    <div class="footer-info">
-        <div class="info-box"><i class="fas fa-shipping-fast"></i><p>Fast Shipping</p></div>
-        <div class="info-box"><i class="fas fa-award"></i><p>Top Quality</p></div>
-        <div class="info-box"><i class="fas fa-industry"></i><p>Factory Prices</p></div>
-        <div class="info-box"><i class="fas fa-sync-alt"></i><p>Customization</p></div>
+    <div class="features-bar">
+        <div class="feat-item">
+            <i class="fas fa-truck-moving"></i>
+            <h5>Fast Shipping</h5>
+            <p>Fast & Safe Delivery Worldwide</p>
+        </div>
+        <div class="feat-item">
+            <i class="fas fa-shield-alt"></i>
+            <h5>Quality Products</h5>
+            <p>100% Guaranteed Materials</p>
+        </div>
+        <div class="feat-item">
+            <i class="fas fa-tags"></i>
+            <h5>Huge Savings</h5>
+            <p>Factory Prices for Bulk Orders</p>
+        </div>
+        <div class="feat-item">
+            <i class="fas fa-pencil-ruler"></i>
+            <h5>Customization</h5>
+            <p>Custom Sublimation & Embroidery</p>
+        </div>
     </div>
 
 </body>
