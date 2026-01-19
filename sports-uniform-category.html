@@ -3,66 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Uniform Collection | 12th Planet Fight Wear</title>
+    <title>Sports Uniform | 12th Planet Fight Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background: #fdfdfd; }
+        body { background: #fdfdfd; color: #333; }
 
-        /* HEADER */
-        header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background: #fff; border-bottom: 1px solid #eee; position: sticky; top: 0; z-index: 1000; }
-        .logo img { height: 45px; }
+        /* HEADER - Same as Main Page */
+        header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 12px 5%; background: #fff; border-bottom: 1px solid #eee;
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .logo img { height: 50px; }
 
-        /* MAIN LAYOUT */
-        .category-container { display: flex; max-width: 1400px; margin: 20px auto; padding: 0 20px; gap: 40px; }
+        /* LAYOUT */
+        .page-wrapper { display: flex; max-width: 1400px; margin: 20px auto; padding: 0 20px; gap: 30px; }
 
-        /* SIDEBAR (image_2fd4a9 style) */
-        .sidebar { width: 260px; flex-shrink: 0; }
-        .sidebar h2 { font-size: 18px; text-transform: uppercase; margin-bottom: 15px; color: #111; border-bottom: 1px solid #eee; padding-bottom: 10px; }
+        /* SIDEBAR (image_2fdca7.png Style) */
+        .sidebar { width: 280px; flex-shrink: 0; background: #fff; padding: 20px; border-radius: 4px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); height: fit-content; position: sticky; top: 90px; }
+        .sidebar h2 { font-size: 16px; text-transform: uppercase; color: #000; margin-bottom: 15px; border-bottom: 2px solid #eee; padding-bottom: 10px; font-weight: 800; }
         .sidebar ul { list-style: none; }
-        .sidebar li { margin-bottom: 8px; }
-        .sidebar a { text-decoration: none; color: #666; font-size: 13.5px; transition: 0.3s; display: block; padding: 5px 0; }
+        .sidebar li { margin-bottom: 5px; }
+        .sidebar a { text-decoration: none; color: #555; font-size: 13px; display: block; padding: 8px 0; border-bottom: 1px solid #f9f9f9; transition: 0.3s; }
         .sidebar a:hover { color: #cc0000; padding-left: 5px; }
-        .sidebar .active-cat { color: #cc0000; font-weight: bold; border-left: 3px solid #cc0000; padding-left: 10px; }
+        .sidebar .active-link { color: #cc0000; font-weight: bold; }
 
-        /* PRODUCT AREA */
-        .product-area { flex-grow: 1; }
-        .area-title { font-size: 26px; font-weight: 800; margin-bottom: 30px; display: flex; justify-content: space-between; align-items: center; }
-        .sort-box select { padding: 8px; border: 1px solid #ddd; outline: none; font-size: 13px; }
+        /* MAIN CONTENT (image_2fdc0b.png Style) */
+        .main-content { flex-grow: 1; background: #fff; padding: 30px; border-radius: 4px; }
+        .main-content h1 { font-size: 24px; margin-bottom: 30px; border-bottom: 1px solid #eee; padding-bottom: 15px; }
 
         /* SECTION STYLING */
-        .cat-section { margin-bottom: 60px; scroll-margin-top: 100px; }
-        .cat-section-title { font-size: 18px; text-transform: uppercase; font-weight: 900; margin-bottom: 20px; color: #000; border-left: 4px solid #cc0000; padding-left: 15px; }
+        .category-block { margin-bottom: 60px; scroll-margin-top: 100px; }
+        .block-title { font-size: 18px; text-transform: uppercase; font-weight: 900; color: #000; margin-bottom: 20px; border-left: 4px solid #cc0000; padding-left: 15px; display: flex; align-items: center; }
 
-        /* GRID */
-        .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
-        .product-card { background: #fff; border: 1px solid #f0f0f0; padding: 15px; text-align: center; transition: 0.3s; }
+        /* PRODUCT GRID */
+        .product-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+        .product-card { border: 1px solid #eee; padding: 12px; text-align: center; transition: 0.3s; background: #fff; }
         .product-card:hover { border-color: #cc0000; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
-        .product-card img { width: 100%; height: auto; margin-bottom: 15px; }
-        .product-card h4 { font-size: 13px; font-weight: 600; color: #333; height: 35px; overflow: hidden; }
-        .product-card .sku { font-size: 11px; color: #999; margin: 8px 0; display: block; }
+        .product-card img { width: 100%; height: auto; margin-bottom: 10px; background: #f4f4f4; }
+        .product-card h4 { font-size: 12px; color: #444; height: 32px; overflow: hidden; line-height: 1.4; margin-bottom: 5px; }
+        .product-card .sku { font-size: 10px; color: #999; display: block; margin-bottom: 12px; }
         
-        .read-more { display: block; width: 100%; padding: 10px; background: #bce1ff; color: #000; text-decoration: none; font-size: 12px; font-weight: bold; text-transform: uppercase; transition: 0.3s; }
-        .read-more:hover { background: #96ccff; }
+        /* READ MORE BUTTON (Light Blue from screenshot) */
+        .read-more-btn { 
+            display: block; width: 100%; padding: 8px; 
+            background: #bce1ff; color: #000; text-decoration: none; 
+            font-size: 11px; font-weight: bold; text-transform: uppercase; 
+            transition: 0.3s; 
+        }
+        .read-more-btn:hover { background: #96ccff; }
 
-        @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 768px) { .category-container { flex-direction: column; } .sidebar { width: 100%; } }
+        @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 768px) { .page-wrapper { flex-direction: column; } .sidebar { width: 100%; position: static; } }
     </style>
 </head>
 <body>
 
 <header>
     <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet"></div>
-    <div class="nav-links" style="font-size: 12px; font-weight: bold;">
-        <a href="index.html" style="text-decoration:none; color:#000;">HOME</a> | SPORTS UNIFORM
-    </div>
+    <div style="font-size: 11px; font-weight: bold; color: #555;">SPORTS UNIFORM > COLLECTION</div>
 </header>
 
-<div class="category-container">
+<div class="page-wrapper">
     <aside class="sidebar">
-        <h2>Categories</h2>
+        <h2>Sports Uniform</h2>
         <ul>
-            <li><a href="#american-football" class="active-cat">American Football Uniform</a></li>
+            <li><a href="#american-football" class="active-link">American Football Uniform</a></li>
             <li><a href="#soccer-uniform">Soccer Uniform</a></li>
             <li><a href="#paintball-jersey">Paintball Jersey</a></li>
             <li><a href="#basketball-uniform">Basketball Uniform</a></li>
@@ -76,70 +83,77 @@
         </ul>
     </aside>
 
-    <main class="product-area">
-        <div class="area-title">
-            Sports Uniform
-            <div class="sort-box">
-                <select><option>Default sorting</option></select>
-            </div>
-        </div>
+    <main class="main-content">
+        <h1>Sports Uniform</h1>
 
-        <section class="cat-section" id="american-football">
-            <h3 class="cat-section-title">American Football</h3>
+        <section class="category-block" id="american-football">
+            <h3 class="block-title">American Football</h3>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="https://i.ibb.co/9H0pL7R/football-1.png">
                     <h4>American Football Uniform</h4>
                     <span class="sku">SW-AFU-17</span>
-                    <a href="#" class="read-more">Read more</a>
+                    <a href="#" class="read-more-btn">Read more</a>
                 </div>
                 <div class="product-card">
                     <img src="https://i.ibb.co/6vGZ7D5/football-2.png">
                     <h4>American Football Uniform</h4>
                     <span class="sku">SW-AFU-18</span>
-                    <a href="#" class="read-more">Read more</a>
+                    <a href="#" class="read-more-btn">Read more</a>
                 </div>
                 <div class="product-card">
                     <img src="https://i.ibb.co/YyYxS5P/football-3.png">
                     <h4>American Football Uniform</h4>
                     <span class="sku">SW-AFU-19</span>
-                    <a href="#" class="read-more">Read more</a>
+                    <a href="#" class="read-more-btn">Read more</a>
                 </div>
                 <div class="product-card">
                     <img src="https://i.ibb.co/L5hY6N8/football-4.png">
                     <h4>American Football Uniform</h4>
                     <span class="sku">SW-AFU-20</span>
-                    <a href="#" class="read-more">Read more</a>
+                    <a href="#" class="read-more-btn">Read more</a>
                 </div>
             </div>
         </section>
 
-        <section class="cat-section" id="soccer-uniform">
-            <h3 class="cat-section-title">Soccer Uniform</h3>
+        <section class="category-block" id="soccer-uniform">
+            <h3 class="block-title">Soccer Uniform</h3>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="https://i.ibb.co/SrtG8hH/soccer-1.png">
                     <h4>Soccer Team Uniform</h4>
                     <span class="sku">SW-SU-01</span>
-                    <a href="#" class="read-more">Read more</a>
+                    <a href="#" class="read-more-btn">Read more</a>
                 </div>
                 <div class="product-card">
                     <img src="https://i.ibb.co/Zc8Wz4m/soccer-2.png">
                     <h4>Custom Soccer Kit</h4>
                     <span class="sku">SW-SU-02</span>
-                    <a href="#" class="read-more">Read more</a>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x400?text=Soccer+3">
+                    <h4>Training Soccer Set</h4>
+                    <span class="sku">SW-SU-03</span>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://via.placeholder.com/300x400?text=Soccer+4">
+                    <h4>Soccer Club Jersey</h4>
+                    <span class="sku">SW-SU-04</span>
+                    <a href="#" class="read-more-btn">Read more</a>
                 </div>
             </div>
         </section>
 
-        <section class="cat-section" id="paintball-jersey">
-            <h3 class="cat-section-title">Paintball Jersey</h3>
+        <section class="category-block" id="paintball-jersey">
+            <h3 class="block-title">Paintball Jersey</h3>
             <div class="product-grid">
                 <div class="product-card">
                     <img src="https://via.placeholder.com/300x400?text=Paintball+1">
-                    <h4>Professional Paintball Jersey</h4>
+                    <h4>Pro Paintball Jersey</h4>
                     <span class="sku">SW-PB-01</span>
-                    <a href="#" class="read-more">Read more</a>
+                    <a href="#" class="read-more-btn">Read more</a>
                 </div>
             </div>
         </section>
