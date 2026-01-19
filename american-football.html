@@ -3,97 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>American Football Uniform | 12th Planet Fight Wear</title>
+    <title>American Football Uniforms | 12th Planet Fight Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #f9f9f9; padding: 20px 5%; }
+        body { background: #fff; color: #333; }
 
-        .header-section { margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
-        .header-section h1 { font-size: 24px; text-transform: uppercase; font-weight: 800; }
-        .back-btn { text-decoration: none; color: #cc0000; font-weight: bold; font-size: 13px; }
+        /* Navigation Path */
+        .breadcrumb { padding: 20px 5%; background: #f9f9f9; font-size: 12px; color: #666; text-transform: uppercase; border-bottom: 1px solid #eee; }
+        .breadcrumb a { text-decoration: none; color: #cc0000; font-weight: bold; }
 
-        .product-grid { 
-            display: grid; 
-            grid-template-columns: repeat(4, 1fr); 
-            gap: 20px; 
+        /* PRODUCT SECTION */
+        .product-container { display: flex; padding: 40px 5%; gap: 50px; max-width: 1400px; margin: auto; }
+
+        /* Left side: Image Gallery */
+        .gallery-container { width: 55%; }
+        .main-display { width: 100%; border: 1px solid #eee; margin-bottom: 20px; background: #fcfcfc; text-align: center; }
+        .main-display img { max-width: 100%; height: 500px; object-fit: contain; padding: 20px; }
+
+        /* 12 Images Grid */
+        .thumbnail-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; }
+        .thumbnail-grid img { width: 100%; height: 120px; object-fit: cover; border: 1px solid #eee; cursor: pointer; transition: 0.3s; padding: 5px; }
+        .thumbnail-grid img:hover { border-color: #cc0000; opacity: 0.8; }
+        .active-thumb { border-color: #cc0000 !important; border-width: 2px !important; }
+
+        /* Right side: Product Info */
+        .info-container { width: 45%; }
+        .info-container h1 { font-size: 32px; font-weight: 900; color: #111; text-transform: uppercase; margin-bottom: 10px; }
+        .sku-text { font-size: 14px; color: #888; font-weight: bold; margin-bottom: 20px; display: block; }
+        .description { font-size: 16px; line-height: 1.6; color: #555; margin-bottom: 30px; }
+
+        /* Specifications */
+        .spec-list { margin-bottom: 30px; border-top: 2px solid #eee; padding-top: 20px; }
+        .spec-item { display: flex; margin-bottom: 12px; font-size: 14px; }
+        .spec-label { font-weight: 800; width: 140px; color: #000; text-transform: uppercase; }
+        .spec-value { color: #555; }
+
+        /* Buttons */
+        .btn-wrapper { display: flex; gap: 15px; margin-top: 40px; }
+        .btn { flex: 1; padding: 18px; text-decoration: none; text-align: center; font-weight: 800; font-size: 13px; text-transform: uppercase; border-radius: 4px; transition: 0.3s; }
+        .btn-inquiry { background: #cc0000; color: #fff; }
+        .btn-whatsapp { background: #25D366; color: #fff; display: flex; align-items: center; justify-content: center; gap: 8px; }
+        .btn:hover { opacity: 0.9; transform: translateY(-2px); }
+
+        @media (max-width: 992px) {
+            .product-container { flex-direction: column; }
+            .gallery-container, .info-container { width: 100%; }
+            .main-display img { height: 350px; }
         }
-
-        .product-card { 
-            background: #fff; 
-            border: 1px solid #f0f0f0; 
-            padding: 15px; 
-            text-align: center;
-            transition: 0.3s ease;
-        }
-        .product-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
-
-        .product-card img { 
-            width: 100%; 
-            height: 250px; 
-            object-fit: contain;
-            margin-bottom: 15px;
-        }
-
-        .product-name { font-size: 11px; color: #888; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
-        .product-code { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 15px; }
-
-        .wa-btn { 
-            display: block; 
-            background: #bde0fe; 
-            color: #000; 
-            text-decoration: none; 
-            padding: 12px; 
-            font-size: 11px; 
-            font-weight: 800; 
-            border-radius: 4px;
-            text-transform: uppercase;
-            transition: 0.3s;
-        }
-        .wa-btn:hover { background: #25D366; color: #fff; }
-
-        @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
-        @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
 
-    <div class="header-section">
-        <h1>American Football Uniform</h1>
-        <a href="index.html" class="back-btn"><i class="fas fa-arrow-left"></i> BACK TO HOME</a>
+<div class="breadcrumb">
+    <a href="index.html">Home</a> / <a href="sports-uniform-category.html">Sports Uniform</a> / American Football
+</div>
+
+<div class="product-container">
+    <div class="gallery-container">
+        <div class="main-display">
+            <img src="https://i.ibb.co/9H0pL7R/football-1.png" id="bigImage" alt="Main View">
+        </div>
+        <div class="thumbnail-grid">
+            <img src="https://i.ibb.co/9H0pL7R/football-1.png" onclick="updatePreview(this)" class="active-thumb">
+            <img src="https://i.ibb.co/6vGZ7D5/football-2.png" onclick="updatePreview(this)">
+            <img src="https://i.ibb.co/YyYxS5P/football-3.png" onclick="updatePreview(this)">
+            <img src="https://i.ibb.co/L5hY6N8/football-4.png" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+5" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+6" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+7" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+8" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+9" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+10" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+11" onclick="updatePreview(this)">
+            <img src="https://via.placeholder.com/300x400?text=AF+Style+12" onclick="updatePreview(this)">
+        </div>
     </div>
 
-    <section class="product-grid">
-        <div class="product-card">
-            <img src="https://i.ibb.co/XfX6fXf/afu1.png" alt="SW-AFU-17">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-17</p>
-            <a href="https://wa.me/923134111317?text=Order: SW-AFU-17" class="wa-btn">ORDER ON WHATSAPP</a>
+    <div class="info-container">
+        <h1>American Football Uniform</h1>
+        <span class="sku-text">SKU: 12PFW-AF-2026</span>
+        
+        <p class="description">
+            Experience peak performance with our professional-grade American Football uniforms. Engineered with heavy-duty breathable mesh and moisture-wicking technology to keep athletes dry and comfortable during intense gameplay. Fully reinforced stitching for maximum durability.
+        </p>
+
+        <div class="spec-list">
+            <div class="spec-item"><span class="spec-label">Material:</span><span class="spec-value">100% Polyester Mesh / Spandex Rib</span></div>
+            <div class="spec-item"><span class="spec-label">Customization:</span><span class="spec-value">Full Sublimation, Embroidery, Tackle Twill</span></div>
+            <div class="spec-item"><span class="spec-label">Features:</span><span class="spec-value">Anti-Bacterial, Breathable, Eco-Friendly</span></div>
+            <div class="spec-item"><span class="spec-label">Size:</span><span class="spec-value">Youth to Adult (XS - 6XL)</span></div>
+            <div class="spec-item"><span class="spec-label">Lead Time:</span><span class="spec-value">15-20 Days after design approval</span></div>
         </div>
 
-        <div class="product-card">
-            <img src="https://i.ibb.co/YyY7yYy/afu2.png" alt="SW-AFU-18">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-18</p>
-            <a href="https://wa.me/923134111317?text=Order: SW-AFU-18" class="wa-btn">ORDER ON WHATSAPP</a>
+        <div class="btn-wrapper">
+            <a href="mailto:12thplanetfightwear@gmail.com" class="btn btn-inquiry">Send Inquiry</a>
+            <a href="https://wa.me/923134111317" class="btn btn-whatsapp"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
         </div>
+    </div>
+</div>
 
-        <div class="product-card">
-            <img src="https://i.ibb.co/ZzZ8zZz/afu3.png" alt="SW-AFU-19">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-19</p>
-            <a href="https://wa.me/923134111317?text=Order: SW-AFU-19" class="wa-btn">ORDER ON WHATSAPP</a>
-        </div>
+<script>
+    function updatePreview(element) {
+        // Change the big image source
+        document.getElementById('bigImage').src = element.src;
+        
+        // Remove active class from all thumbnails
+        let thumbs = document.querySelectorAll('.thumbnail-grid img');
+        thumbs.forEach(img => img.classList.remove('active-thumb'));
+        
+        // Add active class to clicked thumbnail
+        element.classList.add('active-thumb');
+    }
+</script>
 
-        <div class="product-card">
-            <img src="https://i.ibb.co/AaA9aAa/afu4.png" alt="SW-AFU-20">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-20</p>
-            <a href="https://wa.me/923134111317?text=Order: SW-AFU-20" class="wa-btn">ORDER ON WHATSAPP</a>
-        </div>
-
-        <div class="product-card">
-            <img src="https://i.ibb.co/BbB0bBb/afu5.png" alt="SW-AFU-21">
-            <p class="product-name">American Football Uniform</p>
-            <p class="product-code">SW-AFU-21</p>
-            <a href="
+</body>
+</html>
