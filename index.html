@@ -3,97 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet Fight Wear</title>
+    <title>12th Planet Fight Wear | Official Store</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Aapka Original Saved CSS */
+        /* AAPKA SAVED ORIGINAL DESIGN */
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        nav { background: #fff; border-bottom: 1px solid #eee; padding: 0 5%; position: sticky; top: 0; z-index: 1000; }
-        .nav-links { display: flex; list-style: none; justify-content: center; }
-        .nav-links > li { position: relative; padding: 20px 15px; }
-        .nav-links > li > a { text-decoration: none; color: #333; font-weight: 600; font-size: 14px; text-transform: uppercase; }
+        
+        header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 15px 5%; background: #fff; border-bottom: 1px solid #eee;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .logo img { height: 50px; }
 
+        nav ul { display: flex; list-style: none; gap: 25px; }
+        nav ul li { position: relative; padding: 10px 0; }
+        nav ul li a { 
+            text-decoration: none; color: #333; font-weight: bold; 
+            font-size: 13px; text-transform: uppercase; 
+        }
+
+        /* MEGA MENU STYLE (Jo aapne pehle save kiya tha) */
         .mega-menu {
             position: absolute; top: 100%; left: 50%; transform: translateX(-50%);
-            background: #fff; width: 850px; display: none; grid-template-columns: repeat(4, 1fr);
-            padding: 30px; box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-top: 3px solid #cc0000;
+            background: #fff; width: 800px; display: none; 
+            grid-template-columns: repeat(4, 1fr); padding: 25px; 
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-top: 3px solid #cc0000;
         }
-        .nav-links > li:hover .mega-menu { display: grid; }
+        nav ul li:hover .mega-menu { display: grid; }
         
-        .menu-col h4 { font-size: 15px; color: #cc0000; margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 5px; text-transform: uppercase; }
-        .menu-col ul { list-style: none; }
-        .menu-col ul li { margin-bottom: 8px; }
-        .menu-col ul li a { text-decoration: none; color: #666; font-size: 13px; transition: 0.3s; }
-        .menu-col ul li a:hover { color: #000; padding-left: 5px; }
+        .menu-col h4 { 
+            font-size: 14px; color: #cc0000; margin-bottom: 12px; 
+            border-bottom: 1px solid #eee; padding-bottom: 5px; text-transform: uppercase; 
+        }
+        .menu-col ul { display: block; list-style: none; }
+        .menu-col ul li { padding: 3px 0; }
+        .menu-col ul li a { 
+            font-weight: 400; color: #666; font-size: 12px; text-transform: capitalize; 
+        }
+        .menu-col ul li a:hover { color: #000; }
+
+        /* HERO BANNERS (Matlooba Look) */
+        .hero-banners { display: grid; grid-template-columns: repeat(4, 1fr); gap: 5px; padding: 5px; }
+        .banner { position: relative; overflow: hidden; height: 450px; cursor: pointer; }
+        .banner img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
+        .banner:hover img { transform: scale(1.05); }
+        .banner-text { 
+            position: absolute; top: 10%; left: 50%; transform: translateX(-50%); 
+            background: rgba(255,255,255,0.9); padding: 8px 20px; 
+            font-weight: 800; text-transform: uppercase; letter-spacing: 1px; font-size: 14px;
+        }
+
+        /* CONTACT/FOOTER SECTION */
+        .footer-info { display: flex; justify-content: space-around; padding: 40px 5%; background: #fff; border-top: 1px solid #eee; }
+        .info-box i { font-size: 24px; margin-bottom: 10px; color: #333; }
+        .info-box p { font-size: 12px; font-weight: bold; text-transform: uppercase; }
     </style>
 </head>
 <body>
 
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            
-            <li>
-                <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
-                <div class="mega-menu">
-                    <div class="menu-col">
-                        <h4>Sports Uniform</h4>
-                        <ul>
-                            <li><a href="american-football.html">American Football Uniform</a></li>
-                            <li><a href="soccer-ball.html">Soccer Ball</a></li>
-                            <li><a href="paintball-jersey.html">Paintball Jersey</a></li>
-                            <li><a href="basketball-uniform.html">Basketball Uniform</a></li>
-                            <li><a href="baseball-uniform.html">Baseball Uniform</a></li>
-                            <li><a href="rugby-uniform.html">Rugby Uniform</a></li>
-                        </ul>
+    <header>
+        <div class="logo"><img src="logo.png" alt="12th Planet"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                
+                <li>
+                    <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
+                    <div class="mega-menu">
+                        <div class="menu-col">
+                            <h4>Sports Uniform</h4>
+                            <ul>
+                                <li><a href="american-football.html">American Football Uniform</a></li>
+                                <li><a href="soccer-ball.html">Soccer Ball</a></li>
+                                <li><a href="paintball-jersey.html">Paintball Jersey</a></li>
+                                <li><a href="basketball-uniform.html">Basketball Uniform</a></li>
+                                <li><a href="baseball-uniform.html">Baseball Uniform</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Active Wear</h4>
+                            <ul>
+                                <li><a href="tracksuit.html">Tracksuit</a></li>
+                                <li><a href="workout-hoodies.html">Workout Hoodies</a></li>
+                                <li><a href="rash-guards.html">Rash Guards</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Martial Arts</h4>
+                            <ul>
+                                <li><a href="karate-uniform.html">Karate Uniform</a></li>
+                                <li><a href="bjj-gi.html">BJJ Gi</a></li>
+                                <li><a href="mma-shorts.html">MMA Shorts</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="menu-col">
-                        <h4>Active Wear</h4>
-                        <ul>
-                            <li><a href="tracksuit.html">Tracksuit</a></li>
-                            <li><a href="workout-hoodies.html">Workout Hoodies</a></li>
-                            <li><a href="rash-guards.html">Rash Guards</a></li>
-                            <li><a href="fitness-bra.html">Fitness Bra</a></li>
-                        </ul>
-                    </div>
-                    <div class="menu-col">
-                        <h4>Martial Arts</h4>
-                        <ul>
-                            <li><a href="karate-uniform.html">Karate Uniform</a></li>
-                            <li><a href="bjj-gi.html">BJJ Gi</a></li>
-                            <li><a href="mma-shorts.html">MMA Shorts</a></li>
-                            <li><a href="muay-thai.html">Muay Thai</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
+                </li>
 
-            <li>
-                <a href="#">Casual Wear <i class="fas fa-caret-down"></i></a>
-                <div class="mega-menu" style="width: 600px;">
-                    <div class="menu-col">
-                        <h4>Casual</h4>
-                        <ul>
-                            <li><a href="hoodie.html">Hoodie</a></li>
-                            <li><a href="t-shirts.html">T-Shirts</a></li>
-                            <li><a href="trousers.html">Trousers</a></li>
-                            <li><a href="polo-shirts.html">Polo Shirts</a></li>
-                        </ul>
+                <li>
+                    <a href="#">Casual Wear <i class="fas fa-caret-down"></i></a>
+                    <div class="mega-menu" style="width: 400px;">
+                        <div class="menu-col">
+                            <h4>Casual</h4>
+                            <ul>
+                                <li><a href="hoodie.html">Hoodie</a></li>
+                                <li><a href="t-shirts.html">T-Shirts</a></li>
+                                <li><a href="trousers.html">Trousers</a></li>
+                            </ul>
+                        </div>
+                        <div class="menu-col">
+                            <h4>Jackets</h4>
+                            <ul>
+                                <li><a href="varsity-jackets.html">Varsity Jackets</a></li>
+                                <li><a href="puffer-jackets.html">Puffer Jackets</a></li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="menu-col">
-                        <h4>Jackets</h4>
-                        <ul>
-                            <li><a href="varsity-jackets.html">Varsity Jackets</a></li>
-                            <li><a href="puffer-jackets.html">Puffer Jackets</a></li>
-                            <li><a href="fleece-jackets.html">Fleece Jackets</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
+                </li>
+                
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <div class="custom-btn"><button style="background:#000; color:#fff; padding:10px 15px; border:none; font-weight:bold; cursor:pointer;">CUSTOM ORDER</button></div>
+    </header>
 
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </nav>
+    <div class="hero-banners">
+        <div class="banner">
+            <img src="banner1.jpg" alt="Sports Uniform">
+            <div class="banner-text">SPORTS UNIFORM</div>
+        </div>
+        <div class="banner">
+            <img src="banner2.jpg" alt="Active Wear">
+            <div class="banner-text">ACTIVE WEAR</div>
+        </div>
+        <div class="banner">
+            <img src="banner3.jpg" alt="Street Wear">
+            <div class="banner-text">STREET WEAR</div>
+        </div>
+        <div class="banner">
+            <img src="banner4.jpg" alt="Tactical & Work">
+            <div class="banner-text">TACTICAL & WORK</div>
+        </div>
+    </div>
+
+    <div class="footer-info">
+        <div class="info-box"><i class="fas fa-shipping-fast"></i><p>Fast Shipping</p></div>
+        <div class="info-box"><i class="fas fa-award"></i><p>Top Quality</p></div>
+        <div class="info-box"><i class="fas fa-industry"></i><p>Factory Prices</p></div>
+        <div class="info-box"><i class="fas fa-sync-alt"></i><p>Customization</p></div>
+    </div>
 
 </body>
 </html>
