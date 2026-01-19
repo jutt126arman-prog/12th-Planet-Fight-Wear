@@ -3,190 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet Fight Wear | Official Store</title>
+    <title>12th Planet Fight Wear | Premier Sports Manufacturer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-        body { background-color: #ffffff; }
+        body { background-color: #ffffff; color: #333; overflow-x: hidden; }
 
-        /* Header & Nav */
+        /* Top Bar */
+        .top-bar { background: #2c3136; color: #fff; padding: 8px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 11px; font-weight: 600; }
+        .top-bar .social-top a { color: #fff; margin-left: 15px; text-decoration: none; font-size: 14px; transition: 0.3s; }
+        .top-bar .social-top a:hover { color: #cc0000; }
+
+        /* Header */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
-            padding: 10px 5%; background: #fff; border-bottom: 1px solid #eee;
+            padding: 15px 5%; background: #fff; border-bottom: 1px solid #f1f1f1;
             position: sticky; top: 0; z-index: 1000;
         }
         .logo img { height: 60px; }
-        nav ul { display: flex; list-style: none; gap: 20px; }
-        nav ul li { position: relative; padding: 20px 0; }
-        nav ul li a { text-decoration: none; color: #111; font-weight: 700; font-size: 13px; text-transform: uppercase; }
 
-        /* Mega Menu Design */
+        /* Navigation & Mega Menu (Clean Text, No Icons) */
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li { position: relative; padding: 10px 0; }
+        nav ul li a { text-decoration: none; color: #111; font-weight: 700; font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.5px; }
+        
         .mega-menu {
-            position: absolute; top: 100%; left: -300px; 
-            background: #f9f8f6; width: 1150px; display: none; 
-            grid-template-columns: 250px repeat(3, 1fr); padding: 35px; 
-            box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-top: 2px solid #cc0000;
+            position: absolute; top: 45px; left: -400px; 
+            background: #fff; width: 1100px; display: none; 
+            grid-template-columns: 280px repeat(4, 1fr); padding: 40px; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); border-top: 3px solid #cc0000;
         }
         nav ul li:hover .mega-menu { display: grid; }
+        .menu-img-box img { width: 100%; border-radius: 4px; object-fit: cover; height: 380px; }
         
-        .menu-banner img { width: 100%; border-right: 1px solid #ddd; padding-right: 20px; }
-
-        .menu-col h4 { 
-            font-size: 14px; color: #cc0000; margin-bottom: 15px; 
-            text-transform: uppercase; font-weight: 800; border-bottom: 1px solid #ddd;
-            padding-bottom: 8px;
-        }
+        .menu-col h4 { font-size: 13px; color: #cc0000; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; border-bottom: 1px solid #eee; padding-bottom: 8px; }
         .menu-col ul { list-style: none; }
-        .menu-col li { padding: 6px 0; display: flex; align-items: center; gap: 10px; }
-        .menu-col li i { color: #cc0000; font-size: 12px; width: 15px; text-align: center; }
-        .menu-col li a { font-weight: 500; color: #444; font-size: 12.5px; text-transform: capitalize; }
-        .menu-col li a:hover { color: #cc0000; padding-left: 5px; transition: 0.3s; }
+        .menu-col li { padding: 5px 0; }
+        .menu-col li a { font-weight: 500; color: #555; font-size: 12px; text-transform: capitalize; text-decoration: none; transition: 0.3s; }
+        .menu-col li a:hover { color: #cc0000; padding-left: 5px; }
 
-        /* Hero Grid */
-        .hero-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px; padding: 4px; }
-        .hero-item { position: relative; height: 500px; overflow: hidden; }
-        .hero-item img { width: 100%; height: 100%; object-fit: cover; transition: 0.6s; }
-        .hero-item:hover img { transform: scale(1.05); }
-        .hero-label { 
-            position: absolute; top: 10%; left: 50%; transform: translateX(-50%); 
-            background: #fff; padding: 10px 25px; font-weight: 800; font-size: 14px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1); text-align: center;
-        }
+        .custom-btn { background: #000; color: #fff; border: none; padding: 10px 22px; font-weight: 800; font-size: 11px; cursor: pointer; text-transform: uppercase; border-radius: 2px; }
 
-        /* Footer */
-        footer { background: #f9f8f6; padding: 60px 5% 20px; border-top: 1px solid #eee; margin-top: 50px; }
-        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.5fr; gap: 40px; }
-        .footer-col h4 { font-size: 15px; margin-bottom: 20px; text-transform: uppercase; font-weight: 800; }
-        .footer-col p, .footer-col li { font-size: 13px; color: #666; line-height: 1.8; list-style: none; }
-        .footer-col a { text-decoration: none; color: #666; }
-        .contact-info li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
-        .contact-info i { color: #cc0000; font-size: 16px; }
-        .social-links { display: flex; gap: 15px; margin-top: 20px; }
-        .social-links a { background: #fff; width: 35px; height: 35px; display: flex; align-items: center; justify-content: center; border-radius: 50%; box-shadow: 0 2px 5px rgba(0,0,0,0.1); color: #111; }
+        /* Hero Banner Grid */
+        .hero-section { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; }
+        .hero-box { position: relative; height: 580px; overflow: hidden; cursor: pointer; }
+        .hero-box img { width: 100%; height: 100%; object-fit: cover; transition: 1.2s; }
+        .hero-box:hover img { transform: scale(1.1); }
+        .hero-box .overlay { position: absolute; bottom: 80px; left: 0; width: 100%; text-align: center; }
+        .hero-box .overlay span { background: #fff; padding: 14px 35px; font-weight: 800; font-size: 13px; text-transform: uppercase; box-shadow: 0 5px 15px rgba(0,0,0,0.1); letter-spacing: 1px; }
+
+        /* Footer (Exact Layout from Image) */
+        footer { background: #fdfcfb; padding: 75px 5% 30px; border-top: 1px solid #eee; margin-top: 50px; }
+        .footer-grid { display: grid; grid-template-columns: 1.3fr 0.8fr 1.3fr; gap: 50px; }
+        .footer-col h4 { font-size: 16px; margin-bottom: 25px; text-transform: uppercase; font-weight: 800; color: #222; }
+        
+        .contact-list { list-style: none; }
+        .contact-list li { font-size: 13px; margin-bottom: 12px; display: flex; align-items: flex-start; gap: 10px; color: #444; }
+        .contact-list i { color: #111; font-size: 14px; width: 20px; text-align: center; margin-top: 3px; }
+
+        /* Shadow Social Icons */
+        .social-container { display: flex; gap: 15px; margin-top: 30px; }
+        .social-box { width: 45px; height: 45px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 18px rgba(0,0,0,0.1); color: #333; text-decoration: none; font-size: 18px; transition: 0.3s; }
+        .social-box:hover { transform: translateY(-5px); box-shadow: 0 12px 25px rgba(0,0,0,0.15); color: #cc0000; }
+
+        /* Form Styling */
+        .talk-form input, .talk-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; background: #fff; font-size: 13px; outline: none; }
+        .submit-btn { background: #eeeeee; border: none; padding: 10px 30px; cursor: pointer; font-weight: 700; font-size: 12px; text-transform: uppercase; transition: 0.3s; }
+        .submit-btn:hover { background: #ddd; }
+
+        /* What We Do */
+        .what-we-do p { font-size: 13px; line-height: 1.6; margin-bottom: 20px; color: #666; }
+        .bullet-list { list-style: none; }
+        .bullet-list li { font-size: 13px; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; font-weight: 600; color: #333; }
+        .bullet-list i { font-size: 8px; color: #000; }
+
+        .quick-links { list-style: none; margin-top: 25px; }
+        .quick-links li { padding: 10px 0; border-bottom: 1px solid #f2f2f2; display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+        .quick-links a { text-decoration: none; color: #333; transition: 0.3s; }
+        .quick-links a:hover { color: #cc0000; padding-left: 5px; }
+
+        /* Bottom Verified Bar */
+        .bottom-footer { border-top: 1px solid #eee; margin-top: 50px; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; }
+        .pay-icons img { height: 22px; margin: 0 10px; opacity: 0.8; }
+        .copyright { font-size: 12px; color: #999; font-weight: 600; }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="logo"><img src="logo.png" alt="12th Planet"></div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li>
-                    <a href="#">Sports Apparel <i class="fas fa-caret-down"></i></a>
-                    <div class="mega-menu">
-                        <div class="menu-banner"><img src="sports-nav.jpg"></div>
-                        <div class="menu-col">
-                            <h4>Sports Uniform</h4>
-                            <ul>
-                                <li><i class="fas fa-football-ball"></i><a href="american-football.html">American Football</a></li>
-                                <li><i class="fas fa-futbol"></i><a href="soccer-ball.html">Soccer Uniform</a></li>
-                                <li><i class="fas fa-paint-roller"></i><a href="paintball-jersey.html">Paintball Jersey</a></li>
-                                <li><i class="fas fa-basketball-ball"></i><a href="basketball-uniform.html">Basketball Uniform</a></li>
-                                <li><i class="fas fa-baseball-ball"></i><a href="baseball-uniform.html">Baseball Uniform</a></li>
-                                <li><i class="fas fa-republican"></i><a href="rugby-uniform.html">Rugby Uniform</a></li>
-                                <li><i class="fas fa-cricket"></i><a href="cricket-uniform.html">Cricket Uniform</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu-col">
-                            <h4>Active Wear</h4>
-                            <ul>
-                                <li><i class="fas fa-running"></i><a href="tracksuit.html">Tracksuit</a></li>
-                                <li><i class="fas fa-female"></i><a href="fitness-bra.html">Fitness Bra</a></li>
-                                <li><i class="fas fa-tshirt"></i><a href="rash-guards.html">Rash Guards</a></li>
-                                <li><i class="fas fa-walking"></i><a href="legging.html">Legging</a></li>
-                                <li><i class="fas fa-tshirt"></i><a href="workout-hoodies.html">Workout Hoodies</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu-col">
-                            <h4>Martial Arts</h4>
-                            <ul>
-                                <li><i class="fas fa-user-ninja"></i><a href="karate-uniform.html">Karate Uniform</a></li>
-                                <li><i class="fas fa-hand-rock"></i><a href="bjj-gi.html">BJJ Gi</a></li>
-                                <li><i class="fas fa-vest"></i><a href="mma-shorts.html">MMA Shorts</a></li>
-                                <li><i class="fas fa-fist-raised"></i><a href="muay-thai.html">Muay Thai</a></li>
-                                <li><i class="fas fa-user-shield"></i><a href="judo-uniform.html">Judo Uniform</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#">Casual Wear <i class="fas fa-caret-down"></i></a>
-                    <div class="mega-menu" style="width: 850px; left: -150px;">
-                        <div class="menu-banner"><img src="casual-nav.jpg"></div>
-                        <div class="menu-col">
-                            <h4>Casual Clothing</h4>
-                            <ul>
-                                <li><i class="fas fa-hat-wizard"></i><a href="hoodie.html">Hoodie</a></li>
-                                <li><i class="fas fa-tshirt"></i><a href="t-shirts.html">T-Shirts</a></li>
-                                <li><i class="fas fa-vest-patches"></i><a href="sweat-shirts.html">Sweat Shirts</a></li>
-                                <li><i class="fas fa-user-tie"></i><a href="polo-shirts.html">Polo Shirts</a></li>
-                                <li><i class="fas fa-socks"></i><a href="trousers.html">Trousers</a></li>
-                            </ul>
-                        </div>
-                        <div class="menu-col">
-                            <h4>Jackets</h4>
-                            <ul>
-                                <li><i class="fas fa-user-tag"></i><a href="varsity-jackets.html">Varsity Jackets</a></li>
-                                <li><i class="fas fa-cloud-sun"></i><a href="puffer-jackets.html">Puffer Jackets</a></li>
-                                <li><i class="fas fa-wind"></i><a href="fleece-jackets.html">Fleece Jackets</a></li>
-                                <li><i class="fas fa-cloud-showers-heavy"></i><a href="rain-jackets.html">Rain Jackets</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        <button style="background:#000; color:#fff; border:none; padding:12px 25px; font-weight:800; cursor:pointer; font-size:12px;">CUSTOM ORDER</button>
-    </header>
-
-    <div class="hero-grid">
-        <div class="hero-item"><img src="b1.jpg"><div class="hero-label">SPORTS UNIFORM</div></div>
-        <div class="hero-item"><img src="b2.jpg"><div class="hero-label">ACTIVE WEAR</div></div>
-        <div class="hero-item"><img src="b3.jpg"><div class="hero-label">STREET WEAR</div></div>
-        <div class="hero-item"><img src="b4.jpg"><div class="hero-label">TACTICAL & WORK</div></div>
-    </div>
-
-    <footer>
-        <div class="footer-grid">
-            <div class="footer-col">
-                <h4>About 12th Planet</h4>
-                <p>Leading manufacturers of premium sports and casual apparel based in Sialkot, Pakistan. Quality and customization is our priority.</p>
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/923134111317"><i class="fab fa-whatsapp"></i></a>
-                </div>
-            </div>
-            <div class="footer-col">
-                <h4>Information</h4>
-                <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Shipping Details</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="american-football.html">American Football</a></li>
-                    <li><a href="soccer-ball.html">Soccer Ball</a></li>
-                    <li><a href="tracksuit.html">Tracksuits</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Contact Us</h4>
-                <ul class="contact-info">
-                    <li><i class="fas fa-map-marker-alt"></i> Sialkot 51310, Punjab, Pakistan</li>
-                    <li><i class="fas fa-phone"></i> +92 313 4111317</li>
-                    <li><i class="fas fa-envelope"></i> info@12thplanetfightwear.com</li>
-                </ul>
-            </div>
-        </div>
-        <p style="text-align:center; margin-top:50px; border-top:1px solid #ddd; padding-top:20px; font-size:12px; color:#888;">© 2026 12th Planet Fight Wear. All Rights Reserved.</p>
-    </footer>
-
-</body>
-</html>
+    <div class="top-bar">
+        <div><i class="fas fa-envelope"></i> info@12thplanetfightwear.com</div>
+        <div class="social-top">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="https
