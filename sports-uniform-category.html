@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Uniform | 12th Planet Fight Wear</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
+        body { background: #f9f9f9; }
+
+        /* HEADER (Main Page Wala) */
+        header { 
+            display: flex; justify-content: space-between; align-items: center; 
+            padding: 12px 5%; background: #fff; border-bottom: 1px solid #eee;
+            position: sticky; top: 0; z-index: 1000; 
+        }
+        .logo img { height: 50px; }
+
+        /* LAYOUT CONTAINER */
+        .page-container { display: flex; max-width: 1400px; margin: 20px auto; padding: 0 20px; gap: 30px; }
+
+        /* LEFT SIDEBAR (image_2fd4a9.jpg Style) */
+        .sidebar { width: 250px; background: transparent; flex-shrink: 0; }
+        .sidebar h3 { font-size: 18px; color: #333; margin-bottom: 15px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
+        .sidebar ul { list-style: none; }
+        .sidebar .parent-cat { font-weight: bold; color: #cc0000; margin-top: 15px; display: block; font-size: 14px; }
+        .sidebar .sub-cat { padding: 8px 0 8px 15px; display: block; text-decoration: none; color: #555; font-size: 13px; border-bottom: 1px solid #f0f0f0; transition: 0.3s; }
+        .sidebar .sub-cat:hover { color: #cc0000; background: #fff; padding-left: 20px; }
+        .sidebar .sub-cat.active { color: #cc0000; font-weight: bold; border-left: 3px solid #cc0000; }
+
+        /* RIGHT CONTENT AREA */
+        .content-area { flex-grow: 1; background: #fff; padding: 25px; border-radius: 5px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+        .content-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+        .content-header h1 { font-size: 24px; color: #111; }
+        .sorting select { padding: 8px; border: 1px solid #ddd; font-size: 13px; outline: none; }
+
+        /* PRODUCT GRID (Scrolling View) */
+        .category-section { margin-bottom: 50px; }
+        .category-title { font-size: 20px; margin-bottom: 20px; padding-left: 10px; border-left: 5px solid #cc0000; text-transform: uppercase; }
+        
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+            gap: 20px; 
+        }
+
+        .product-card { 
+            border: 1px solid #eee; padding: 15px; text-align: center; 
+            transition: 0.3s; background: #fff; text-decoration: none; color: inherit;
+        }
+        .product-card:hover { border-color: #cc0000; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        
+        .product-card img { width: 100%; height: auto; margin-bottom: 15px; }
+        .product-card h4 { font-size: 13px; color: #333; margin-bottom: 5px; height: 35px; overflow: hidden; }
+        .product-card .sku { font-size: 11px; color: #888; margin-bottom: 10px; display: block; }
+        
+        .read-more-btn { 
+            display: block; width: 100%; padding: 10px; 
+            background: #b6dfff; color: #000; border: none; 
+            font-size: 12px; font-weight: bold; cursor: pointer;
+            text-transform: uppercase; text-decoration: none;
+        }
+        .read-more-btn:hover { background: #94cdff; }
+
+        @media (max-width: 768px) {
+            .page-container { flex-direction: column; }
+            .sidebar { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo"><img src="https://i.ibb.co/67BCB0rR/logo-12th-planet-fight-wear.jpg" alt="12th Planet"></div>
+    <div class="contact-info" style="font-size: 12px; font-weight: bold;">WhatsApp: +92 313 4111317</div>
+</header>
+
+<div class="page-container">
+    <aside class="sidebar">
+        <h3>Categories</h3>
+        <ul>
+            <li><span class="parent-cat">Sports Apparel</span></li>
+            <li><a href="#american-football" class="sub-cat active">> American Football Uniform</a></li>
+            <li><a href="#soccer-uniform" class="sub-cat">> Soccer Uniform</a></li>
+            <li><a href="#basketball-uniform" class="sub-cat">> Basketball Uniform</a></li>
+            <li><a href="#baseball-uniform" class="sub-cat">> Baseball Uniform</a></li>
+            <li><a href="#cricket-uniform" class="sub-cat">> Cricket Uniform</a></li>
+            <li><a href="#boxing-uniform" class="sub-cat">> Boxing Uniform</a></li>
+        </ul>
+    </aside>
+
+    <main class="content-area">
+        <div class="content-header">
+            <h1>Sports Uniform</h1>
+            <div class="sorting">
+                <select>
+                    <option>Default sorting</option>
+                    <option>Sort by latest</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="category-section" id="american-football">
+            <h2 class="category-title">American Football</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://i.ibb.co/9H0pL7R/football-1.png" alt="AF-17">
+                    <h4>American Football Uniform</h4>
+                    <span class="sku">SW-AFU-17</span>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/6vGZ7D5/football-2.png" alt="AF-18">
+                    <h4>American Football Uniform</h4>
+                    <span class="sku">SW-AFU-18</span>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/YyYxS5P/football-3.png" alt="AF-19">
+                    <h4>American Football Uniform</h4>
+                    <span class="sku">SW-AFU-19</span>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/L5hY6N8/football-4.png" alt="AF-20">
+                    <h4>American Football Uniform</h4>
+                    <span class="sku">SW-AFU-20</span>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="category-section" id="soccer-uniform">
+            <h2 class="category-title">Soccer Uniform</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <img src="https://i.ibb.co/SrtG8hH/soccer-1.png" alt="Soccer 1">
+                    <h4>Soccer Team Uniform</h4>
+                    <span class="sku">SW-SU-01</span>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+                <div class="product-card">
+                    <img src="https://i.ibb.co/Zc8Wz4m/soccer-2.png" alt="Soccer 2">
+                    <h4>Custom Soccer Kit</h4>
+                    <span class="sku">SW-SU-02</span>
+                    <a href="#" class="read-more-btn">Read more</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
