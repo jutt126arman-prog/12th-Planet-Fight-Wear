@@ -6,39 +6,38 @@
     <title>American Football Collection | 12th Planet Fight Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial', sans-serif; }
-        body { background: #f0f0f0; color: #111; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Helvetica', Arial, sans-serif; }
+        body { background: #f4f4f4; color: #111; }
+        
+        header { background: #000; padding: 20px; text-align: center; border-bottom: 4px solid #cc0000; }
+        .logo-text { font-size: 28px; font-weight: 900; color: #fff; text-transform: uppercase; letter-spacing: 2px; }
+        
+        .container { max-width: 1200px; margin: 40px auto; padding: 0 20px; }
+        .page-title { text-align: center; margin-bottom: 50px; font-size: 32px; font-weight: 800; text-transform: uppercase; }
 
-        header { background: #fff; padding: 15px; text-align: center; border-bottom: 3px solid #cc0000; position: sticky; top: 0; z-index: 1000; }
-        .logo-text { font-size: 24px; font-weight: 900; color: #cc0000; text-transform: uppercase; }
-
-        .container { max-width: 1400px; margin: 30px auto; padding: 0 20px; }
-        .page-header { text-align: center; margin-bottom: 40px; }
-        .page-header h1 { font-size: 32px; font-weight: 900; text-transform: uppercase; color: #000; }
-
-        /* 20 Items Grid */
+        /* Grid for 8 Items */
         .uniform-grid { 
             display: grid; 
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 25px; 
+            gap: 30px; 
         }
 
         .card { 
             background: #fff; 
             border: 1px solid #ddd; 
+            border-radius: 10px; 
             overflow: hidden; 
             transition: 0.3s; 
             display: flex; 
             flex-direction: column;
-            border-radius: 8px;
         }
-        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); border-color: #cc0000; }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.2); border-color: #cc0000; }
 
-        /* Full Uniform Image Box */
+        /* Image Box - Professional Height */
         .img-box { 
             width: 100%; 
             height: 450px; 
-            background: #fff; 
+            background: #ffffff; 
             display: flex; 
             align-items: center; 
             justify-content: center; 
@@ -46,15 +45,15 @@
         }
         .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        .info { padding: 20px; text-align: center; border-top: 1px solid #f0f0f0; flex-grow: 1; }
-        .design-name { font-size: 16px; font-weight: bold; color: #cc0000; margin-bottom: 10px; text-transform: uppercase; }
-        .design-bio { font-size: 13px; color: #555; margin-bottom: 20px; line-height: 1.5; height: 60px; overflow: hidden; }
+        .info { padding: 25px; text-align: center; border-top: 1px solid #eee; }
+        .design-name { font-size: 18px; font-weight: 800; color: #cc0000; margin-bottom: 10px; text-transform: uppercase; }
+        .design-bio { font-size: 14px; color: #555; margin-bottom: 25px; line-height: 1.6; min-height: 45px; }
 
         .wa-btn { 
-            display: flex; align-items: center; justify-content: center; gap: 8px;
-            background: #25D366; color: #fff; padding: 14px; 
+            display: flex; align-items: center; justify-content: center; gap: 10px;
+            background: #25D366; color: #fff; padding: 15px; 
             text-decoration: none; font-weight: bold; border-radius: 5px; font-size: 14px;
-            text-transform: uppercase;
+            text-transform: uppercase; transition: 0.3s;
         }
         .wa-btn:hover { background: #128C7E; }
 
@@ -64,54 +63,35 @@
 <body>
 
 <header>
-    <div class="logo-text">12TH PLANET FIGHT WEAR</div>
+    <div class="logo-text">12th Planet Fight Wear</div>
 </header>
 
 <div class="container">
-    <div class="page-header"><h1>Full Uniform Designs (20 Sets)</h1></div>
-    <div class="uniform-grid" id="gallery">
-        </div>
-</div>
-
-<script>
-    // In links ko maine double check kiya hai, ye live images hain.
-    const productImages = [
-        "https://m.media-amazon.com/images/I/61NlUo8eJpL._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/61n9zHk7U0L._AC_SL1500_.jpg",
-        "https://m.media-amazon.com/images/I/61I2l45v-PL._AC_SL1200_.jpg",
-        "https://m.media-amazon.com/images/I/51H5PzKNoUL._AC_SL1001_.jpg",
-        "https://m.media-amazon.com/images/I/61K-K0Vp1DL._AC_SL1500_.jpg"
-    ];
-
-    const names = ["Stealth Black Elite", "Red Warrior Pro", "Royal Blue Champion", "White Away Series", "Neon Speed Kit"];
-    const bios = [
-        "Professional micro-mesh jersey with integrated pad-pocket game pants.",
-        "Heavy-duty sublimated uniform set with reinforced stitching for durability.",
-        "Elite v-neck design featuring moisture-wicking fabric and custom side-stripes.",
-        "Clean professional look with 4-way stretch spandex panels for agility.",
-        "High-visibility modern design with breathable airflow technology."
-    ];
-
-    const gallery = document.getElementById('gallery');
-
-    for(let i=0; i<20; i++) {
-        let idx = i % productImages.length;
-        gallery.innerHTML += `
-            <div class="card">
-                <div class="img-box">
-                    <img src="${productImages[idx]}" alt="Design ${i+1}" onerror="this.src='https://placehold.co/400x600?text=Uniform+Design+${i+1}'">
-                </div>
-                <div class="info">
-                    <div class="design-name">${names[idx]} - AF0${i+1}</div>
-                    <p class="design-bio">${bios[idx]}</p>
-                    <a href="https://wa.me/923134111317?text=Hi, I want to order the ${names[idx]} AF0${i+1} full uniform set." class="wa-btn">
-                        <i class="fab fa-whatsapp"></i> Order This Set
-                    </a>
-                </div>
+    <h1 class="page-title">American Football Full Uniforms</h1>
+    
+    <div class="uniform-grid">
+        
+        <div class="card">
+            <div class="img-box">
+                <img src="https://m.media-amazon.com/images/I/61NlUo8eJpL._AC_SL1500_.jpg" alt="Design 1" onerror="this.src='https://placehold.co/500x700?text=Design+1+Load+Error'">
             </div>
-        `;
-    }
-</script>
+            <div class="info">
+                <div class="design-name">Elite Stealth Black</div>
+                <p class="design-bio">Professional grade heavy-duty mesh jersey with integrated pad pockets in pants.</p>
+                <a href="https://wa.me/923134111317?text=Interested in Elite Stealth Black AF-01" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+            </div>
+        </div>
 
-</body>
-</html>
+        <div class="card">
+            <div class="img-box">
+                <img src="https://m.media-amazon.com/images/I/61n9zHk7U0L._AC_SL1500_.jpg" alt="Design 2" onerror="this.src='https://placehold.co/500x700?text=Design+2+Load+Error'">
+            </div>
+            <div class="info">
+                <div class="design-name">Crimson Warrior Set</div>
+                <p class="design-bio">Sublimated away jersey with double-layered shoulders for maximum durability.</p>
+                <a href="https://wa.me/923134111317?text=Interested in Crimson Warrior AF-02" class="wa-btn"><i class="fab fa-whatsapp"></i> Order This Set</a>
+            </div>
+        </div>
+
+        <div class="card">
+            <div
