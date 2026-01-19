@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background-color: #f4f4f4; padding: 20px 5%; }
+        body { background-color: #f9f9f9; padding: 20px 5%; }
 
-        .header-section { margin-bottom: 30px; border-bottom: 1px solid #ddd; padding-bottom: 10px; }
-        .header-section h1 { font-size: 26px; font-weight: 800; text-transform: uppercase; }
-        .back-btn { text-decoration: none; color: #cc0000; font-size: 13px; font-weight: bold; }
+        .header-section { margin-bottom: 30px; border-bottom: 2px solid #eee; padding-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+        .header-section h1 { font-size: 24px; text-transform: uppercase; font-weight: 800; }
+        .back-btn { text-decoration: none; color: #cc0000; font-weight: bold; font-size: 13px; }
 
-        /* 4 Column Grid */
+        /* Professional 4-Column Grid */
         .product-grid { 
             display: grid; 
             grid-template-columns: repeat(4, 1fr); 
@@ -22,32 +22,31 @@
 
         .product-card { 
             background: #fff; 
-            border: 1px solid #eee; 
+            border: 1px solid #f0f0f0; 
             padding: 15px; 
             text-align: center;
-            transition: 0.3s;
+            transition: 0.3s ease;
         }
-        .product-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        .product-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.1); transform: translateY(-3px); }
 
-        /* Images style */
+        /* Mukamal Uniform Images */
         .product-card img { 
             width: 100%; 
-            height: 220px; 
+            height: 250px; 
             object-fit: contain;
-            margin-bottom: 15px; 
-            background: #fff;
+            margin-bottom: 15px;
         }
 
-        .product-name { font-size: 12px; color: #777; margin-bottom: 5px; text-transform: uppercase; }
+        .product-name { font-size: 11px; color: #888; margin-bottom: 5px; text-transform: uppercase; letter-spacing: 1px; }
         .product-code { font-size: 15px; font-weight: 700; color: #111; margin-bottom: 15px; }
 
-        /* WhatsApp Order Button */
+        /* Light Blue WhatsApp Button */
         .wa-btn { 
             display: block; 
-            background: #bde0fe; /* Light Blue like your screenshot */
+            background: #bde0fe; 
             color: #000; 
             text-decoration: none; 
-            padding: 10px; 
+            padding: 12px; 
             font-size: 12px; 
             font-weight: 800; 
             border-radius: 4px;
@@ -56,7 +55,7 @@
         }
         .wa-btn:hover { background: #25D366; color: #fff; }
 
-        @media (max-width: 1100px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 1024px) { .product-grid { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 600px) { .product-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
@@ -69,59 +68,59 @@
 
     <section class="product-grid">
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/163452/basketball-basketball-player-players-team-163452.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-17">
+            <img src="https://i.ibb.co/v4pB0G7G/afu1.jpg" alt="SW-AFU-17">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-17</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-17" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-17" class="wa-btn">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-18">
+            <img src="https://i.ibb.co/v6mX89m6/afu2.jpg" alt="SW-AFU-18">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-18</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-18" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-18" class="wa-btn">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/274422/pexels-photo-274422.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-19">
+            <img src="https://i.ibb.co/6R8mD9Gj/afu3.jpg" alt="SW-AFU-19">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-19</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-19" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-19" class="wa-btn">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/159571/football-american-football-runner-player-159571.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-20">
+            <img src="https://i.ibb.co/5X7m89m6/afu4.jpg" alt="SW-AFU-20">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-20</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-20" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-20" class="wa-btn">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-21">
+            <img src="https://i.ibb.co/v4pB0G7G/afu1.jpg" alt="SW-AFU-21">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-21</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-21" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-21" class="wa-btn">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-22">
+            <img src="https://i.ibb.co/v6mX89m6/afu2.jpg" alt="SW-AFU-22">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-22</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-22" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-22" class="wa-btn">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/2570139/pexels-photo-2570139.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-23">
+            <img src="https://i.ibb.co/RT9mD9Gj/afu7.jpg" alt="SW-AFU-23">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-23</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-23" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-23" class="wa-btn">Order on WhatsApp</a>
         </div>
 
         <div class="product-card">
-            <img src="https://images.pexels.com/photos/1618269/pexels-photo-1618269.jpeg?auto=compress&cs=tinysrgb&w=400" alt="SW-AFU-24">
+            <img src="https://i.ibb.co/pX7m89m6/afu8.jpg" alt="SW-AFU-24">
             <p class="product-name">American Football Uniform</p>
             <p class="product-code">SW-AFU-24</p>
-            <a href="https://wa.me/923134111317?text=Hi, I want to order SW-AFU-24" class="wa-btn">Order on WhatsApp</a>
+            <a href="https://wa.me/923134111317?text=I want to order SW-AFU-24" class="wa-btn">Order on WhatsApp</a>
         </div>
     </section>
 
