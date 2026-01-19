@@ -3,79 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet Fight Wear | Premier Sports Manufacturer</title>
+    <title>12th Planet Fight Wear | Official</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Montserrat', sans-serif; }
-        body { background-color: #ffffff; color: #333; overflow-x: hidden; width: 100%; }
+        body { background-color: #ffffff; color: #333; }
 
         /* Top Bar */
         .top-bar { background: #2c3136; color: #fff; padding: 10px 5%; display: flex; justify-content: space-between; align-items: center; font-size: 12px; }
-        .top-bar .social-links a { color: #fff; margin-left: 15px; text-decoration: none; font-size: 14px; }
+        .top-bar .social-links a { color: #fff; margin-left: 15px; text-decoration: none; }
 
         /* Header */
         header { 
             display: flex; justify-content: space-between; align-items: center; 
-            padding: 15px 5%; background: #fff; border-bottom: 1px solid #eee;
-            position: sticky; top: 0; z-index: 1000;
+            padding: 10px 5%; background: #fff; border-bottom: 1px solid #eee;
+            position: sticky; top: 0; z-index: 1000; height: 80px;
         }
-        .logo img { height: 50px; }
+        .logo img { height: 60px; object-fit: contain; }
 
-        /* Nav & Mega Menu */
-        nav ul { display: flex; list-style: none; gap: 25px; }
-        nav ul li { position: relative; padding: 10px 0; }
+        /* Navigation & Mega Menu */
+        nav ul { display: flex; list-style: none; gap: 20px; }
+        nav ul li { position: relative; padding: 25px 0; }
         nav ul li a { text-decoration: none; color: #111; font-weight: 700; font-size: 12px; text-transform: uppercase; }
         
         .mega-menu {
-            position: absolute; top: 45px; left: -400px; 
+            position: absolute; top: 75px; left: -400px; 
             background: #fff; width: 1100px; display: none; 
-            grid-template-columns: 280px repeat(4, 1fr); padding: 40px; 
+            grid-template-columns: 250px repeat(4, 1fr); padding: 40px; 
             box-shadow: 0 15px 35px rgba(0,0,0,0.1); border-top: 3px solid #cc0000;
         }
         nav ul li:hover .mega-menu { display: grid; }
-        .menu-img-box img { width: 100%; height: 380px; object-fit: cover; border-radius: 4px; }
+        .menu-img-box img { width: 100%; height: 350px; object-fit: cover; border-radius: 4px; }
         .menu-col h4 { font-size: 13px; color: #cc0000; margin-bottom: 15px; text-transform: uppercase; font-weight: 800; border-bottom: 1px solid #eee; padding-bottom: 8px; }
         .menu-col ul { list-style: none; }
-        .menu-col li { padding: 5px 0; }
-        .menu-col li a { color: #555; font-size: 12px; text-decoration: none; font-weight: 500; transition: 0.3s; }
+        .menu-col li { padding: 4px 0; }
+        .menu-col li a { color: #555; font-size: 11.5px; text-decoration: none; font-weight: 500; transition: 0.3s; }
         .menu-col li a:hover { color: #cc0000; padding-left: 5px; }
 
-        .custom-btn { background: #bde1f9; color: #333; border: none; padding: 10px 20px; font-weight: 700; font-size: 11px; cursor: pointer; text-transform: uppercase; }
+        .custom-btn { background: #000; color: #fff; border: none; padding: 10px 20px; font-weight: 700; font-size: 11px; cursor: pointer; text-transform: uppercase; }
 
-        /* Hero Section (Image Match) */
-        .hero-section { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; width: 100%; }
-        .hero-box { position: relative; height: 550px; overflow: hidden; }
-        .hero-box img { width: 100%; height: 100%; object-fit: cover; transition: 1s; }
-        .hero-box:hover img { transform: scale(1.1); }
-        .hero-box .overlay { position: absolute; bottom: 60px; width: 100%; text-align: center; }
-        .hero-box .overlay span { background: #fff; padding: 12px 30px; font-weight: 800; text-transform: uppercase; font-size: 14px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+        /* Hero Section (Match with Pic 3) */
+        .hero-section { display: grid; grid-template-columns: repeat(4, 1fr); height: 500px; width: 100%; }
+        .hero-box { 
+            position: relative; 
+            background-size: cover; 
+            background-position: center; 
+            display: flex; 
+            justify-content: center; 
+            cursor: pointer;
+            border-right: 1px solid rgba(255,255,255,0.2);
+        }
+        /* Yahan apni images ke naam check kar lein */
+        .hero-box.b1 { background-image: url('b1.jpg'); }
+        .hero-box.b2 { background-image: url('b2.jpg'); }
+        .hero-box.b3 { background-image: url('b3.jpg'); }
+        .hero-box.b4 { background-image: url('b4.jpg'); }
 
-        /* Footer (Image 24d978 Exact Match) */
-        footer { background: #fdfcfb; padding: 70px 5% 30px; border-top: 1px solid #eee; margin-top: 50px; }
-        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1.2fr; gap: 50px; }
-        .footer-col h4 { font-size: 18px; font-weight: 800; margin-bottom: 25px; }
-        .contact-list { list-style: none; }
-        .contact-list li { font-size: 13px; margin-bottom: 12px; display: flex; gap: 10px; color: #444; }
+        .hero-box .title-tag { 
+            position: absolute; top: 40px; 
+            background: rgba(255,255,255,0.9); 
+            padding: 10px 25px; font-weight: 800; 
+            text-transform: uppercase; font-size: 14px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        /* Features Bar */
+        .features-bar { display: grid; grid-template-columns: repeat(4, 1fr); padding: 30px 5%; background: #f9f9f9; text-align: center; border-bottom: 1px solid #eee; }
+        .feat-item { border-right: 1px solid #ddd; padding: 0 10px; }
+        .feat-item:last-child { border: none; }
+        .feat-item i { font-size: 20px; margin-bottom: 10px; display: block; }
+        .feat-item span { font-weight: 800; font-size: 11px; text-transform: uppercase; display: block; }
+        .feat-item p { font-size: 10px; color: #777; margin-top: 5px; }
+
+        /* Footer */
+        footer { background: #fff; padding: 60px 5% 20px; border-top: 1px solid #eee; }
+        .footer-grid { display: grid; grid-template-columns: 1.2fr 0.8fr 1.2fr; gap: 40px; }
+        .footer-col h4 { font-size: 16px; font-weight: 800; margin-bottom: 25px; text-transform: uppercase; }
+        .contact-list { list-style: none; font-size: 13px; }
+        .contact-list li { margin-bottom: 12px; display: flex; gap: 10px; color: #444; }
         
-        /* Shadow Social Icons */
-        .social-container { display: flex; gap: 15px; margin-top: 30px; }
-        .social-box { width: 45px; height: 45px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(0,0,0,0.1); color: #333; text-decoration: none; transition: 0.3s; }
-        .social-box:hover { transform: translateY(-5px); color: #cc0000; }
+        .social-container { display: flex; gap: 15px; margin-top: 25px; }
+        .social-box { width: 45px; height: 45px; background: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 5px 15px rgba(0,0,0,0.1); color: #333; text-decoration: none; font-size: 18px; }
 
-        .talk-form input, .talk-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; outline: none; }
-        .submit-btn { background: #eeeeee; border: none; padding: 10px 25px; font-weight: 700; cursor: pointer; }
+        .talk-form input, .talk-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; font-size: 13px; }
+        .submit-btn { background: #eee; border: none; padding: 10px 25px; font-weight: 700; cursor: pointer; text-transform: uppercase; }
 
-        .what-we-do p { font-size: 13px; line-height: 1.6; color: #666; margin-bottom: 20px; }
-        .bullets { list-style: none; font-size: 13px; font-weight: 700; }
+        .bullets { list-style: none; font-size: 13px; }
         .bullets li { margin-bottom: 8px; display: flex; align-items: center; gap: 8px; }
-        
-        .quick-links { list-style: none; margin-top: 25px; }
-        .quick-links li { padding: 10px 0; border-bottom: 1px solid #eee; display: flex; justify-content: space-between; font-size: 13px; }
+
+        .quick-links { list-style: none; margin-top: 20px; }
+        .quick-links li { padding: 12px 0; border-bottom: 1px solid #f2f2f2; display: flex; justify-content: space-between; font-size: 13px; }
         .quick-links a { text-decoration: none; color: #333; }
 
-        .bottom-bar { border-top: 1px solid #eee; margin-top: 50px; padding-top: 30px; display: flex; justify-content: space-between; align-items: center; }
-        .pay-icons img { height: 25px; margin: 0 8px; }
+        .bottom-bar { border-top: 1px solid #eee; margin-top: 40px; padding-top: 20px; display: flex; justify-content: space-between; align-items: center; font-size: 11px; color: #999; }
+        .pay-icons img { height: 20px; margin: 0 5px; }
     </style>
 </head>
 <body>
@@ -85,7 +107,7 @@
         <div class="social-links">
             <a href="#"><i class="fab fa-facebook-f"></i></a>
             <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fas fa-envelope"></i></a>
+            <a href="https://wa.me/923134111317"><i class="fab fa-whatsapp"></i></a>
         </div>
     </div>
 
@@ -110,7 +132,6 @@
                                 <li><a href="cricket.html">Cricket Uniform</a></li>
                                 <li><a href="boxing.html">Boxing Uniform</a></li>
                                 <li><a href="ice-hockey.html">Ice Hockey</a></li>
-                                <li><a href="softball.html">Softball Uniform</a></li>
                                 <li><a href="volleyball.html">Volleyball Uniform</a></li>
                             </ul>
                         </div>
@@ -150,7 +171,7 @@
                 </li>
                 <li>
                     <a href="#">Casual Apparel</a>
-                    <div class="mega-menu" style="width: 900px; left: -200px; grid-template-columns: 280px repeat(3, 1fr);">
+                    <div class="mega-menu" style="width: 900px; left: -200px; grid-template-columns: 250px repeat(3, 1fr);">
                         <div class="menu-img-box"><img src="casual-nav.jpg"></div>
                         <div class="menu-col">
                             <h4>Casual Wear</h4>
@@ -187,15 +208,22 @@
                 <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
-        <button class="custom-btn">Custom Made Wear</button>
+        <button class="custom-btn">Custom Order</button>
     </header>
 
     <section class="hero-section">
-        <div class="hero-box"><img src="b1.jpg"><div class="overlay"><span>Sports Uniform</span></div></div>
-        <div class="hero-box"><img src="b2.jpg"><div class="overlay"><span>Active Wear</span></div></div>
-        <div class="hero-box"><img src="b3.jpg"><div class="overlay"><span>Street Wear</span></div></div>
-        <div class="hero-box"><img src="b4.jpg"><div class="overlay"><span>Tactical & Work</span></div></div>
+        <div class="hero-box b1"><div class="title-tag">Sports Uniform</div></div>
+        <div class="hero-box b2"><div class="title-tag">Active Wear</div></div>
+        <div class="hero-box b3"><div class="title-tag">Street Wear</div></div>
+        <div class="hero-box b4"><div class="title-tag">Tactical & Work</div></div>
     </section>
+
+    <div class="features-bar">
+        <div class="feat-item"><i class="fas fa-truck"></i><span>Fast Shipping</span><p>Fast & Save</p></div>
+        <div class="feat-item"><i class="fas fa-award"></i><span>Top Quality</span><p>100% Guarantee</p></div>
+        <div class="feat-item"><i class="fas fa-hand-holding-usd"></i><span>Factory Prices</span><p>At Lowest Price</p></div>
+        <div class="feat-item"><i class="fas fa-sync"></i><span>Customization</span><p>Cut & Sew</p></div>
+    </div>
 
     <footer>
         <div class="footer-grid">
@@ -205,7 +233,7 @@
                     <li><i class="fas fa-envelope"></i> info@12thplanetfightwear.com</li>
                     <li><i class="fas fa-phone"></i> +92 313 4111317</li>
                     <li><i class="fab fa-whatsapp"></i> +92 313 4111317</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Jodhay Wali Kalan, Sialkot 51310, Punjab, Pakistan</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Jodhay Wali Kalan, Sialkot 51310, Pakistan</li>
                 </ul>
                 <div class="social-container">
                     <a href="#" class="social-box"><i class="fab fa-facebook-f"></i></a>
@@ -216,33 +244,37 @@
             <div class="footer-col">
                 <h4>LET'S TALK</h4>
                 <form class="talk-form">
-                    <input type="email" placeholder="Email" required>
-                    <textarea placeholder="Message" rows="4"></textarea>
-                    <button type="submit" class="submit-btn">SUBMIT</button>
+                    <input type="text" placeholder="Your Name">
+                    <input type="email" placeholder="Email">
+                    <textarea placeholder="Message" rows="3"></textarea>
+                    <button type="submit" class="submit-btn">Submit</button>
                 </form>
             </div>
             <div class="footer-col">
                 <h4>WHAT WE DO</h4>
                 <div class="what-we-do">
-                    <p>Manufacture and export high quality sports wear especially Team wear, Gym wear and Street wear at competitive prices.</p>
+                    <p>Expert manufacturing and export of customized sports apparel with global shipping.</p>
                     <ul class="bullets">
-                        <li><i class="fas fa-dot-circle"></i> Customized Design</li>
-                        <li><i class="fas fa-dot-circle"></i> Kids-Men-Women (All Sizes)</li>
-                        <li><i class="fas fa-dot-circle"></i> Sublimation and Cut & Sew</li>
+                        <li><i class="far fa-dot-circle"></i> Customized Design</li>
+                        <li><i class="far fa-dot-circle"></i> Kids-Men-Women (All Sizes)</li>
+                        <li><i class="far fa-dot-circle"></i> Sublimation and Cut & Sew</li>
                     </ul>
-                    <h4 style="margin-top:30px; font-size:15px;">QUICK LINKS</h4>
+                    <h4 style="margin-top:25px; font-size:14px;">QUICK LINKS</h4>
                     <ul class="quick-links">
-                        <li><a href="soccer-uniform.html">Soccer Uniform</a> <i class="fas fa-tshirt"></i></li>
-                        <li><a href="tracksuits.html">Tracksuits</a> <i class="fas fa-chevron-right"></i></li>
-                        <li><a href="american-football.html">American Football</a> <i class="fas fa-map-marker-alt"></i></li>
+                        <li><a href="soccer-uniform.html">Soccer Uniform</a> <i class="fas fa-tshirt" style="opacity:0.3;"></i></li>
+                        <li><a href="tracksuit.html">Tracksuits</a> <i class="fas fa-chevron-right" style="opacity:0.3;"></i></li>
+                        <li><a href="american-football.html">American Football</a> <i class="fas fa-map-marker-alt" style="opacity:0.3;"></i></li>
                     </ul>
                 </div>
             </div>
         </div>
         <div class="bottom-bar">
-            <div class="pay-icons"><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/FedEx_Express.svg"></div>
-            <div style="font-size:12px; color:#999;">Copyright © 2026 12th Planet Fight Wear</div>
-            <div class="pay-icons"><img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg"> <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg"></div>
+            <div><img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Express_logo.svg" height="15" style="margin-right:15px;"> <img src="https://upload.wikimedia.org/wikipedia/commons/1/1a/FedEx_Express.svg" height="15"></div>
+            <div>Copyright © 2026 12th Planet Fight Wear</div>
+            <div class="pay-icons">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Visa_Inc._logo.svg">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b5/PayPal.svg">
+            </div>
         </div>
     </footer>
 </body>
