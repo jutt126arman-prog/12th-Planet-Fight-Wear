@@ -3,150 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>12th Planet</title>
+    <title>12th Planet - Sports Uniform Collection</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Arial Black', sans-serif; }
-        body { background: #000; color: #fff; padding: 20px; text-align: center; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1200px; margin: auto; }
-        .card { background: #fff; border-radius: 12px; padding: 15px; border: 4px solid #cc0000; }
-        .img-box { width: 100%; height: 320px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; overflow: hidden; }
+        body { background: #f4f4f4; color: #000; display: flex; }
+
+        /* Left Sidebar Menu */
+        .sidebar { width: 280px; height: 100vh; background: #fff; border-right: 3px solid #cc0000; padding: 25px; position: fixed; overflow-y: auto; }
+        .sidebar h2 { font-size: 18px; color: #000; margin-bottom: 20px; text-transform: uppercase; border-bottom: 2px solid #cc0000; padding-bottom: 10px; }
+        .sidebar ul { list-style: none; }
+        .sidebar ul li { margin-bottom: 10px; }
+        .sidebar ul li a { text-decoration: none; color: #444; font-size: 13px; transition: 0.3s; display: block; padding: 10px; border-radius: 5px; background: #f9f9f9; }
+        .sidebar ul li a:hover { background: #cc0000; color: #fff; }
+
+        /* Right Side Content */
+        .main-content { margin-left: 280px; flex: 1; padding: 40px; }
+        .header-box { background: #fff; padding: 20px; border: 1px solid #ddd; margin-bottom: 40px; text-align: center; }
+        
+        /* Category Sections */
+        .section-container { margin-bottom: 60px; scroll-margin-top: 30px; }
+        .section-title { font-size: 22px; color: #000; text-transform: uppercase; margin-bottom: 25px; border-left: 8px solid #cc0000; padding-left: 15px; }
+
+        /* Product Cards (Same as your other pages) */
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+        .card { background: #fff; border-radius: 12px; padding: 15px; border: 4px solid #cc0000; text-align: center; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+        .img-box { width: 100%; height: 300px; background: #fff; border-radius: 8px; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; overflow: hidden; }
         .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
-        h3 { color: #000; font-size: 16px; margin-bottom: 15px; text-transform: uppercase; }
+        
+        h3 { color: #000; font-size: 14px; margin-bottom: 15px; text-transform: uppercase; }
         .wa-btn { background: #25D366; color: white; text-decoration: none; padding: 12px; border-radius: 30px; font-weight: bold; display: block; font-size: 14px; }
+
+        @media (max-width: 900px) {
+            .sidebar { display: none; }
+            .main-content { margin-left: 0; padding: 15px; }
+        }
     </style>
 </head>
 <body>
-    <h1 style="margin-bottom:10px;">12TH PLANET FIGHT WEAR</h1>
-    <div class="grid">
-        <div class="card"><div class="img-box"><img src="1.jpeg"></div><h3>Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="2.jpeg"></div><h3>Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="3.jpeg"></div><h3>Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="4.jpeg"></div><h3>Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="5.jpeg"></div><h3>Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="6.jpeg"></div><h3>Design 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="7.jpeg"></div><h3>Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="8.jpeg"></div><h3>Design 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-    <div class="grid">
-        <div class="card"><div class="img-box"><img src="9.jpeg"></div><h3>Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
-        <div class="card"><div class="img-box"><img src="10.jpeg"></div><h3>Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
-        <div class="card"><div class="img-box"><img src="11.jpeg"></div><h3>Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
-        <div class="card"><div class="img-box"><img src="12.jpeg"></div><h3>Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
-        <div class="card"><div class="img-box"><img src="13.jpeg"></div><h3>Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
-        <div class="card"><div class="img-box"><img src="14.jpeg"></div><h3>Design 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
-        <div class="card"><div class="img-box"><img src="15.jpeg"></div><h3>Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
-    </div>class="grid">
-        <div class="card"><div class="img-box"><img src="p1.jpeg"></div><h3>Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="p2.jpeg"></div><h3>Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="p3.jpeg"></div><h3>Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="p4.jpeg"></div><h3>Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
- <div class="grid">
-        <div class="card"><div class="img-box"><img src="b1.jpeg"></div><h3>Basketball 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="b2.jpeg"></div><h3>Basketball 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="b3.jpeg"></div><h3>Basketball 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="b4.jpeg"></div><h3>Basketball 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="b5.jpeg"></div><h3>Basketball 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="b6.jpeg"></div><h3>Basketball 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="b7.jpeg"></div><h3>Basketball 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="b8.jpeg"></div><h3>Basketball 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
- <div class="grid">
-        <div class="card"><div class="img-box"><img src="ba1.jpeg"></div><h3>Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="ba2.jpeg"></div><h3>Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="ba3.jpeg"></div><h3>Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="ba4.jpeg"></div><h3>Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="ba5.jpeg"></div><h3>Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="ba6.jpeg"></div><h3>Design 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="ba7.jpeg"></div><h3>Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="ba8.jpeg"></div><h3>Design 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
- <div class="grid">
-        <div class="card"><div class="img-box"><img src="r1.jpeg"></div><h3>Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="r2.jpeg"></div><h3>Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="r3.jpeg"></div><h3>Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="r4.jpeg"></div><h3>Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
- <div class="grid">
-        <div class="card"><div class="img-box"><img src="c1.jpeg"></div><h3>Cricket Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="c2.jpeg"></div><h3>Cricket Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="c3.jpeg"></div><h3>Cricket Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="c4.jpeg"></div><h3>Cricket Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="c5.jpeg"></div><h3>Cricket Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="c6.jpeg"></div><h3>Cricket Design 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="c7.jpeg"></div><h3>Cricket Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="c8.jpeg"></div><h3>Cricket Design 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-<div class="grid">
-        <div class="card"><div class="img-box"><img src="bx1.jpeg"></div><h3>Boxing Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="bx2.jpeg"></div><h3>Boxing Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="bx3.jpeg"></div><h3>Boxing Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="bx4.jpeg"></div><h3>Boxing Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="bx7.jpeg"></div><h3>Boxing Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="bx8.jpeg"></div><h3>Boxing Design 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
- <div class="grid">
-        <div class="card"><div class="img-box"><img src="h1.jpeg"></div><h3>Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="h2.jpeg"></div><h3>Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="h3.jpeg"></div><h3>Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="h4.jpeg"></div><h3>Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="h5.jpeg"></div><h3>Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="h6.jpeg"></div><h3>Design 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="h7.jpeg"></div><h3>Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="h8.jpeg"></div><h3>Design 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-<div class="grid">
-        <div class="card"><div class="img-box"><img src="sb1.jpeg"></div><h3>Softball Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="sb2.jpeg"></div><h3>Softball Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="sb3.jpeg"></div><h3>Softball Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="sb4.jpeg"></div><h3>Softball Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="sb5.jpeg"></div><h3>Softball Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="sb6.jpeg"></div><h3>Softball Design 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="sb7.jpeg"></div><h3>Softball Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="sb8.jpeg"></div><h3>Softball Design 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-   <div class="grid">
-        <div class="card"><div class="img-box"><img src="v1.jpeg"></div><h3>Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="v2.jpeg"></div><h3>Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="v3.jpeg"></div><h3>Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="v4.jpeg"></div><h3>Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="v5.jpeg"></div><h3>Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="v6.jpeg"></div><h3>Design 06</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="v7.jpeg"></div><h3>Design 07</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
-        <div class="card"><div class="img-box"><img src="v8.jpeg"></div><h3>Design 08</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+
+    <div class="sidebar">
+        <h2>CATEGORIES</h2>
+        <ul>
+            <li><a href="#american-football">American Football</a></li>
+            <li><a href="#soccer">Soccer Uniform</a></li>
+            <li><a href="#basketball">Basketball Uniform</a></li>
+            <li><a href="#cricket">Cricket Uniform</a></li>
+            <li><a href="#boxing">Boxing Uniform</a></li>
+            <li><a href="#paintball">Paintball Jersey</a></li>
+        </ul>
     </div>
-</body>
-</html>
-<footer>
-    <div class="footer-col">
-        <h3>CONTACT INFO</h3>
-        <p><i class="fas fa-envelope"></i> 12thplanetfightwear@gmail.com</p>
-        <p><i class="fas fa-phone-alt"></i> +92 313 4111317</p>
-        <p><i class="fab fa-whatsapp"></i> +92 313 4111317</p>
-        <p><i class="fas fa-map-marker-alt"></i> Jodhay Wali Kalan, Sialkot 51310, Punjab, Pakistan</p>
-        <div class="social-icons">
-            <a href="https://facebook.com/12thplanetfightwear" target="_blank"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://instagram.com/12thplanetfightwear" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="https://wa.me/923134111317" target="_blank"><i class="fab fa-whatsapp"></i></a>
+
+    <div class="main-content">
+        <div class="header-box">
+            <h1 style="font-size: 28px;">12TH PLANET SPORTS UNIFORMS</h1>
+            <p style="color: #cc0000; font-weight: bold;">PREMIUM MANUFACTURING CATALOGUE</p>
         </div>
-    </div>
-    <div class="footer-col">
-        <h3>LET'S TALK</h3>
-        <input type="email" placeholder="Email Address">
-        <textarea placeholder="Your Message" rows="3"></textarea>
-        <button type="submit">SUBMIT</button>
-    </div>
-    <div class="footer-col">
-        <h3>WHAT WE DO</h3>
-        <p style="color: #666; margin-bottom: 15px;">Expert manufacturing and export of customized sports apparel with global shipping.</p>
-        <p><strong>• Customized Design</strong></p>
-        <p><strong>• Global Shipping</strong></p>
-        <p><strong>• Factory Wholesale</strong></p>
-    </div>
-</footer>
 
-<div class="bottom-bar">
-    <div class="shipping-logos">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/b/b3/DHL_Logo.svg" alt="DHL">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/a/af/FedEx_Express_logo.svg" alt="FedEx">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/UPS_logo.svg" alt="UPS">
-    </div>
-    <div class="copy">Copyright © 2026 12th Planet Fight Wear.</div>
-    <div class="payment-icons" style="font-size: 18px; color: #ccc;">
-        <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard" style="margin-left: 10px;"></i>
-    </div>
-</div>
+        <section class="section-container" id="american-football">
+            <div class="section-title">American Football</div>
+            <div class="grid">
+                <div class="card"><div class="img-box"><img src="fb1.jpeg"></div><h3>Football Kit 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                <div class="card"><div class="img-box"><img src="fb2.jpeg"></div><h3>Football Kit 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+            </div>
+        </section>
 
+        <section class="section-container" id="soccer">
+            <div class="section-title">Soccer Uniform</div>
+            <div class="grid">
+                <div class="card"><div class="img-box"><img src="su1.jpeg"></div><h3>Soccer Jersey 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                <div class="card"><div class="img-box"><img src="su2.jpeg"></div><h3>Soccer Jersey 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+            </div>
+        </section>
+
+        <section class="section-container" id="basketball">
+            <div class="section-title">Basketball Uniform</div>
+            <div class="grid">
+                <div class="card"><div class="img-box"><img src="ba1.jpeg"></div><h3>Basketball Kit 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                <div class="card"><div class="img-box"><img src="ba2.jpeg"></div><h3>Basketball Kit 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+            </div>
+        </section>
+
+        <section class="section-container" id="cricket">
+            <div class="section-title">Cricket Uniform</div>
+            <div class="grid">
+                <div class="card"><div class="img-box"><img src="c1.jpeg"></div><h3>Cricket Pro Kit</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                <div class="card"><div class="img-box"><img src="c2.jpeg"></div><h3>Cricket Pro Kit</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+            </div>
+        </section>
+
+        <section class="section-container" id="boxing">
+            <div class="section-header" style="font-size: 22px; margin-bottom: 25px; border-left: 8px solid #cc0000; padding-left: 15px; text-transform: uppercase;">Boxing Uniform</div>
+            <div class="grid">
+                <div class="card"><div class="img-box"><img src="bx1.jpeg"></div><h3>Boxing Kit</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                <div class="card"><div class="img-box"><img src="bx2.jpeg"></div><h3>Boxing Kit</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+            </div>
+        </section>
+
+    </div>
 </body>
 </html>
