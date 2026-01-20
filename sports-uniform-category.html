@@ -3,106 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Uniform - 12th Planet</title>
+    <title>12th Planet - Sports Uniform Full Catalogue</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        body { background-color: #fff; color: #333; display: flex; flex-direction: column; }
+        body { background-color: #fff; color: #333; }
 
-        /* Top Header Breadcrumb Style */
-        .breadcrumb { padding: 20px 50px; font-size: 12px; color: #888; text-align: right; text-transform: uppercase; border-bottom: 1px solid #eee; }
-        .breadcrumb span { color: #000; font-weight: bold; }
+        /* Top Breadcrumb */
+        .breadcrumb { padding: 15px 50px; font-size: 12px; color: #888; text-align: right; text-transform: uppercase; border-bottom: 1px solid #eee; background: #fcfcfc; }
+        .breadcrumb b { color: #000; }
 
-        .container { display: flex; padding: 20px 50px; }
+        .container { display: flex; max-width: 1400px; margin: auto; padding: 30px 50px; gap: 40px; }
 
-        /* Left Sidebar - Categories */
-        .sidebar { width: 250px; padding-right: 30px; position: sticky; top: 20px; height: fit-content; }
-        .sidebar h2 { font-size: 18px; margin-bottom: 25px; text-transform: uppercase; letter-spacing: 1px; }
+        /* Sidebar Navigation */
+        .sidebar { width: 260px; flex-shrink: 0; position: sticky; top: 20px; height: fit-content; }
+        .sidebar h2 { font-size: 18px; margin-bottom: 25px; border-bottom: 2px solid #000; padding-bottom: 10px; text-transform: uppercase; letter-spacing: 1px; font-weight: 800; }
         .sidebar ul { list-style: none; }
-        .sidebar ul li { margin-bottom: 15px; }
-        .sidebar ul li a { text-decoration: none; color: #666; font-size: 14px; transition: 0.3s; }
+        .sidebar ul li { margin-bottom: 12px; }
+        .sidebar ul li a { text-decoration: none; color: #555; font-size: 14px; display: block; transition: 0.3s; }
         .sidebar ul li a:hover { color: #cc0000; padding-left: 5px; }
-        .sidebar ul li a.active { color: #cc0000; font-weight: bold; }
 
         /* Main Content Area */
-        .content { flex: 1; }
-        .main-title { font-size: 24px; margin-bottom: 40px; font-weight: bold; }
+        .main-content { flex: 1; }
+        .main-content h1 { font-size: 28px; margin-bottom: 40px; font-weight: 800; }
 
-        /* Section Styling */
-        .category-block { margin-bottom: 60px; scroll-margin-top: 20px; }
-        .section-header { display: flex; align-items: center; font-size: 18px; font-weight: bold; text-transform: uppercase; margin-bottom: 25px; }
-        .section-header::before { content: ""; width: 4px; height: 25px; background: #cc0000; margin-right: 15px; }
+        /* Section Styling with Red Bar */
+        .category-section { margin-bottom: 80px; scroll-margin-top: 30px; }
+        .section-header { display: flex; align-items: center; font-size: 19px; font-weight: bold; text-transform: uppercase; margin-bottom: 30px; letter-spacing: 1px; }
+        .section-header::before { content: ""; width: 5px; height: 28px; background: #cc0000; margin-right: 15px; }
 
         /* Product Grid */
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; }
-        .product-card { background: #fff; border: 1px solid #eee; padding: 15px; text-align: center; transition: 0.3s; }
-        .product-card:hover { box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-color: #cc0000; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 25px; }
+        .card { background: #fff; border: 1px solid #eee; padding: 15px; text-align: center; transition: 0.4s; }
+        .card:hover { border-color: #cc0000; box-shadow: 0 10px 20px rgba(0,0,0,0.05); transform: translateY(-5px); }
 
-        .img-box { width: 100%; height: 230px; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .img-box { width: 100%; height: 260px; background: #fff; margin-bottom: 15px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
         .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
 
-        .product-info h3 { font-size: 13px; color: #000; margin-bottom: 5px; }
-        .product-info p { font-size: 11px; color: #888; margin-bottom: 15px; text-transform: uppercase; }
+        .card h3 { font-size: 14px; color: #000; margin-bottom: 5px; font-weight: bold; text-transform: uppercase; }
+        .card p { font-size: 11px; color: #888; margin-bottom: 15px; letter-spacing: 1px; }
 
-        .btn-wa { background: #25D366; color: white; text-decoration: none; padding: 10px; display: block; font-size: 12px; font-weight: bold; border-radius: 2px; }
-        .btn-wa:hover { background: #1ebd5b; }
+        .wa-btn { background: #25D366; color: white; text-decoration: none; padding: 12px; display: block; font-size: 12px; font-weight: bold; border-radius: 4px; transition: 0.3s; }
+        .wa-btn:hover { background: #1ebd5b; }
 
-        @media (max-width: 768px) {
-            .container { flex-direction: column; padding: 20px; }
+        /* Features Section */
+        .features { display: flex; justify-content: space-around; padding: 50px; background: #f9f9f9; border-top: 1px solid #eee; text-align: center; margin-top: 40px; }
+        .feat-item { font-size: 13px; font-weight: 800; text-transform: uppercase; color: #444; }
+
+        /* Footer */
+        footer { background: #fff; padding: 60px 50px 20px; border-top: 1px solid #eee; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 60px; max-width: 1400px; margin: auto; }
+        .footer-col h4 { font-size: 16px; margin-bottom: 25px; text-transform: uppercase; font-weight: 900; border-bottom: 2px solid #000; padding-bottom: 10px; display: inline-block; }
+        .footer-col p, .footer-col li { font-size: 13px; color: #666; line-height: 1.8; margin-bottom: 10px; list-style: none; }
+        
+        .contact-form input, .contact-form textarea { width: 100%; padding: 12px; margin-bottom: 10px; border: 1px solid #ddd; background: #fafafa; }
+        .btn-submit { background: #000; color: #fff; width: 100%; padding: 12px; border: none; font-weight: bold; cursor: pointer; text-transform: uppercase; }
+
+        .bottom-row { display: flex; justify-content: space-between; align-items: center; max-width: 1400px; margin: 40px auto 0; padding-top: 20px; border-top: 1px solid #eee; }
+        .copy { font-size: 12px; color: #999; }
+
+        @media (max-width: 1000px) {
+            .container, .footer-grid, .features { flex-direction: column; padding: 20px; }
             .sidebar { display: none; }
+            .footer-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
 
-    <div class="breadcrumb">SPORTS UNIFORM > <span>COLLECTION</span></div>
+    <div class="breadcrumb">SPORTS UNIFORM > <b>CATALOGUE 2026</b></div>
 
     <div class="container">
         <aside class="sidebar">
             <h2>SPORTS UNIFORM</h2>
             <ul>
-                <li><a href="#american-football" class="active">American Football</a></li>
+                <li><a href="#american-football">American Football</a></li>
                 <li><a href="#soccer">Soccer Uniform</a></li>
                 <li><a href="#basketball">Basketball Uniform</a></li>
                 <li><a href="#baseball">Baseball Uniform</a></li>
                 <li><a href="#cricket">Cricket Uniform</a></li>
                 <li><a href="#boxing">Boxing Uniform</a></li>
+                <li><a href="#paintball">Paintball Jersey</a></li>
             </ul>
         </aside>
 
-        <main class="content">
-            <h1 class="main-title">Sports Uniform</h1>
+        <main class="main-content">
+            <h1>Sports Uniform Collection</h1>
 
-            <section class="category-block" id="american-football">
-                <div class="section-header">AMERICAN FOOTBALL</div>
-                <div class="product-grid">
-                    <div class="product-card"><div class="img-box"><img src="fb1.jpeg"></div><div class="product-info"><h3>American Football Uniform</h3><p>SW-AFU-01</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="fb2.jpeg"></div><div class="product-info"><h3>American Football Uniform</h3><p>SW-AFU-02</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="fb3.jpeg"></div><div class="product-info"><h3>American Football Uniform</h3><p>SW-AFU-03</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="fb4.jpeg"></div><div class="product-info"><h3>American Football Uniform</h3><p>SW-AFU-04</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                </div>
-            </section>
-
-            <section class="category-block" id="basketball">
-                <div class="section-header">BASKETBALL UNIFORM</div>
-                <div class="product-grid">
-                    <div class="product-card"><div class="img-box"><img src="ba1.jpeg"></div><div class="product-info"><h3>Basketball Jersey</h3><p>SW-BKU-01</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="ba2.jpeg"></div><div class="product-info"><h3>Basketball Jersey</h3><p>SW-BKU-02</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="ba3.jpeg"></div><div class="product-info"><h3>Basketball Jersey</h3><p>SW-BKU-03</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="ba4.jpeg"></div><div class="product-info"><h3>Basketball Jersey</h3><p>SW-BKU-04</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                </div>
-            </section>
-
-            <section class="category-block" id="cricket">
-                <div class="section-header">CRICKET UNIFORM</div>
-                <div class="product-grid">
-                    <div class="product-card"><div class="img-box"><img src="c1.jpeg"></div><div class="product-info"><h3>Professional Cricket Kit</h3><p>SW-CU-01</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="c2.jpeg"></div><div class="product-info"><h3>Professional Cricket Kit</h3><p>SW-CU-02</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                    <div class="product-card"><div class="img-box"><img src="c3.jpeg"></div><div class="product-info"><h3>Professional Cricket Kit</h3><p>SW-CU-03</p><a href="https://wa.me/923134111317" class="btn-wa">ORDER ON WHATSAPP</a></div></div>
-                </div>
-            </section>
-
-        </main>
-    </div>
-
-</body>
-</html>
+            <section class="category-section" id="american-football">
+                <div class="section-header">American Football Uniform</div>
+                <div class="grid">
+                    <div class="card"><div class="img-box"><img src="fb1.jpeg"></div><h3>Football Jersey</h3><p>SW-AFU-101</p><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                    <div class="card"><div class="img-box"><img src="fb2.jpeg"></div><h3>Football Jersey</h3><p>SW-AFU-102</p><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                    <div class="card"><div class="img-box"><img src="fb3.jpeg"></div><h3>
