@@ -6,221 +6,206 @@
     <title>Sports Apparel - 12th Planet Fight Wear</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root { --red: #cc0000; --black: #111; --gray: #f4f4f4; --text: #444; }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: #fff; color: var(--text); line-height: 1.6; }
+        :root { --blue-link: #33a2d5; --wa-green: #25D366; --red: #cc0000; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Open Sans', Arial, sans-serif; }
+        body { background-color: #fff; color: #333; }
 
-        /* Navigation Bar */
-        header { border-bottom: 1px solid #eee; padding: 20px 50px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; background: #fff; z-index: 1000; }
-        .logo { font-size: 22px; font-weight: 900; color: var(--black); text-transform: uppercase; letter-spacing: 1px; }
-        .logo span { color: var(--red); }
-        nav ul { display: flex; list-style: none; gap: 30px; }
-        nav ul li a { text-decoration: none; color: var(--black); font-size: 14px; font-weight: 600; text-transform: uppercase; transition: 0.3s; }
-        nav ul li a:hover { color: var(--red); }
+        /* Header & Logo */
+        header { padding: 15px 6%; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; position: sticky; top: 0; background: #fff; z-index: 1000; }
+        .logo-box img { height: 75px; width: auto; }
+        nav a { text-decoration: none; color: #000; font-size: 13px; font-weight: 700; margin-left: 25px; text-transform: uppercase; }
 
-        /* Breadcrumb (Like Shils Wear) */
-        .breadcrumb { background: var(--gray); padding: 40px 50px; text-align: left; }
-        .breadcrumb h1 { font-size: 32px; font-weight: 800; color: var(--black); text-transform: uppercase; }
-        .breadcrumb p { font-size: 13px; color: #888; margin-top: 5px; }
+        /* Breadcrumb Area */
+        .breadcrumb { background: #f5f5f5; padding: 40px 6%; border-bottom: 1px solid #e5e5e5; }
+        .breadcrumb h1 { font-size: 28px; font-weight: 800; text-transform: uppercase; }
+        .breadcrumb p { font-size: 11px; color: #999; text-transform: uppercase; margin-top: 5px; }
 
-        /* Main Section */
-        .shop-container { display: flex; max-width: 1440px; margin: 40px auto; padding: 0 50px; gap: 40px; }
+        /* Main Content Wrapper */
+        .main-wrapper { display: flex; max-width: 1440px; margin: 40px auto; padding: 0 6%; gap: 40px; }
 
-        /* Sidebar Filter */
-        .sidebar { width: 250px; flex-shrink: 0; }
-        .sidebar-box { margin-bottom: 40px; }
-        .sidebar-box h3 { font-size: 16px; border-bottom: 2px solid var(--black); padding-bottom: 10px; margin-bottom: 20px; text-transform: uppercase; }
-        .sidebar-box ul { list-style: none; }
-        .sidebar-box ul li { padding: 8px 0; border-bottom: 1px solid #f0f0f0; }
-        .sidebar-box ul li a { text-decoration: none; color: #666; font-size: 14px; transition: 0.3s; display: block; }
-        .sidebar-box ul li a:hover { color: var(--red); padding-left: 5px; }
+        /* Sidebar - Exact Shils List */
+        .sidebar { width: 260px; flex-shrink: 0; }
+        .sidebar-title { font-size: 17px; font-weight: 800; text-transform: uppercase; border-bottom: 2px solid #222; padding-bottom: 10px; margin-bottom: 20px; }
+        .cat-list { list-style: none; margin-bottom: 40px; }
+        .cat-list li { padding: 10px 0; border-bottom: 1px solid #f0f0f0; }
+        .cat-list li a { text-decoration: none; color: var(--blue-link); font-size: 14px; font-weight: 600; transition: 0.2s; }
+        .cat-list li a:hover { color: var(--red); padding-left: 5px; }
+
+        /* Content Area */
+        .content-area { flex: 1; }
+        .cat-section { margin-bottom: 60px; }
+        .cat-heading { font-size: 20px; font-weight: 800; color: var(--red); text-transform: uppercase; margin-bottom: 25px; border-left: 5px solid var(--red); padding-left: 15px; background: #fdfdfd; padding-top: 10px; padding-bottom: 10px; }
 
         /* Product Grid */
-        .products-area { flex: 1; }
-        .grid-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; font-size: 14px; color: #888; }
+        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 25px; }
+        .product-card { border: 1px solid #eee; background: #fff; transition: 0.3s; text-align: center; padding-bottom: 15px; }
+        .product-card:hover { border-color: #ccc; box-shadow: 0 10px 20px rgba(0,0,0,0.05); }
+        .img-box { height: 260px; display: flex; align-items: center; justify-content: center; padding: 15px; overflow: hidden; }
+        .img-box img { max-width: 100%; max-height: 100%; object-fit: contain; }
         
-        .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 30px; }
-        .product-card { background: #fff; border: 1px solid #eee; position: relative; transition: 0.4s; overflow: hidden; }
-        .product-card:hover { box-shadow: 0 10px 30px rgba(0,0,0,0.08); transform: translateY(-5px); }
-        
-        .img-box { width: 100%; height: 320px; background: #f9f9f9; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-        .img-box img { width: 100%; height: 100%; object-fit: contain; padding: 20px; transition: 0.5s; }
-        .product-card:hover .img-box img { transform: scale(1.1); }
+        .product-card h3 { font-size: 13px; font-weight: 800; color: #222; text-transform: uppercase; padding: 0 10px; margin-bottom: 15px; height: 35px; }
+        .wa-btn { background: var(--wa-green); color: #fff; text-decoration: none; padding: 10px 15px; font-size: 11px; font-weight: 800; border-radius: 3px; display: inline-block; text-transform: uppercase; }
 
-        .product-info { padding: 20px; text-align: center; }
-        .product-info h4 { font-size: 15px; font-weight: 700; color: var(--black); text-transform: uppercase; margin-bottom: 10px; height: 40px; overflow: hidden; }
-        
-        .order-btn { display: inline-block; background: #25D366; color: #fff; padding: 10px 20px; text-decoration: none; font-size: 12px; font-weight: 700; border-radius: 4px; transition: 0.3s; }
-        .order-btn i { margin-right: 8px; font-size: 15px; }
-        .order-btn:hover { background: #128c7e; box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3); }
-
-        /* Footer Section */
-        footer { background: var(--black); color: #fff; padding: 80px 50px 30px; margin-top: 100px; }
-        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 50px; max-width: 1440px; margin: auto; }
-        .footer-col h4 { color: #fff; font-size: 16px; margin-bottom: 30px; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-col p, .footer-col li { font-size: 14px; color: #aaa; margin-bottom: 15px; list-style: none; }
+        /* Professional Footer */
+        footer { border-top: 1px solid #eee; padding: 60px 6% 20px; margin-top: 60px; }
+        .footer-grid { display: grid; grid-template-columns: 1fr 1.2fr 1fr; gap: 50px; max-width: 1440px; margin: auto; }
+        .footer-col h4 { font-size: 15px; font-weight: 800; text-transform: uppercase; margin-bottom: 25px; }
+        .footer-col p, .footer-col li { font-size: 13px; color: #555; line-height: 1.8; margin-bottom: 10px; list-style: none; }
         .footer-col i { color: var(--red); margin-right: 10px; }
-        
-        .social-icons { display: flex; gap: 15px; margin-top: 25px; }
-        .social-icons a { width: 40px; height: 40px; border: 1px solid #333; display: flex; align-items: center; justify-content: center; color: #fff; border-radius: 50%; text-decoration: none; transition: 0.3s; }
-        .social-icons a:hover { background: var(--red); border-color: var(--red); }
 
-        .copyright { border-top: 1px solid #222; margin-top: 60px; padding-top: 30px; text-align: center; font-size: 12px; color: #666; }
+        .footer-bottom { border-top: 1px solid #eee; margin-top: 50px; padding-top: 25px; display: flex; justify-content: space-between; align-items: center; }
+        .ship-icons i { font-size: 28px; margin-right: 15px; color: #bbb; }
+        .copyright { font-size: 11px; color: #999; }
 
-        @media (max-width: 1024px) {
-            .shop-container { flex-direction: column; }
-            .sidebar { width: 100%; }
-            header, .breadcrumb, .shop-container { padding: 20px; }
-            .footer-grid { grid-template-columns: 1fr 1fr; }
-        }
+        @media (max-width: 900px) { .main-wrapper, .footer-grid { flex-direction: column; } .sidebar { display: none; } }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo">12TH <span>PLANET</span></div>
+        <div class="logo-box"><img src="logo.png" alt="12th Planet Fight Wear Logo"></div>
         <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Sports Apparel</a></li>
-                <li><a href="#">Fight Wear</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <a href="#">Home</a>
+            <a href="#" style="color: var(--red);">Sports Apparel</a>
+            <a href="#">Fight Wear</a>
+            <a href="#">Contact Us</a>
         </nav>
     </header>
 
     <div class="breadcrumb">
-        <h1>Sports Apparel</h1>
         <p>Home / Products / Sports Wear</p>
+        <h1>Sports Apparel Collection</h1>
     </div>
 
-    <div class="shop-container">
-        
+    <div class="main-wrapper">
         <aside class="sidebar">
-            <div class="sidebar-box">
-                <h3>Product Categories</h3>
-                <ul>
-                    <li><a href="#football">American Football</a></li>
-                    <li><a href="#soccer">Soccer Uniforms</a></li>
-                    <li><a href="#basketball">Basketball Kits</a></li>
-                    <li><a href="#paintball">Paintball Jerseys</a></li>
-                    <li><a href="#baseball">Baseball Apparel</a></li>
-                    <li><a href="#cricket">Cricket Kits</a></li>
-                    <li><a href="#hockey">Ice Hockey</a></li>
-                </ul>
-            </div>
-            <div class="sidebar-box">
-                <h3>Quick Contact</h3>
-                <p style="font-size: 13px; color: #888;">Order custom uniforms with your team logo.</p>
-                <a href="https://wa.me/923134111317" class="order-btn" style="margin-top: 15px; width: 100%; text-align: center;">
-                    <i class="fab fa-whatsapp"></i> MESSAGE US
-                </a>
-            </div>
+            <h3 class="sidebar-title">Categories</h3>
+            <ul class="cat-list">
+                <li><a href="#american-football">American Football</a></li>
+                <li><a href="#soccer">Soccer Uniform</a></li>
+                <li><a href="#paintball">Paintball Jersey</a></li>
+                <li><a href="#basketball">Basketball Uniform</a></li>
+                <li><a href="#baseball">Baseball Uniform</a></li>
+                <li><a href="#rugby">Rugby Uniform</a></li>
+                <li><a href="#cricket">Cricket Uniform</a></li>
+                <li><a href="#boxing">Boxing Uniform</a></li>
+                <li><a href="#ice-hockey">Ice Hockey Uniform</a></li>
+                <li><a href="#softball">Softball Uniform</a></li>
+                <li><a href="#volleyball">Volleyball Uniform</a></li>
+            </ul>
         </aside>
 
-        <main class="products-area">
-            <div class="grid-header">
-                <p>Showing all products</p>
-                <p>Sort by: <b>Latest</b></p>
-            </div>
+        <main class="content-area">
+            
+            <section id="soccer" class="cat-section">
+                <div class="cat-heading">Soccer Uniform Collection</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="9.jpeg"></div><h3>Soccer Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                    <div class="card"><div class="img-box"><img src="10.jpeg"></div><h3>Soccer Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="card"><div class="img-box"><img src="11.jpeg"></div><h3>Soccer Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="card"><div class="img-box"><img src="12.jpeg"></div><h3>Soccer Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="card"><div class="img-box"><img src="13.jpeg"></div><h3>Soccer Design 05</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                </div>
+            </section>
 
-            <div class="product-grid">
-                <div class="product-card" id="football">
-                    <div class="img-box"><img src="fb1.jpeg"></div>
-                    <div class="product-info">
-                        <h4>Pro American Football Jersey</h4>
-                        <a href="https://wa.me/923134111317" class="order-btn"><i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP</a>
-                    </div>
+            <section id="paintball" class="cat-section">
+                <div class="cat-heading">Paintball Jersey</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="bg1.jpeg"></div><h3>Paintball Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
+                    <div class="product-card"><div class="img-box"><img src="bg2.jpeg"></div><h3>Paintball Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER ON WHATSAPP</a></div>
                 </div>
+            </section>
 
-                <div class="product-card">
-                    <div class="img-box"><img src="fb2.jpeg"></div>
-                    <div class="product-info">
-                        <h4>Elite Football Uniform</h4>
-                        <a href="https://wa.me/923134111317" class="order-btn"><i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP</a>
-                    </div>
+            <section id="basketball" class="cat-section">
+                <div class="cat-heading">Basketball Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="b1.jpeg"></div><h3>Basketball Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="product-card"><div class="img-box"><img src="b2.jpeg"></div><h3>Basketball Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="product-card"><div class="img-box"><img src="b3.jpeg"></div><h3>Basketball Design 03</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="product-card"><div class="img-box"><img src="b4.jpeg"></div><h3>Basketball Design 04</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
                 </div>
+            </section>
 
-                <div class="product-card" id="soccer">
-                    <div class="img-box"><img src="su1.jpeg"></div>
-                    <div class="product-info">
-                        <h4>Custom Soccer Match Kit</h4>
-                        <a href="https://wa.me/923134111317" class="order-btn"><i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP</a>
-                    </div>
+            <section id="baseball" class="cat-section">
+                <div class="cat-heading">Baseball Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="bb1.jpeg"></div><h3>Baseball Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="product-card"><div class="img-box"><img src="bb2.jpeg"></div><h3>Baseball Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
                 </div>
+            </section>
 
-                <div class="product-card">
-                    <div class="img-box"><img src="su2.jpeg"></div>
-                    <div class="product-info">
-                        <h4>Training Soccer Jersey</h4>
-                        <a href="https://wa.me/923134111317" class="order-btn"><i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP</a>
-                    </div>
+            <section id="rugby" class="cat-section">
+                <div class="cat-heading">Rugby Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="r1.jpeg"></div><h3>Rugby Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
                 </div>
+            </section>
 
-                <div class="product-card" id="paintball">
-                    <div class="img-box"><img src="bg1.jpeg"></div>
-                    <div class="product-info">
-                        <h4>Professional Paintball Jersey</h4>
-                        <a href="https://wa.me/923134111317" class="order-btn"><i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP</a>
-                    </div>
+            <section id="cricket" class="cat-section">
+                <div class="cat-heading">Cricket Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="c1.jpeg"></div><h3>Cricket Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
                 </div>
+            </section>
 
-                <div class="product-card" id="hockey">
-                    <div class="img-box"><img src="ih1.jpeg"></div>
-                    <div class="product-info">
-                        <h4>Premium Ice Hockey Jersey</h4>
-                        <a href="https://wa.me/923134111317" class="order-btn"><i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP</a>
-                    </div>
+            <section id="boxing" class="cat-section">
+                <div class="cat-heading">Boxing Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="bx1.jpeg"></div><h3>Boxing Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
                 </div>
-                
-                <div class="product-card" id="baseball">
-                    <div class="img-box"><img src="bb1.jpeg"></div>
-                    <div class="product-info">
-                        <h4>Classic Baseball Jersey</h4>
-                        <a href="https://wa.me/923134111317" class="order-btn"><i class="fab fa-whatsapp"></i> ORDER ON WHATSAPP</a>
-                    </div>
+            </section>
+
+            <section id="ice-hockey" class="cat-section">
+                <div class="cat-heading">Ice Hockey Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="h1.jpeg"></div><h3>Hockey Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                    <div class="product-card"><div class="img-box"><img src="h2.jpeg"></div><h3>Hockey Design 02</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
                 </div>
-            </div>
+            </section>
+
+            <section id="softball" class="cat-section">
+                <div class="cat-heading">Softball Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="sb1.jpeg"></div><h3>Softball Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                </div>
+            </section>
+
+            <section id="volleyball" class="cat-section">
+                <div class="cat-heading">Volleyball Uniform</div>
+                <div class="product-grid">
+                    <div class="product-card"><div class="img-box"><img src="v1.jpeg"></div><h3>Volleyball Design 01</h3><a href="https://wa.me/923134111317" class="wa-btn">ORDER</a></div>
+                </div>
+            </section>
+
         </main>
     </div>
 
     <footer>
         <div class="footer-grid">
             <div class="footer-col">
-                <h4>12th Planet Fight Wear</h4>
-                <p>We specialize in custom sports apparel and equipment, delivering export-quality uniforms from Sialkot to the world.</p>
-                <div class="social-icons">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
+                <h4>Contact Details</h4>
+                <p><i class="fas fa-envelope"></i> 12thplanetfightwear@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +92 313 4111317</p>
+                <p><i class="fas fa-location-dot"></i> Jodhay Wali Kalan, Sialkot, Pakistan</p>
             </div>
             <div class="footer-col">
-                <h4>Information</h4>
-                <ul>
-                    <li><a href="#" style="color: #aaa; text-decoration: none;">About Us</a></li>
-                    <li><a href="#" style="color: #aaa; text-decoration: none;">Shipping Policy</a></li>
-                    <li><a href="#" style="color: #aaa; text-decoration: none;">Size Guide</a></li>
-                    <li><a href="#" style="color: #aaa; text-decoration: none;">Bulk Orders</a></li>
-                </ul>
+                <h4>Let's Talk</h4>
+                <p>We provide high-quality custom sports apparel with worldwide door-to-door shipping.</p>
+                <a href="https://wa.me/923134111317" class="wa-btn" style="background:#000;">Inquire Now</a>
             </div>
             <div class="footer-col">
-                <h4>Contact Us</h4>
-                <ul>
-                    <li><i class="fas fa-location-dot"></i> Sialkot 51310, PK</li>
-                    <li><i class="fas fa-phone"></i> +92 313 4111317</li>
-                    <li><i class="fas fa-envelope"></i> 12thplanet@gmail.com</li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <h4>Newsletter</h4>
-                <p>Get updates on new collections.</p>
-                <input type="email" placeholder="Your Email" style="width: 100%; padding: 10px; background: #222; border: 1px solid #444; color: #fff; margin-bottom: 10px;">
-                <button style="width: 100%; padding: 10px; background: var(--red); color: #fff; border: none; font-weight: bold; cursor: pointer;">SUBSCRIBE</button>
+                <h4>What We Do</h4>
+                <p>Expert manufacturing of American Football, Soccer, Basketball and more. 100% Export Quality.</p>
             </div>
         </div>
-        <div class="copyright">
-            © 2026 12th Planet Fight Wear. All Rights Reserved. | <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i> <i class="fab fa-dhl"></i>
+        <div class="footer-bottom">
+            <div class="ship-icons">
+                <i class="fab fa-dhl"></i> <i class="fab fa-fedex"></i> <i class="fab fa-ups"></i>
+            </div>
+            <p class="copyright">Copyright © 2026 12th Planet Fight Wear. All Rights Reserved.</p>
+            <div class="ship-icons">
+                <i class="fab fa-cc-visa"></i> <i class="fab fa-cc-mastercard"></i>
+            </div>
         </div>
     </footer>
 
